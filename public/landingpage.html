@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Mirror - Welcoming Page</title>
+    <link rel="shorcut icon" href="../src/img/LOGO INDO ASIA INTERTECH no text.svg">
+    <link href="style.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+
+
+    <style>
+        .switch {
+            font-size: 17px;
+            position: relative;
+            display: inline-block;
+            width: 64px;
+            height: 34px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #73C0FC;
+            transition: .4s;
+            border-radius: 30px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 30px;
+            width: 30px;
+            border-radius: 20px;
+            left: 2px;
+            bottom: 2px;
+            z-index: 2;
+            background-color: #e8e8e8;
+            transition: .4s;
+        }
+
+        .sun svg {
+            position: absolute;
+            top: 6px;
+            left: 36px;
+            z-index: 1;
+            width: 24px;
+            height: 24px;
+        }
+
+        .moon svg {
+            fill: #73C0FC;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            z-index: 1;
+            width: 24px;
+            height: 24px;
+        }
+
+        /* .switch:hover */
+        .sun svg {
+            animation: rotate 15s linear infinite;
+        }
+
+        @keyframes rotate {
+
+            0% {
+                transform: rotate(0);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* .switch:hover */
+        .moon svg {
+            animation: tilt 5s linear infinite;
+        }
+
+        @keyframes tilt {
+
+            0% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(-10deg);
+            }
+
+            75% {
+                transform: rotate(10deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        .input:checked+.slider {
+            background-color: #183153;
+        }
+
+        .input:focus+.slider {
+            box-shadow: 0 0 1px #183153;
+        }
+
+        .input:checked+.slider:before {
+            transform: translateX(30px);
+        }
+    </style>
+</head>
+
+<body class="bg-primary overflow-x-hidden"
+    style="background-image: url(../src/img/bg-image.jpg); background-size: cover; background-repeat: no-repeat;">
+    <!-- start header -->
+
+    <header class="bg-header w-full h-max p-4 top-0 flex justify-between">
+        <a href="./landingpage.html">
+        <img src="../src/img/LOGO INDO ASIA INTERTECH no text.svg" class="w-14" alt="logo_ntext">
+        </a>
+        <img src="../src/img/Text Indo Asia.png" class="w-32 hidden md:block md:absolute md:left-[90px]"  alt="textIndoasia">
+        <div class="flex items-center">
+            <label class="switch">
+                <span class="sun"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <g fill="#ffd43b">
+                            <circle r="5" cy="12" cx="12"></circle>
+                            <path
+                                d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z">
+                            </path>
+                        </g>
+                    </svg></span>
+                <span class="moon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                        <path
+                            d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z">
+                        </path>
+                    </svg></span>
+                <input type="checkbox" class="input">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <div class="flex items-center md:order-2">
+            <button type="button" data-dropdown-toggle="language-dropdown-menu"
+                class="inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-white dark:text-white rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
+                <img src="../src/img/indonesia-flag-icon.png" class="h-5 mr-2" alt="Indonesia Logo">
+                Indonesia
+            </button>
+            <!-- Dropdown -->
+            <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700"
+                id="language-dropdown-menu">
+                <ul class="py-2 font-medium" role="none">
+                    <li>
+                        <a href="#"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                            role="menuitem">
+                            <div class="inline-flex items-center">
+                                <img src="../src/img/indonesia-flag-icon.png" class="h-5 mr-2" alt="Indonesia Logo">
+                                Indonesia
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                            role="menuitem">
+                            <div class="inline-flex items-center">
+                                <img src="../src/img/united-states-flag-icon.png" class="h-5 mr-2" alt="USA Logo">
+                                English (USA)
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+    </header>
+
+    <!-- end header -->
+
+    <!-- navbar start -->
+    <nav id="navbar" class="bg-nav bg-opacity-70 rounded-full w-[90vw] m-auto">
+        <div class="container my-3  p-2 flex justify-evenly items-center">
+            <a href="./landingpage.html"><img src="../src/img/SMART MIRROR.png" class="w-28 lg:w-36" alt="xx"></a>
+            <a href="./login.html"><lord-icon src="https://cdn.lordicon.com/ovqhybfd.json" trigger="hover"
+                    colors="outline:#121331,primary:#4bb3fd" style="width:70px;height:50px">
+                </lord-icon></a>
+            <a href="./about.html" class="text-white hover:underline lg:text-lg">Tentang Kami</a>
+        </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- info mirror -->
+    <main id="productinfo" class="flex flex-wrap justify-center my-2">
+        <div class="container flex flex-wrap justify-center text-center">
+            <h1 class="my-2 text-white text-xl font-extrabold bg-indigo-700">Apa Itu Smart Mirror?</h1>
+            <h2 class="p-3 my-5 text-xl font-bold bg-slate-100 bg-opacity-50">Smart Mirror, atau cermin pintar, adalah
+                sebuah perangkat Internet of Things (IoT) yang menggabungkan
+                teknologi canggih dengan fungsionalitas cermin tradisional untuk menciptakan pengalaman pengguna yang
+                modern dan informatif. Produk ini memadukan cermin dengan layar sentuh atau tampilan digital yang
+                tersembunyi di balik permukaan kaca cermin, memungkinkan pengguna untuk mengakses berbagai informasi dan
+                fungsi yang berguna sehari-hari.</h2>
+        </div>
+        <img src="../src/img/SMART MIRROR bg blue.png" class="w-[70vw] " alt="logosmbgb">
+    </main>
+
+    <!-- end info mirror -->
+
+    <article id="feature" class="flex flex-wrap justify-center my-2">
+        <h1 class="text-xl font-bold underline">Fitur Utama Smart Mirror</h1>
+        <div class="container">
+            <div class="flex flex-col justify-center items-center text-center">
+                <h3 class="text-xl font-bold">Layar Interaktif</h3>
+                <img src="../src/img/prototype.jpg" class="w-80" alt="xx">
+                <p class="text-lg font-semibold">Smart Mirror dilengkapi dengan layar sentuh atau tampilan digital yang memungkinkan pengguna untuk
+                    berinteraksi dengan berbagai aplikasi dan informasi. Anda dapat menampilkan jam, cuaca, berita
+                    terbaru, atau bahkan pesan kalender pribadi.</p>
+            </div>
+            <div class="flex flex-col justify-center items-center text-center">
+                <h3 class="text-xl font-bold">Layar Interaktif</h3>
+                <img src="../src/img/prototype.jpg" class="w-80" alt="xx">
+                <p class="text-lg font-semibold">Smart Mirror dilengkapi dengan layar sentuh atau tampilan digital yang memungkinkan pengguna untuk
+                    berinteraksi dengan berbagai aplikasi dan informasi. Anda dapat menampilkan jam, cuaca, berita
+                    terbaru, atau bahkan pesan kalender pribadi.</p>
+            </div>
+            <div class="flex flex-col justify-center items-center text-center">
+                <h3 class="text-xl font-bold">Layar Interaktif</h3>
+                <img src="../src/img/prototype.jpg" class="w-80" alt="xx">
+                <p class="text-lg font-semibold">Smart Mirror dilengkapi dengan layar sentuh atau tampilan digital yang memungkinkan pengguna untuk
+                    berinteraksi dengan berbagai aplikasi dan informasi. Anda dapat menampilkan jam, cuaca, berita
+                    terbaru, atau bahkan pesan kalender pribadi.</p>
+            </div>
+            <div class="flex flex-col justify-center items-center text-center">
+                <h3 class="text-xl font-bold">Layar Interaktif</h3>
+                <img src="../src/img/prototype.jpg" class="w-80" alt="xx">
+                <p class="text-lg font-semibold">Smart Mirror dilengkapi dengan layar sentuh atau tampilan digital yang memungkinkan pengguna untuk
+                    berinteraksi dengan berbagai aplikasi dan informasi. Anda dapat menampilkan jam, cuaca, berita
+                    terbaru, atau bahkan pesan kalender pribadi.</p>
+            </div>
+        </div>
+    </article>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+    <script src="../public/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Mirror - Welcoming Page</title>
+    <link rel="shorcut icon" href="../src/img/LOGO INDO ASIA INTERTECH no text.svg">
+    <link href="style.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+
+
+    <style>
+        .switch {
+            font-size: 17px;
+            position: relative;
+            display: inline-block;
+            width: 64px;
+            height: 34px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #73C0FC;
+            transition: .4s;
+            border-radius: 30px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 30px;
+            width: 30px;
+            border-radius: 20px;
+            left: 2px;
+            bottom: 2px;
+            z-index: 2;
+            background-color: #e8e8e8;
+            transition: .4s;
+        }
+
+        .sun svg {
+            position: absolute;
+            top: 6px;
+            left: 36px;
+            z-index: 1;
+            width: 24px;
+            height: 24px;
+        }
+
+        .moon svg {
+            fill: #73C0FC;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            z-index: 1;
+            width: 24px;
+            height: 24px;
+        }
+
+        /* .switch:hover */
+        .sun svg {
+            animation: rotate 15s linear infinite;
+        }
+
+        @keyframes rotate {
+
+            0% {
+                transform: rotate(0);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* .switch:hover */
+        .moon svg {
+            animation: tilt 5s linear infinite;
+        }
+
+        @keyframes tilt {
+
+            0% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(-10deg);
+            }
+
+            75% {
+                transform: rotate(10deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        .input:checked+.slider {
+            background-color: #183153;
+        }
+
+        .input:focus+.slider {
+            box-shadow: 0 0 1px #183153;
+        }
+
+        .input:checked+.slider:before {
+            transform: translateX(30px);
+        }
+    </style>
+</head>
+
+<body class="bg-primary overflow-x-hidden"
+    style="background-image: url(../src/img/bg-image.jpg); background-size: cover; background-repeat: no-repeat;">
+    <!-- start header -->
+
+    <header class="bg-header w-full h-max p-4 top-0 flex justify-between">
+        <a href="./landingpage.html">
+        <img src="../src/img/LOGO INDO ASIA INTERTECH no text.svg" class="w-14" alt="logo_ntext">
+        </a>
+        <img src="../src/img/Text Indo Asia.png" class="w-32 hidden md:block md:absolute md:left-[90px]"  alt="textIndoasia">
+        <div class="flex items-center">
+            <label class="switch">
+                <span class="sun"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <g fill="#ffd43b">
+                            <circle r="5" cy="12" cx="12"></circle>
+                            <path
+                                d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z">
+                            </path>
+                        </g>
+                    </svg></span>
+                <span class="moon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                        <path
+                            d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z">
+                        </path>
+                    </svg></span>
+                <input type="checkbox" class="input">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <div class="flex items-center md:order-2">
+            <button type="button" data-dropdown-toggle="language-dropdown-menu"
+                class="inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-white dark:text-white rounded-lg cursor-pointer hover:bg-sky-700 dark:hover:bg-gray-700 dark:hover:text-white">
+                <img src="../src/img/indonesia-flag-icon.png" class="h-5 mr-2" alt="Indonesia Logo">
+                Indonesia
+            </button>
+            <!-- Dropdown -->
+            <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700"
+                id="language-dropdown-menu">
+                <ul class="py-2 font-medium" role="none">
+                    <li>
+                        <a href="#"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                            role="menuitem">
+                            <div class="inline-flex items-center">
+                                <img src="../src/img/indonesia-flag-icon.png" class="h-5 mr-2" alt="Indonesia Logo">
+                                Indonesia
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                            role="menuitem">
+                            <div class="inline-flex items-center">
+                                <img src="../src/img/united-states-flag-icon.png" class="h-5 mr-2" alt="USA Logo">
+                                English (USA)
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+    </header>
+
+    <!-- end header -->
+
+    <!-- navbar start -->
+    <nav id="navbar" class="bg-nav bg-opacity-70 rounded-full w-[90vw] m-auto">
+        <div class="container my-3  p-2 flex justify-evenly items-center">
+            <a href="./landingpage.html"><img src="../src/img/SMART MIRROR.png" class="w-28 lg:w-36" alt="xx"></a>
+            <a href="./login.html"><lord-icon src="https://cdn.lordicon.com/ovqhybfd.json" trigger="hover"
+                    colors="outline:#121331,primary:#4bb3fd" style="width:70px;height:50px">
+                </lord-icon></a>
+            <a href="./about.html" class="text-white hover:underline lg:text-lg">Tentang Kami</a>
+        </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- profile 0 -->
+    <section id="profile" name="profile" class="my-10 w-full mx-auto md:grid md:grid-cols-2">
+        <div class="container relative px-4">
+            <img width="278" height="350" class=" mx-auto" src="../src/img/foto profil no bg.png" alt="nikoo">
+            <span class="absolute -bottom-2 -translate-x-1 md:translate-x-2 opacity-5">
+                <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#0F62FE"
+                        d="M51,-46.3C66.9,-35,81.3,-17.5,81.4,0.2C81.6,17.8,67.5,35.6,51.6,48.9C35.6,62.1,17.8,70.6,3,67.7C-11.9,64.7,-23.8,50.2,-38.7,37C-53.5,23.8,-71.3,11.9,-73.5,-2.2C-75.8,-16.4,-62.4,-32.7,-47.6,-44C-32.7,-55.3,-16.4,-61.6,0.6,-62.2C17.5,-62.7,35,-57.6,51,-46.3Z"
+                        transform="translate(100 100) scale(1.2)" />
+                </svg>
+            </span>
+        </div>
+        <div class="container bg-white/75 px-5 w-full border-2 border-blue-800 rounded-lg">
+            <h1 class="font-Montserrat text-xl text-center p-1">Niko Achmad</h1>
+            <h2 class="font-Poppins text-center text-sm font-semibold pb-2">Universitas PGRI Kanjuruhan Malang</h2>
+            <p class="font-Poppins text-justify font-semibold">Lorem ipsum dolor, sit amet consectetur adipisicing
+                elit. Necessitatibus quae facere, magnam cumque temporibus nisi aperiam consectetur odio
+                exercitationem architecto distinctio? Vitae nesciunt autem ipsum. Fugiat, aliquid! Vitae, temporibus
+                fuga</p>
+        </div>
+    </section>
+
+    <!-- end profile 0 -->
+    <!-- profile1 -->
+
+    <section id="profile1" name="profile2" class="my-10 w-full mx-auto md:flex md:flex-row-reverse">
+        <div class="container relative px-4">
+            <img width="278" height="350" class=" mx-auto" src="../src/img/foto profil no bg.png" alt="nikoo">
+            <span class="absolute -bottom-2 -translate-x-1 md:translate-x-2 opacity-5">
+                <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#0F62FE"
+                        d="M51,-46.3C66.9,-35,81.3,-17.5,81.4,0.2C81.6,17.8,67.5,35.6,51.6,48.9C35.6,62.1,17.8,70.6,3,67.7C-11.9,64.7,-23.8,50.2,-38.7,37C-53.5,23.8,-71.3,11.9,-73.5,-2.2C-75.8,-16.4,-62.4,-32.7,-47.6,-44C-32.7,-55.3,-16.4,-61.6,0.6,-62.2C17.5,-62.7,35,-57.6,51,-46.3Z"
+                        transform="translate(100 100) scale(1.2)" />
+                </svg>
+            </span>
+        </div>
+        <div class="container bg-white/75 px-5 w-full border-2 border-blue-800 rounded-lg">
+            <h1 class="font-Montserrat text-xl text-center p-1">Niko Achmad</h1>
+            <h2 class="font-Poppins text-center text-sm font-semibold pb-2">Universitas PGRI Kanjuruhan Malang</h2>
+            <p class="font-Poppins text-justify font-semibold">Lorem ipsum dolor, sit amet consectetur adipisicing
+                elit. Necessitatibus quae facere, magnam cumque temporibus nisi aperiam consectetur odio
+                exercitationem architecto distinctio? Vitae nesciunt autem ipsum. Fugiat, aliquid! Vitae, temporibus
+                fuga</p>
+        </div>
+    </section>
+
+    <!-- end profile 1 -->
+    <!-- profile 2 -->
+    <section id="profile2" name="profile2" class="my-10 w-full mx-auto md:grid md:grid-cols-2">
+        <div class="container relative px-4">
+            <img width="278" height="350" class=" mx-auto" src="../src/img/foto profil no bg.png" alt="nikoo">
+            <span class="absolute -bottom-2 -translate-x-1 md:translate-x-2 opacity-5">
+                <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#0F62FE"
+                        d="M51,-46.3C66.9,-35,81.3,-17.5,81.4,0.2C81.6,17.8,67.5,35.6,51.6,48.9C35.6,62.1,17.8,70.6,3,67.7C-11.9,64.7,-23.8,50.2,-38.7,37C-53.5,23.8,-71.3,11.9,-73.5,-2.2C-75.8,-16.4,-62.4,-32.7,-47.6,-44C-32.7,-55.3,-16.4,-61.6,0.6,-62.2C17.5,-62.7,35,-57.6,51,-46.3Z"
+                        transform="translate(100 100) scale(1.2)" />
+                </svg>
+            </span>
+        </div>
+        <div class="container bg-white/75 px-5 w-full border-2 border-blue-800 rounded-lg">
+            <h1 class="font-Montserrat text-xl text-center p-1">Niko Achmad</h1>
+            <h2 class="font-Poppins text-center text-sm font-semibold pb-2">Universitas PGRI Kanjuruhan Malang</h2>
+            <p class="font-Poppins text-justify font-semibold">Lorem ipsum dolor, sit amet consectetur adipisicing
+                elit. Necessitatibus quae facere, magnam cumque temporibus nisi aperiam consectetur odio
+                exercitationem architecto distinctio? Vitae nesciunt autem ipsum. Fugiat, aliquid! Vitae, temporibus
+                fuga</p>
+        </div>
+    </section>
+
+    <!-- end profile 2 -->
+
+    <!-- footer start -->
+    <footer id="footer" class="bg-header p-4 md:grid md:grid-cols-2">
+        <div class="container mx-auto">
+            <img src="../src/img/LOGO INDO ASIA INTERTECH 5.png" class="w-80 mx-auto my-10" alt="logo">
+            <h2 class="text-center"><span class="text-blue-600  hover:text-blue-950"><a href="">Office No. 56, Jalan
+                        Raya Pakisaji,
+                        Kabupaten Malang,
+                        Jawa Timur(65162)</a></span>
+                || E-mail:<span class="text-blue-600 hover:text-blue-950"><a href="">cs@healthtech.com</a></span> ||
+                Telepon: <span class="text-blue-600  hover:text-blue-950"><a href="">(+62)89673457965</a></span>
+            </h2>
+        </div>
+        <div class="container grid grid-cols-2 auto-cols-fr gap-1 p-5 mx-auto md:flex md:p-0 md:w-max">
+            <div class="text-center md:px-4 ">
+                <h1 class="font-bold md:text-left">Profil Kami</h1>
+                <p class="hover:text-blue-600 md:text-left"><a href="#">Tentang Perusahaan</a></p>
+                <p class="hover:text-blue-600 md:text-left"><a href="#">Pendiri Perusahaan</a></p>
+            </div>
+            <div class="text-center md:px-4">
+                <h1 class="font-bold md:text-left"><a href="#">Insight</a></h1>
+                <p class="hover:text-blue-600 md:text-left"><a href="#">Blog</a></p>
+                <p class="hover:text-blue-600 md:text-left"><a href="#">Testimoni</a></p>
+                <p class="hover:text-blue-600 md:text-left"><a href="#">Portofolio</a></p>
+            </div>
+            <div class="text-center col-span-2 md:px-4">
+                <h1 class="font-bold md:text-left">Pelayanan</h1>
+                <p class="hover:text-blue-600 md:text-left"><a href="#">Training and Consulting</a></p>
+                <p class="hover:text-blue-600 md:text-left"><a href="#">Webinar</a></p>
+                <p class="hover:text-blue-600 md:text-left"><a href="#">Tracking Kesehatan</a></p>
+                <p class="hover:text-blue-600 md:text-left"><a href="#">Dukungan Komunitas</a></p>
+            </div>
+        </div>
+    </footer>
+    <div class="container px-5 w-full bg-slate-900 h-9">
+        <p class="text-white text-base">© Copyright 2023 - Indo Asia InterTech</p>
+    </div>
+    <!-- footer end -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+    <script src="../public/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Mirror - Welcoming Page</title>
+    <link rel="shorcut icon" href="../src/img/LOGO INDO ASIA INTERTECH no text.svg">
+    <link href="style.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Lato:wght@300;400&family=Montserrat:wght@600&family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+
+    <style>
+        .switch {
+            font-size: 17px;
+            position: relative;
+            display: inline-block;
+            width: 64px;
+            height: 34px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #73C0FC;
+            transition: .4s;
+            border-radius: 30px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 30px;
+            width: 30px;
+            border-radius: 20px;
+            left: 2px;
+            bottom: 2px;
+            z-index: 2;
+            background-color: #e8e8e8;
+            transition: .4s;
+        }
+
+        .sun svg {
+            position: absolute;
+            top: 6px;
+            left: 36px;
+            z-index: 1;
+            width: 24px;
+            height: 24px;
+        }
+
+        .moon svg {
+            fill: #73C0FC;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            z-index: 1;
+            width: 24px;
+            height: 24px;
+        }
+
+        /* .switch:hover */
+        .sun svg {
+            animation: rotate 15s linear infinite;
+        }
+
+        @keyframes rotate {
+
+            0% {
+                transform: rotate(0);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* .switch:hover */
+        .moon svg {
+            animation: tilt 5s linear infinite;
+        }
+
+        @keyframes tilt {
+
+            0% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(-10deg);
+            }
+
+            75% {
+                transform: rotate(10deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        .input:checked+.slider {
+            background-color: #183153;
+        }
+
+        .input:focus+.slider {
+            box-shadow: 0 0 1px #183153;
+        }
+
+        .input:checked+.slider:before {
+            transform: translateX(30px);
+        }
+    </style>
+</head>
+
+<body class="bg-primary overflow-x-hidden"
+    style="background-image: url(../src/img/bg-image.jpg); background-size: cover; background-repeat: no-repeat;">
+    <!-- start header -->
+
+    <header class="bg-header w-full h-max py-4 px-6 top-0 flex justify-between dark:bg-darkPrimary">
+        <a href="./landingpage.html">
+            <img src="../src/img/LOGO INDO ASIA INTERTECH no text.svg" class="w-14" alt="logo_ntext">
+        </a>
+        <img src="../src/img/Text Indo Asia.png" class="w-32 hidden md:block md:absolute md:left-[90px]"  alt="textIndoasia">
+        <div class="flex items-center">
+            <label class="switch">
+                <span class="sun"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <g fill="#ffd43b">
+                            <circle r="5" cy="12" cx="12"></circle>
+                            <path
+                                d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z">
+                            </path>
+                        </g>
+                    </svg></span>
+                <span class="moon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                        <path
+                            d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z">
+                        </path>
+                    </svg></span>
+                <input type="checkbox" class="input">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <div class="flex items-center md:order-2">
+            <button type="button" data-dropdown-toggle="language-dropdown-menu"
+                class="inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-white dark:text-white rounded-lg cursor-pointer hover:bg-sky-700 dark:hover:bg-gray-700 dark:hover:text-white">
+                <img src="../src/img/united-states-flag-icon.png" class="h-5 mr-2" alt="Indonesia Logo">
+                English (USA)
+            </button>
+            <!-- Dropdown -->
+            <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700"
+                id="language-dropdown-menu">
+                <ul class="py-2 font-medium" role="none">
+                    <li>
+                        <a href="#"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                            role="menuitem">
+                            <div class="inline-flex items-center">
+                                <img src="../src/img/indonesia-flag-icon.png" class="h-5 mr-2" alt="Indonesia Logo">
+                                Indonesia
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./loginEN.html"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                            role="menuitem">
+                            <div class="inline-flex items-center">
+                                <img src="../src/img/united-states-flag-icon.png" class="h-5 mr-2" alt="USA Logo">
+                                English (USA)
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+    </header>
+
+    <!-- end header -->
+
+    <!-- navbar start -->
+    <nav id="navbar" class="bg-nav dark:bg-darkPrimary bg-opacity-70 rounded-full w-[90vw] m-auto">
+        <div class="container my-3  p-2 flex justify-evenly items-center">
+            <a href="./landingpage.html"><img src="../src/img/SMART MIRROR.png" class="w-28 lg:w-36" alt="xx"></a>
+            <a href="#"><lord-icon src="https://cdn.lordicon.com/ovqhybfd.json" trigger="hover"
+                    colors="outline:#121331,primary:#4bb3fd" style="width:70px;height:50px">
+                </lord-icon></a>
+            <a href="./about.html" class="text-white hover:underline lg:text-lg">About Us</a>
+        </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- form login -->
+    <section id="loguser">
+
+        <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+            <div class="mx-auto max-w-lg">
+                <h1 class="text-center text-xl font-bold text-white font-Poppins bg-header dark:bg-darkPrimary p-2 rounded-xl">
+                    Connect With Your Device
+                </h1>
+
+                <p class="mx-auto mt-4 max-w-md text-center text-black text-xl">
+                    Log in using your Indo Asia Intertech account so you can control your device properly.
+                </p>
+
+                <form action="" class="bg-slate-400 dark:bg-slate-800 mb-0 mt-6 space-y-4 rounded-lg p-4 shadow-lg sm:p-6 lg:p-8">
+                    <p class="text-center text-lg font-medium dark:text-white">Login To Your Account</p>
+
+                    <div class="container">
+                        <label for="id" class="sr-only">ID</label>
+
+                        <div class="relative">
+                            <input type="text" class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+                                placeholder="Input Your ID" />
+                            <span class="absolute inset-y-0 end-0 grid place-content-center px-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <label for="password" class="sr-only">Password</label>
+
+                        <div class="relative">
+                            <input type="password" class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+                                placeholder="Input Your Password" />
+
+                            <span class="absolute inset-y-0 end-0 grid place-content-center px-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+
+                    <button type="submit"
+                        class="block w-full rounded-lg bg-indigo-600 px-5 py-3 text-sm font-medium text-white">
+                        Login
+                    </button>
+
+                    <p class="text-center text-sm text-gray-900">
+                        Forgot your password?
+                        <a class="underline" href="">Contact Us</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- end form login -->
+    <div class="container px-5 w-full bg-slate-900 h-9">
+        <p class="text-white text-base">© Copyright 2023 - Indo Asia InterTech</p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+    <script src="../public/script.js"></script>
+</body>
+
+</html>
