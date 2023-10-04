@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Mirror - Welcoming Page</title>
+    <title>Smart Mirror - Control</title>
     <link rel="shorcut icon" href="../src/img/LOGO INDO ASIA INTERTECH no text.svg">
     <link href="style.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
@@ -215,7 +215,7 @@
                         </div>
                         <ul class="py-1" role="none">
                             <li>
-                                <a href="#"
+                                <a href="./dashboard.html"
                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
                                     role="menuitem">Dashboard</a>
                             </li>
@@ -241,8 +241,9 @@
     <nav class="w-full flex h-max fixed bottom-0 z-50">
         <div class="container pointer-events-none flex flex-row items-center sm:w-32 md:w-max bg-nav hover:bg-sky-700 px-5 rounded-tr-[90px]"
             id="bgwifi">
-            <label for="wifi" name="wifi" class="cursor-pointer md:ml-8">
-                <button id="wifi" name="wifi">
+            <form action="" method="post">
+                <label for="wifi" class="cursor-pointer md:ml-8"></label>
+                <button id="wifi" type="submit" name="wifi">
                     <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg"
                         class="hidden w-[70px] h-[70px] relative wifiOn" preserveAspectRatio="none">
                         <path
@@ -262,15 +263,16 @@
                             fill="#F8F8F8"></path>
                     </svg>
                 </button>
-            </label>
+            </form>
             <span class="hidden text-lg font-Lato font-extrabold md:block md:ml-12">WI-FI :</span>
             <span class="hidden text-lg font-Lato font-extrabold md:block md:ml-2" id="statuswifi">Mati</span>
         </div>
 
         <!-- btn power  -->
         <div class="container flex justify-center">
-            <label for="power" name="power" class="cursor-pointer">
-                <button id="power">
+            <form action="" method="post">
+                <label for="power"></label>
+                <button id="power" name="power">
                     <svg width="134" height="134" viewBox="0 0 134 134" fill="none" xmlns="http://www.w3.org/2000/svg"
                         class="hidden w-[70px] h-[70px] md:w-[90px] md:h-[90px] relative onPower"
                         preserveAspectRatio="none">
@@ -285,27 +287,25 @@
                         <path d="M66.6071 76.4286L66.6071 56.7857" stroke="#FF0000" stroke-width="9"></path>
                     </svg>
                 </button>
-            </label>
+            </form>
         </div>
 
         <!-- bluetooth controller -->
         <div class="container flex flex-row sm:w-32 md:w-max items-center bg-nav hover:bg-sky-700 px-5 rounded-tl-[90px] pointer-events-none"
             id="bgbt">
-            <label for="btbtn" class="cursor-pointer md:ml-8">
-                <button id="btbtn" name="btbtn">
-                    <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        class="hidden w-[70px] h-[70px] relative left-9 btOn" preserveAspectRatio="none">
-                        <path d="M21 24L51 48L36 60V12L51 24L21 48" stroke="#F8F8F8" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                    <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        class="w-[70px] h-[70px] relative left-9 btOff" preserveAspectRatio="none">
-                        <path
-                            d="M9 9L63 63M49.314 49.35L36 60V36M36 24V12L51 24L42.672 30.66M36.006 35.997L21.006 47.997"
-                            stroke="#F8F8F8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                </button>
-            </label>
+            <label for="bluetooth"></label>
+            <button id="bluetooth" name="bluetooth">
+                <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="hidden w-[70px] h-[70px] relative left-9 btOn" preserveAspectRatio="none">
+                    <path d="M21 24L51 48L36 60V12L51 24L21 48" stroke="#F8F8F8" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                </svg>
+                <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="w-[70px] h-[70px] relative left-9 btOff" preserveAspectRatio="none">
+                    <path d="M9 9L63 63M49.314 49.35L36 60V36M36 24V12L51 24L42.672 30.66M36.006 35.997L21.006 47.997"
+                        stroke="#F8F8F8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </button>
             <span class="hidden text-lg font-Lato font-extrabold md:block md:ml-12">Bluetooth :</span>
             <span class="hidden text-lg font-Lato font-extrabold md:block md:ml-2" id="statusbt">Mati</span>
         </div>
@@ -341,7 +341,7 @@
                     </div>
                 </span>
                 <div class="container flex justify-center">
-                    <span class="text-lg p-1 text-center" id="day">Senin,</span>
+                    <span class="text-lg p-1 text-center" id="day"></span>
                     <span class="text-lg p-1 text-center" id="dates"></span>
                 </div>
             </div>
@@ -370,7 +370,7 @@
                         d="M68.913 48.908L68.865 49.034C68.88 48.996 68.892 48.957 68.907 48.919L68.913 48.908ZM34.006 69.057C19.88 71.053 10 75.828 10 82.857C10 92.325 26.508 100 50 100C73.492 100 90 92.325 90 82.857C90 75.828 80.121 71.053 65.996 69.057L64.039 72.389C74.685 73.866 82 76.97 82 80.572C82 85.622 67.673 89.715 50 89.715C32.327 89.715 18 85.622 18 80.572C17.999 76.982 25.266 73.881 35.945 72.398C35.3 71.284 34.652 70.172 34.006 69.057Z"
                         fill="#EE0000"></path>
                 </svg>
-                <h1 class="text-xl text-center mb-10" id="location">Malang</h1>
+                <h1 class="text-xl text-center mb-10" id="location">Ngawi</h1>
             </div>
             <div class="mb-10">INI LOGO CUACA</div>
             <h1 class="text-xl">Hujan Deras</h1>
@@ -384,8 +384,7 @@
     <!-- control rgb -->
     <div class="container p-4 w-full flex justify-center mx-auto">
         <div class="container relative bg-cardUI bg-opacity-75 mt-6 w-full rounded-3xl" id="lamprgb">
-            <label for="inforgb" class="cursor-pointer">
-                <input type="checkbox" class="absolute right-0 sr-only" name="inforgb" id="inforgb">
+            <button class="absolute right-0" id="inforgb">
                 <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"
                     class="w-[40px] h-[40px] bg-white rounded-bl-3xl rounded-tr-3xl border-white border-4 absolute right-0"
                     preserveAspectRatio="none">
@@ -393,38 +392,41 @@
                         d="M27.0833 18.75H22.9166V14.5833H27.0833M27.0833 35.4167H22.9166V22.9167H27.0833M25 4.16667C22.2641 4.16667 19.555 4.70554 17.0274 5.75251C14.4998 6.79948 12.2031 8.33405 10.2686 10.2686C6.36156 14.1756 4.16663 19.4747 4.16663 25C4.16663 30.5253 6.36156 35.8244 10.2686 39.7314C12.2031 41.6659 14.4998 43.2005 17.0274 44.2475C19.555 45.2945 22.2641 45.8333 25 45.8333C30.5253 45.8333 35.8243 43.6384 39.7314 39.7314C43.6384 35.8244 45.8333 30.5253 45.8333 25C45.8333 22.2641 45.2944 19.555 44.2475 17.0274C43.2005 14.4998 41.6659 12.2032 39.7314 10.2686C37.7968 8.33405 35.5002 6.79948 32.9725 5.75251C30.4449 4.70554 27.7358 4.16667 25 4.16667Z"
                         fill="#0500F7"></path>
                 </svg>
-            </label>
+            </button>
             <p class="bg-white text-base rounded-tl-3xl rounded-br-3xl w-max p-2">Lampu RGB</p>
-            <div class="container flex justify-center">
-                <img src="../src/img/intellectual-property-unscreen.gif" class="w-20 bg-white rounded-full m-4"
-                    alt="iconlampface">
-            </div>
-            <p class="text-lg text-center" id="vlrgbtxt">0%</p>
-            <div class="container flex items-center justify-center text-center">
-                <label for="vlrgb" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                    <input id="vlrgb" type="range" min="0" max="257" value="0" step="0.1"
-                        class="w-36 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
-                </label>
-            </div>
-            <div class="flex flex-wrap justify-center p-5">
-                <div class="flex items-center mr-4">
-                    <input id="red-radio" type="radio" value="red" name="colored-radio"
-                        class="w-4 h-4 text-red-600 bg-gray-100 border-gray-300 focus:ring-red-500 dark:focus:ring-red-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                    <label for="red-radio" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Red</label>
+            <form action="" method="post">
+                <button type="submit" class="container flex justify-center">
+                    <img src="../src/img/intellectual-property-unscreen.gif" class="w-20 bg-white rounded-full m-4"
+                        alt="iconlampface">
+                </button>
+                <p class="text-lg text-center" id="vlrgbtxt">0%</p>
+                <div class="container flex items-center justify-center text-center">
+                    <label for="rgb" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                        <input id="rgb" name="rgb" type="range" min="0" max="257" value="0" step="1"
+                            class="w-36 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
+                    </label>
                 </div>
-                <div class="flex items-center mr-4">
-                    <input id="green-radio" type="radio" value="green" name="colored-radio"
-                        class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                    <label for="green-radio"
-                        class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Green</label>
+                <div class="flex flex-wrap justify-center p-5">
+                    <div class="flex items-center mr-4">
+                        <input id="red-radio" type="radio" value="red" name="colored-radio"
+                            class="w-4 h-4 text-red-600 bg-gray-100 border-gray-300 focus:ring-red-500 dark:focus:ring-red-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="red-radio"
+                            class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Red</label>
+                    </div>
+                    <div class="flex items-center mr-4">
+                        <input id="green-radio" type="radio" value="green" name="colored-radio"
+                            class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="green-radio"
+                            class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Green</label>
+                    </div>
+                    <div class="flex items-center mr-4">
+                        <input checked id="purple-radio" type="radio" value="blue" name="colored-radio"
+                            class="w-4 h-4 text-blue-600-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="purple-radio"
+                            class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Blue</label>
+                    </div>
                 </div>
-                <div class="flex items-center mr-4">
-                    <input checked id="purple-radio" type="radio" value="blue" name="colored-radio"
-                        class="w-4 h-4 text-blue-600-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                    <label for="purple-radio"
-                        class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Blue</label>
-                </div>
-            </div>
+            </form>
         </div>
     </div>
     <section class="grid grid-cols-2 grid-flow-row gap-3">
@@ -550,40 +552,7 @@
     <!-- end control lamp -->
 
     <!-- alarm controller  -->
-    <section id="alarm" class="mx-4 mt-6 rounded-3xl p-4 bg-cardUI">
-        <div class="p-3 flex justify-between">
-            <h1 class="text-lg md:text-2xl">Alarm</h1>
-            <button class="hover:bg-white rounded-full" id="setalarm"><svg width="70" height="70" viewBox="0 0 70 70"
-                    fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[30px] h-[30px] relative"
-                    preserveAspectRatio="none">
-                    <path
-                        d="M37.625 16.625C37.625 15.9288 37.3484 15.2611 36.8562 14.7688C36.3639 14.2766 35.6962 14 35 14C34.3038 14 33.6361 14.2766 33.1438 14.7688C32.6516 15.2611 32.375 15.9288 32.375 16.625V32.375H16.625C15.9288 32.375 15.2611 32.6516 14.7688 33.1438C14.2766 33.6361 14 34.3038 14 35C14 35.6962 14.2766 36.3639 14.7688 36.8562C15.2611 37.3484 15.9288 37.625 16.625 37.625H32.375V53.375C32.375 54.0712 32.6516 54.7389 33.1438 55.2312C33.6361 55.7234 34.3038 56 35 56C35.6962 56 36.3639 55.7234 36.8562 55.2312C37.3484 54.7389 37.625 54.0712 37.625 53.375V37.625H53.375C54.0712 37.625 54.7389 37.3484 55.2312 36.8562C55.7234 36.3639 56 35.6962 56 35C56 34.3038 55.7234 33.6361 55.2312 33.1438C54.7389 32.6516 54.0712 32.375 53.375 32.375H37.625V16.625Z"
-                        fill="black"></path>
-                </svg></button>
-        </div>
-        <div class="mb-5 hidden" id="setsalarm">
-            <label for="alarm-time" class="block text-gray-600">Atur Alarm Anda:</label>
-            <input type="time" id="alarm-time" class="border border-gray-300 p-2 rounded-md w-full">
-            <label for="alarm-name"></label>
-            <input type="text" name="alarm-name" id="alarm-name"
-                class="mt-2 border border-gray-300 p-2 rounded-md w-full" placeholder="Nama Alarm">
-            <button id="add-alarm-btn"
-                class="mt-4 bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none">Tambah
-                Alarm</button>
-            <button id="cancel-alarm-btn"
-                class="mt-4 bg-red-500 text-white py-2 px-4 rounded-md hover:bg-red-600 focus:outline-none">Batal</button>
-        </div>
-
-        <div class="mt-4">
-            <ul id="alarm-list" class="list-decimal pl-6">
-                <!-- Alarm items will be added here -->
-            </ul>
-        </div>
-        </div>
-
-
-    </section>
-
+    <h3 class="bg-blue-950 w-max mx-auto my-5 rounded-lg p-3 text-white"><a href="./alarm.html">Kontrol Alarm</a></h3>
     <!-- end alarm controller -->
     <br><br><br><br>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>

@@ -129,17 +129,16 @@
 </head>
 
 <body class="bg-primary overflow-x-hidden"
-    style="background-image: url(../src/img/bg-image.jpg); background-size: cover; background-repeat: no-repeat;">
+    style="background-image: url(../src/img/bg-control.jpg); background-size:cover; background-repeat: inherit;">
     <!-- start header -->
 
-    <header class="bg-header w-full h-max py-4 px-6 top-0 flex items-center justify-between dark:bg-darkPrimary">
-        <div class="flex">
-            <a href="./landingpage.html" class="w-max">
-                <img src="../src/img/LOGO INDO ASIA INTERTECH no text.svg" class="w-[25%] md:w-[5vw]" alt="logo_ntext">
-            </a>
-            <img src="../src/img/Text Indo Asia.png" class="w-[13vw] hidden md:block" alt="textIndoasia">
-        </div>
-        <div class="my-auto relative -left-16">
+    <header class="bg-header w-full h-max py-4 px-6 top-0 flex justify-between dark:bg-darkPrimary">
+        <a href="./landingpage.html">
+            <img src="../src/img/LOGO INDO ASIA INTERTECH no text.svg" class="w-14" alt="logo_ntext">
+        </a>
+        <img src="../src/img/Text Indo Asia.png" class="w-32 hidden md:block md:absolute md:left-[90px]"
+            alt="textIndoasia">
+        <div class="flex items-center">
             <label class="switch">
                 <span class="sun"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <g fill="#ffd43b">
@@ -159,13 +158,12 @@
             </label>
         </div>
 
-        <div class="flex w-max h-max">
+        <div class="flex items-center md:order-2">
             <button type="button" data-dropdown-toggle="language-dropdown-menu"
-                class="inline-flex items-center font-medium justify-center px-4 py-2 text-base md:text-6xl text-white dark:text-white rounded-lg cursor-pointer hover:bg-sky-700 dark:hover:bg-gray-700 dark:hover:text-white">
-                <img src="../src/img/indonesia-flag-icon.png" class="h-6 mr-2 md:h-24" alt="Indonesia Logo">
-                Indonesia
+                class="inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-white dark:text-white rounded-lg cursor-pointer hover:bg-sky-700 dark:hover:bg-gray-700 dark:hover:text-white">
+                <img src="../src/img/indonesia-flag-icon.png" class="h-5 mr-2" alt="Indonesia Logo">
+                <span class="hidden md:block text-lg">Indonesia</span>
             </button>
-        </div>
             <!-- Dropdown -->
             <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700"
                 id="language-dropdown-menu">
@@ -192,92 +190,101 @@
                     </li>
                 </ul>
             </div>
+
+            <div class="flex items-center">
+                <div class="flex items-center ml-3">
+                    <div>
+                        <button type="button"
+                            class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                            aria-expanded="false" data-dropdown-toggle="dropdown-user">
+                            <span class="sr-only">Open user menu</span>
+                            <img class="w-10 h-10 rounded-full" src="../src/img/Elaina_Chibi-removebg-preview.png"
+                                alt="user photo">
+                        </button>
+                    </div>
+                    <span class="text-white text-lg px-4 hidden md:block">KOO ZEE</span>
+                    <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600"
+                        id="dropdown-user">
+                        <div class="px-4 py-3" role="none">
+                            <p class="text-sm text-gray-900 dark:text-white" role="none">
+                                KOO ZEE
+                            </p>
+                            <p class="text-sm font-medium text-gray-900 truncate dark:text-gray-300" role="none">
+                                Koozee@gmail.com
+                            </p>
+                        </div>
+                        <ul class="py-1" role="none">
+                            <li>
+                                <a href="./dashboard.html"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                                    role="menuitem">Dashboard</a>
+                            </li>
+                            <li>
+                                <a href="./accountsettings.html"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                                    role="menuitem">Pengaturan</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                                    role="menuitem">Keluar</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
     </header>
 
     <!-- end header -->
 
-    <!-- navbar start -->
-    <nav id="navbar" class="bg-nav dark:bg-darkPrimary bg-opacity-70 rounded-full w-[90vw] m-auto">
-        <div class="container my-3  p-2 flex justify-evenly items-center">
-            <a href="./landingpage.html"><img src="../src/img/SMART MIRROR.png" class="w-28 lg:w-36" alt="xx"></a>
-            <a href="#"><lord-icon src="https://cdn.lordicon.com/ovqhybfd.json" trigger="hover"
-                    colors="outline:#121331,primary:#4bb3fd" style="width:70px;height:50px">
-                </lord-icon></a>
-            <a href="./about.html" class="text-white hover:underline lg:text-lg">Tentang Kami</a>
-        </div>
-    </nav>
-    <!-- navbar end -->
+    <section class="p-4">
+        <h1 class="p-3 text-start text-2xl font-Montserrat">Pengaturan Akun</h1>
+        <div class="rounded-xl border bg-blue-500 border-blue-600 dark:border-gray-700 dark:bg-gray-800 p-4">
+            <div class="flex items-center gap-4">
+                <img alt="Developer" src="../src/img/Elaina_Chibi-removebg-preview.png"
+                    class="h-16 w-16 rounded-full object-cover" />
 
-    <!-- form login -->
-    <section class="w-full h-max p-10 md:p-32">
-
-        <!-- <div class="mx-auto px-4 py-16 sm:px-6 lg:px-8"> -->
-        <div class="mx-auto">
-            <h1
-                class="text-center mx-auto text-xl font-bold md:w-3/4 md:text-3xl lg:text-5xl text-white font-Poppins bg-header dark:bg-darkPrimary p-2 rounded-xl">
-                Hubungkan Dengan Perangkat Anda
-            </h1>
-
-            <p class="mx-auto mt-4 text-center text-black text-xl md:text-3xl lg:text-5xl">
-                Masuk menggunakan akun Indo Asia Intertech agar dapat mengontrol perangkat anda dengan baik.
-            </p>
-
-            <form action="" method="post"
-                class="bg-slate-400 dark:bg-slate-800 mb-0 mt-6 space-y-4 rounded-lg p-4 shadow-lg sm:p-6 lg:p-8">
-                <p class="text-center text-lg font-medium dark:text-white">Masuk ke dalam akun Anda</p>
-
-                <div class="container">
-                    <div class="relative">
-                        <label for="username" class="sr-only">Email</label>
-                        <input type="text" class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
-                            name="username" id="username" placeholder="Masukkan Email Anda" />
-                        <span class="absolute inset-y-0 end-0 grid place-content-center px-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
-                            </svg>
-                        </span>
-                    </div>
+                <div>
+                    <h3 class="text-lg font-medium text-white">KOO ZEE</h3>
+                    <h2 class="text-base font-medium font-Poppins text-white">Koozee@gmail.com</h2>
                 </div>
-
-                <div class="container">
-                    <div class="relative">
-                        <label for="password" class="sr-only">Password</label>
-                        <input type="password" class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
-                            name="password" id="password" placeholder="Masukkan Password" />
-                        <span class="absolute inset-y-0 end-0 grid place-content-center px-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                            </svg>
-                        </span>
-                    </div>
-                </div>
-
-                <button type="submit"
-                    class="block w-full rounded-lg bg-indigo-600 px-5 py-3 text-sm font-medium text-white">
-                    Masuk
-                </button>
-
-                <p class="text-center text-sm text-gray-900">
-                    Lupa Kata Sandi?
-                    <a class="underline hover:text-white hover:cursor-pointer href="">Hubungi kami</a>
-                    </p>
-                </form>
             </div>
-        <!-- </div> -->
+            <form action="" method="post">
+                <ul class="mt-4 space-y-2">
+                    <li>
+                        <label for="username">Ganti Username</label>
+                        <input type="text" name="username" id="username"
+                            class="block h-full w-full rounded-lg border border-gray-700 p-4 hover:border-pink-600 font-medium text-black"
+                            placeholder="Masukkan Username Baru">
+                    </li>
+                    <li>
+                        <label for="owner">Ganti Nama Pemilik</label>
+                        <input type="text" name="owner" id="owner"
+                            class="block h-full w-full rounded-lg border border-gray-700 p-4 hover:border-pink-600 font-medium text-black"
+                            placeholder="Masukkan Nama Pemilik Baru">
+                    </li>
+                    <li>
+                        <label for="password">Ganti Kata Sandi</label>
+                        <input type="text" name="password" id="password"
+                            class="block h-full w-full rounded-lg border border-gray-700 p-4 hover:border-pink-600 font-medium text-black"
+                            placeholder="Masukkan Kata Sandi Baru">
+                    </li>
+                    <li>
+                        <label for="retypepassword">Ulangi Kata Sandi Baru</label>
+                        <input type="text" name="username" id="retypepassword"
+                            class="block h-full w-full rounded-lg border border-gray-700 p-4 hover:border-pink-600 font-medium text-black"
+                            placeholder="Ulangi Kata Sandi">
+                    </li>
+                    <button class="bg-white w-max h-max" type="submit">Konfirmasi</button>
+                </ul>
+            </form>
+        </div>
     </section>
 
-    <!-- end form login -->
-
-    <script src=" https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
-                        <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
-                        <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
-                        <script src="../public/script.js"></script>
+    <br><br><br><br>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+    <script src="../public/script.js"></script>
 </body>
 
 </html>
