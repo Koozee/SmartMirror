@@ -162,7 +162,7 @@
         <div class="flex w-max h-max">
             <button type="button" data-dropdown-toggle="language-dropdown-menu"
                 class="inline-flex items-center font-medium justify-center px-4 py-2 text-base md:text-6xl text-white dark:text-white rounded-lg cursor-pointer hover:bg-sky-700 dark:hover:bg-gray-700 dark:hover:text-white">
-                <img src="../src/img/indonesia-flag-icon.png" class="h-6 mr-2 md:h-24" alt="Indonesia Logo">
+                <img src="../src/img/indonesia-flag-icon.png" class="w-10 mr-2 md:w-16" alt="Indonesia Logo">
                 Indonesia
             </button>
         </div>
@@ -197,39 +197,39 @@
     <!-- end header -->
 
     <!-- navbar start -->
-    <nav id="navbar" class="bg-nav dark:bg-darkPrimary bg-opacity-70 rounded-full w-[90vw] m-auto">
-        <div class="container my-3  p-2 flex justify-evenly items-center">
-            <a href="./landingpage.html"><img src="../src/img/SMART MIRROR.png" class="w-28 lg:w-36" alt="xx"></a>
+    <nav id="navbar" class="flex items-center justify-evenly mt-10 bg-nav dark:bg-darkPrimary bg-opacity-70 rounded-full w-[90vw] md:w-[80vw] m-auto">
+            <a href="./landingpage.html"><img src="../src/img/SMART MIRROR.png" class="w-28 lg:w-56" alt="xx"></a>
             <a href="#"><lord-icon src="https://cdn.lordicon.com/ovqhybfd.json" trigger="hover"
-                    colors="outline:#121331,primary:#4bb3fd" style="width:70px;height:50px">
-                </lord-icon></a>
-            <a href="./about.html" class="text-white hover:underline lg:text-lg">Tentang Kami</a>
-        </div>
+                    colors="outline:#121331,primary:#4bb3fd" style="width:70px;height:50px" class="md:hidden">
+                </lord-icon>
+                <lord-icon src="https://cdn.lordicon.com/ovqhybfd.json" trigger="hover"
+                    colors="outline:#121331,primary:#4bb3fd" style="width:120px;height:100px" class="hidden md:block">
+                </lord-icon
+            </a>
+            <a href="./about.html" class="text-white hover:underline md:text-3xl">Tentang Kami</a>
     </nav>
     <!-- navbar end -->
 
     <!-- form login -->
     <section class="w-full h-max p-10 md:p-32">
 
-        <!-- <div class="mx-auto px-4 py-16 sm:px-6 lg:px-8"> -->
         <div class="mx-auto">
             <h1
-                class="text-center mx-auto text-xl font-bold md:w-3/4 md:text-3xl lg:text-5xl text-white font-Poppins bg-header dark:bg-darkPrimary p-2 rounded-xl">
+                class="text-center mx-auto text-xl font-bold md:w-3/4 md:text-4xl text-white font-Poppins bg-header dark:bg-darkPrimary p-2 rounded-xl">
                 Hubungkan Dengan Perangkat Anda
             </h1>
 
-            <p class="mx-auto mt-4 text-center text-black text-xl md:text-3xl lg:text-5xl">
+            <h2 class="mx-auto mt-4 text-center text-black text-xl md:text-4xl dark:text-white">
                 Masuk menggunakan akun Indo Asia Intertech agar dapat mengontrol perangkat anda dengan baik.
-            </p>
+            </h2>
 
             <form action="" method="post"
-                class="bg-slate-400 dark:bg-slate-800 mb-0 mt-6 space-y-4 rounded-lg p-4 shadow-lg sm:p-6 lg:p-8">
-                <p class="text-center text-lg font-medium dark:text-white">Masuk ke dalam akun Anda</p>
+                class="bg-slate-400 dark:bg-slate-800 mb-0 mt-6 space-y-4 rounded-lg p-4 shadow-lg sm:p-6 lg:p-8 md:w-3/4 mx-auto">
+                <p class="text-center text-lg md:text-4xl font-medium dark:text-white">Masuk ke dalam akun Anda</p>
 
-                <div class="container">
                     <div class="relative">
                         <label for="username" class="sr-only">Email</label>
-                        <input type="text" class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+                        <input type="text" class="w-full md:h-[8vh] rounded-lg border-gray-200 p-4 text-sm shadow-sm md:text-xl"
                             name="username" id="username" placeholder="Masukkan Email Anda" />
                         <span class="absolute inset-y-0 end-0 grid place-content-center px-4">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400" fill="none"
@@ -239,12 +239,10 @@
                             </svg>
                         </span>
                     </div>
-                </div>
 
-                <div class="container">
                     <div class="relative">
                         <label for="password" class="sr-only">Password</label>
-                        <input type="password" class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+                        <input type="password" class="w-full md:h-[8vh] rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm md:text-xl"
                             name="password" id="password" placeholder="Masukkan Password" />
                         <span class="absolute inset-y-0 end-0 grid place-content-center px-4">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400" fill="none"
@@ -256,20 +254,18 @@
                             </svg>
                         </span>
                     </div>
-                </div>
 
                 <button type="submit"
-                    class="block w-full rounded-lg bg-indigo-600 px-5 py-3 text-sm font-medium text-white">
+                    class=" w-full rounded-lg bg-indigo-600 p-3 text-lg md:text-3xl text-white">
                     Masuk
                 </button>
 
-                <p class="text-center text-sm text-gray-900">
+                <p class="text-center text-sm md:text-xl text-gray-900 dark:text-white">
                     Lupa Kata Sandi?
-                    <a class="underline hover:text-white hover:cursor-pointer href="">Hubungi kami</a>
+                    <a class="underline hover:text-blue-600 hover:cursor-pointer href="">Hubungi kami</a>
                     </p>
                 </form>
             </div>
-        <!-- </div> -->
     </section>
 
     <!-- end form login -->

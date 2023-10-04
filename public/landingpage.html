@@ -127,12 +127,14 @@
     style="background-image: url(../src/img/bg-image.jpg); background-size: cover; background-repeat: no-repeat;">
     <!-- start header -->
 
-    <header class="bg-header w-full h-max p-4 top-0 flex justify-between">
-        <a href="./landingpage.html">
-        <img src="../src/img/LOGO INDO ASIA INTERTECH no text.svg" class="w-14" alt="logo_ntext">
-        </a>
-        <img src="../src/img/Text Indo Asia.png" class="w-32 hidden md:block md:absolute md:left-[90px]"  alt="textIndoasia">
-        <div class="flex items-center">
+    <header class="bg-header w-full h-max py-4 px-6 top-0 flex items-center justify-between dark:bg-darkPrimary">
+        <div class="flex">
+            <a href="./landingpage.html" class="w-max">
+                <img src="../src/img/LOGO INDO ASIA INTERTECH no text.svg" class="w-[25%] md:w-[5vw]" alt="logo_ntext">
+            </a>
+            <img src="../src/img/Text Indo Asia.png" class="w-[13vw] hidden md:block" alt="textIndoasia">
+        </div>
+        <div class="my-auto relative -left-16">
             <label class="switch">
                 <span class="sun"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <g fill="#ffd43b">
@@ -152,51 +154,54 @@
             </label>
         </div>
 
-        <div class="flex items-center md:order-2">
+        <div class="flex w-max h-max">
             <button type="button" data-dropdown-toggle="language-dropdown-menu"
-                class="inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-white dark:text-white rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
-                <img src="../src/img/indonesia-flag-icon.png" class="h-5 mr-2" alt="Indonesia Logo">
+                class="inline-flex items-center font-medium justify-center px-4 py-2 text-base md:text-6xl text-white dark:text-white rounded-lg cursor-pointer hover:bg-sky-700 dark:hover:bg-gray-700 dark:hover:text-white">
+                <img src="../src/img/indonesia-flag-icon.png" class="w-10 mr-2 md:w-16" alt="Indonesia Logo">
                 Indonesia
             </button>
-            <!-- Dropdown -->
-            <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700"
-                id="language-dropdown-menu">
-                <ul class="py-2 font-medium" role="none">
-                    <li>
-                        <a href="#"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
-                            role="menuitem">
-                            <div class="inline-flex items-center">
-                                <img src="../src/img/indonesia-flag-icon.png" class="h-5 mr-2" alt="Indonesia Logo">
-                                Indonesia
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
-                            role="menuitem">
-                            <div class="inline-flex items-center">
-                                <img src="../src/img/united-states-flag-icon.png" class="h-5 mr-2" alt="USA Logo">
-                                English (USA)
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+        </div>
+        <!-- Dropdown -->
+        <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700"
+            id="language-dropdown-menu">
+            <ul class="py-2 font-medium" role="none">
+                <li>
+                    <a href="#"
+                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                        role="menuitem">
+                        <div class="inline-flex items-center">
+                            <img src="../src/img/indonesia-flag-icon.png" class="h-5 mr-2" alt="Indonesia Logo">
+                            Indonesia
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./loginEN.html"
+                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                        role="menuitem">
+                        <div class="inline-flex items-center">
+                            <img src="../src/img/united-states-flag-icon.png" class="h-5 mr-2" alt="USA Logo">
+                            English (USA)
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </header>
 
     <!-- end header -->
 
     <!-- navbar start -->
-    <nav id="navbar" class="bg-nav bg-opacity-70 rounded-full w-[90vw] m-auto">
-        <div class="container my-3  p-2 flex justify-evenly items-center">
-            <a href="./landingpage.html"><img src="../src/img/SMART MIRROR.png" class="w-28 lg:w-36" alt="xx"></a>
-            <a href="./login.html"><lord-icon src="https://cdn.lordicon.com/ovqhybfd.json" trigger="hover"
-                    colors="outline:#121331,primary:#4bb3fd" style="width:70px;height:50px">
-                </lord-icon></a>
-            <a href="./about.html" class="text-white hover:underline lg:text-lg">Tentang Kami</a>
-        </div>
+    <nav id="navbar"
+        class="flex items-center justify-evenly mt-10 bg-nav dark:bg-darkPrimary bg-opacity-70 rounded-full w-[90vw] md:w-[80vw] m-auto">
+        <a href="#"><img src="../src/img/SMART MIRROR.png" class="w-28 lg:w-56" alt="xx"></a>
+        <a href="../public/login.html"><lord-icon src="https://cdn.lordicon.com/ovqhybfd.json" trigger="hover"
+                colors="outline:#121331,primary:#4bb3fd" style="width:70px;height:50px" class="md:hidden">
+            </lord-icon>
+            <lord-icon src="https://cdn.lordicon.com/ovqhybfd.json" trigger="hover"
+                colors="outline:#121331,primary:#4bb3fd" style="width:120px;height:100px" class="hidden md:block">
+            </lord-icon </a>
+            <a href="./about.html" class="text-white hover:underline md:text-3xl">Tentang Kami</a>
     </nav>
     <!-- navbar end -->
 
@@ -222,28 +227,32 @@
             <div class="flex flex-col justify-center items-center text-center">
                 <h3 class="text-xl font-bold">Layar Interaktif</h3>
                 <img src="../src/img/prototype.jpg" class="w-80" alt="xx">
-                <p class="text-lg font-semibold">Smart Mirror dilengkapi dengan layar sentuh atau tampilan digital yang memungkinkan pengguna untuk
+                <p class="text-lg font-semibold">Smart Mirror dilengkapi dengan layar sentuh atau tampilan digital yang
+                    memungkinkan pengguna untuk
                     berinteraksi dengan berbagai aplikasi dan informasi. Anda dapat menampilkan jam, cuaca, berita
                     terbaru, atau bahkan pesan kalender pribadi.</p>
             </div>
             <div class="flex flex-col justify-center items-center text-center">
                 <h3 class="text-xl font-bold">Layar Interaktif</h3>
                 <img src="../src/img/prototype.jpg" class="w-80" alt="xx">
-                <p class="text-lg font-semibold">Smart Mirror dilengkapi dengan layar sentuh atau tampilan digital yang memungkinkan pengguna untuk
+                <p class="text-lg font-semibold">Smart Mirror dilengkapi dengan layar sentuh atau tampilan digital yang
+                    memungkinkan pengguna untuk
                     berinteraksi dengan berbagai aplikasi dan informasi. Anda dapat menampilkan jam, cuaca, berita
                     terbaru, atau bahkan pesan kalender pribadi.</p>
             </div>
             <div class="flex flex-col justify-center items-center text-center">
                 <h3 class="text-xl font-bold">Layar Interaktif</h3>
                 <img src="../src/img/prototype.jpg" class="w-80" alt="xx">
-                <p class="text-lg font-semibold">Smart Mirror dilengkapi dengan layar sentuh atau tampilan digital yang memungkinkan pengguna untuk
+                <p class="text-lg font-semibold">Smart Mirror dilengkapi dengan layar sentuh atau tampilan digital yang
+                    memungkinkan pengguna untuk
                     berinteraksi dengan berbagai aplikasi dan informasi. Anda dapat menampilkan jam, cuaca, berita
                     terbaru, atau bahkan pesan kalender pribadi.</p>
             </div>
             <div class="flex flex-col justify-center items-center text-center">
                 <h3 class="text-xl font-bold">Layar Interaktif</h3>
                 <img src="../src/img/prototype.jpg" class="w-80" alt="xx">
-                <p class="text-lg font-semibold">Smart Mirror dilengkapi dengan layar sentuh atau tampilan digital yang memungkinkan pengguna untuk
+                <p class="text-lg font-semibold">Smart Mirror dilengkapi dengan layar sentuh atau tampilan digital yang
+                    memungkinkan pengguna untuk
                     berinteraksi dengan berbagai aplikasi dan informasi. Anda dapat menampilkan jam, cuaca, berita
                     terbaru, atau bahkan pesan kalender pribadi.</p>
             </div>
