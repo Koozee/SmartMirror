@@ -132,8 +132,8 @@
     style="background-image: url(../src/img/bg-image.jpg); background-size: cover; background-repeat: no-repeat;">
     <!-- start header -->
 
-    <header class="bg-header w-full h-max py-4 px-6 top-0 flex items-center justify-between dark:bg-darkPrimary">
-        <div class="flex">
+    <header class="bg-header w-full h-max py-4 px-1 top-0 flex items-center justify-between dark:bg-darkPrimary">
+        <div class="flex pl-2">
             <a href="./landingpage.html" class="w-max">
                 <img src="../src/img/LOGO INDO ASIA INTERTECH no text.svg" class="w-[25%] md:w-[5vw]" alt="logo_ntext">
             </a>
@@ -161,51 +161,51 @@
 
         <div class="flex w-max h-max">
             <button type="button" data-dropdown-toggle="language-dropdown-menu"
-                class="inline-flex items-center font-medium justify-center px-4 py-2 text-base md:text-6xl text-white dark:text-white rounded-lg cursor-pointer hover:bg-sky-700 dark:hover:bg-gray-700 dark:hover:text-white">
-                <img src="../src/img/indonesia-flag-icon.png" class="w-10 mr-2 md:w-16" alt="Indonesia Logo">
-                Indonesia
+                class="inline-flex justify-center px-4 py-2 text-base md:text-6xl text-white dark:text-white rounded-lg cursor-pointer hover:bg-sky-700 dark:hover:bg-gray-700 dark:hover:text-white">
+                <img src="../src/img/indonesia-flag-icon.png" class="w-11 mr-2 md:w-16" alt="Indonesia Logo">
+                <span class="hidden md:block md:text-3xl">Indonesia</span>
             </button>
         </div>
-            <!-- Dropdown -->
-            <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700"
-                id="language-dropdown-menu">
-                <ul class="py-2 font-medium" role="none">
-                    <li>
-                        <a href="#"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
-                            role="menuitem">
-                            <div class="inline-flex items-center">
-                                <img src="../src/img/indonesia-flag-icon.png" class="h-5 mr-2" alt="Indonesia Logo">
-                                Indonesia
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./loginEN.html"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
-                            role="menuitem">
-                            <div class="inline-flex items-center">
-                                <img src="../src/img/united-states-flag-icon.png" class="h-5 mr-2" alt="USA Logo">
-                                English (USA)
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+        <!-- Dropdown -->
+        <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700"
+            id="language-dropdown-menu">
+            <ul class="py-2 font-medium" role="none">
+                <li>
+                    <a href="#"
+                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                        role="menuitem">
+                        <div class="inline-flex items-center">
+                            <img src="../src/img/indonesia-flag-icon.png" class="w-11 mr-2" alt="Indonesia Logo">
+                            <span class="md:text-4xl">Indonesia</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="../public/loginEN.html"
+                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                        role="menuitem">
+                        <div class="inline-flex items-center">
+                            <img src="../src/img/united-states-flag-icon.png" class="w-11 mr-2" alt="USA Logo">
+                            <span class="md:text-4xl">English</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </header>
 
     <!-- end header -->
 
     <!-- navbar start -->
-    <nav id="navbar" class="flex items-center justify-evenly mt-10 bg-nav dark:bg-darkPrimary bg-opacity-70 rounded-full w-[90vw] md:w-[80vw] m-auto">
-            <a href="./landingpage.html"><img src="../src/img/SMART MIRROR.png" class="w-28 lg:w-56" alt="xx"></a>
-            <a href="#"><lord-icon src="https://cdn.lordicon.com/ovqhybfd.json" trigger="hover"
-                    colors="outline:#121331,primary:#4bb3fd" style="width:70px;height:50px" class="md:hidden">
-                </lord-icon>
-                <lord-icon src="https://cdn.lordicon.com/ovqhybfd.json" trigger="hover"
-                    colors="outline:#121331,primary:#4bb3fd" style="width:120px;height:100px" class="hidden md:block">
-                </lord-icon
-            </a>
+    <nav id="navbar"
+        class="flex items-center justify-evenly mt-10 bg-nav dark:bg-darkPrimary bg-opacity-70 rounded-full w-[90vw] md:w-[80vw] m-auto">
+        <a href="./landingpage.html"><img src="../src/img/SMART MIRROR.png" class="w-28 lg:w-56" alt="xx"></a>
+        <a href="#"><lord-icon src="https://cdn.lordicon.com/ovqhybfd.json" trigger="hover"
+                colors="outline:#121331,primary:#4bb3fd" style="width:70px;height:50px" class="md:hidden">
+            </lord-icon>
+            <lord-icon src="https://cdn.lordicon.com/ovqhybfd.json" trigger="hover"
+                colors="outline:#121331,primary:#4bb3fd" style="width:120px;height:100px" class="hidden md:block">
+            </lord-icon </a>
             <a href="./about.html" class="text-white hover:underline md:text-3xl">Tentang Kami</a>
     </nav>
     <!-- navbar end -->
@@ -227,36 +227,37 @@
                 class="bg-slate-400 dark:bg-slate-800 mb-0 mt-6 space-y-4 rounded-lg p-4 shadow-lg sm:p-6 lg:p-8 md:w-3/4 mx-auto">
                 <p class="text-center text-lg md:text-4xl font-medium dark:text-white">Masuk ke dalam akun Anda</p>
 
-                    <div class="relative">
-                        <label for="username" class="sr-only">Email</label>
-                        <input type="text" class="w-full md:h-[8vh] rounded-lg border-gray-200 p-4 text-sm shadow-sm md:text-xl"
-                            name="username" id="username" placeholder="Masukkan Email Anda" />
-                        <span class="absolute inset-y-0 end-0 grid place-content-center px-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
-                            </svg>
-                        </span>
-                    </div>
+                <div class="relative">
+                    <label for="username" class="sr-only">Email</label>
+                    <input type="text"
+                        class="w-full md:h-[8vh] rounded-lg border-gray-200 p-4 text-sm shadow-sm md:text-xl"
+                        name="username" id="username" placeholder="Masukkan Email Anda" />
+                    <span class="absolute inset-y-0 end-0 grid place-content-center px-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
+                        </svg>
+                    </span>
+                </div>
 
-                    <div class="relative">
-                        <label for="password" class="sr-only">Password</label>
-                        <input type="password" class="w-full md:h-[8vh] rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm md:text-xl"
-                            name="password" id="password" placeholder="Masukkan Password" />
-                        <span class="absolute inset-y-0 end-0 grid place-content-center px-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                            </svg>
-                        </span>
-                    </div>
+                <div class="relative">
+                    <label for="password" class="sr-only">Password</label>
+                    <input type="password"
+                        class="w-full md:h-[8vh] rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm md:text-xl"
+                        name="password" id="password" placeholder="Masukkan Password" />
+                    <span class="absolute inset-y-0 end-0 grid place-content-center px-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                        </svg>
+                    </span>
+                </div>
 
-                <button type="submit"
-                    class=" w-full rounded-lg bg-indigo-600 p-3 text-lg md:text-3xl text-white">
+                <button type="submit" class="w-full rounded-lg bg-indigo-600 p-3 text-lg text-white">
                     Masuk
                 </button>
 
@@ -268,7 +269,9 @@
             </div>
     </section>
 
-    <!-- end form login -->
+<!-- end form login  -->
+
+<br><br><br><br><br> 
 
     <script src=" https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
                         <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>

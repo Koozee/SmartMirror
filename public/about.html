@@ -7,7 +7,7 @@
     <title>Smart Mirror - Welcoming Page</title>
     <link rel="shorcut icon" href="../src/img/LOGO INDO ASIA INTERTECH no text.svg">
     <link href="style.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" /> -->
 
 
     <style>
@@ -127,8 +127,8 @@
     style="background-image: url(../src/img/bg-image.jpg); background-size: cover; background-repeat: no-repeat;">
     <!-- start header -->
 
-    <header class="bg-header w-full h-max py-4 px-6 top-0 flex items-center justify-between dark:bg-darkPrimary">
-        <div class="flex">
+    <header class="bg-header w-full h-max py-4 px-1 top-0 flex items-center justify-between dark:bg-darkPrimary">
+        <div class="flex pl-2">
             <a href="./landingpage.html" class="w-max">
                 <img src="../src/img/LOGO INDO ASIA INTERTECH no text.svg" class="w-[25%] md:w-[5vw]" alt="logo_ntext">
             </a>
@@ -156,9 +156,9 @@
 
         <div class="flex w-max h-max">
             <button type="button" data-dropdown-toggle="language-dropdown-menu"
-                class="inline-flex items-center font-medium justify-center px-4 py-2 text-base md:text-6xl text-white dark:text-white rounded-lg cursor-pointer hover:bg-sky-700 dark:hover:bg-gray-700 dark:hover:text-white">
-                <img src="../src/img/indonesia-flag-icon.png" class="w-10 mr-2 md:w-16" alt="Indonesia Logo">
-                Indonesia
+                class="inline-flex justify-center px-4 py-2 text-base md:text-6xl text-white dark:text-white rounded-lg cursor-pointer hover:bg-sky-700 dark:hover:bg-gray-700 dark:hover:text-white">
+                <img src="../src/img/indonesia-flag-icon.png" class="w-11 mr-2 md:w-16" alt="Indonesia Logo">
+                <span class="hidden md:block md:text-3xl">Indonesia</span>
             </button>
         </div>
         <!-- Dropdown -->
@@ -170,18 +170,18 @@
                         class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
                         role="menuitem">
                         <div class="inline-flex items-center">
-                            <img src="../src/img/indonesia-flag-icon.png" class="h-5 mr-2" alt="Indonesia Logo">
-                            Indonesia
+                            <img src="../src/img/indonesia-flag-icon.png" class="w-11 mr-2" alt="Indonesia Logo">
+                            <span class="md:text-4xl">Indonesia</span>
                         </div>
                     </a>
                 </li>
                 <li>
-                    <a href="./loginEN.html"
+                    <a href="../public/aboutEN.html"
                         class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
                         role="menuitem">
                         <div class="inline-flex items-center">
-                            <img src="../src/img/united-states-flag-icon.png" class="h-5 mr-2" alt="USA Logo">
-                            English (USA)
+                            <img src="../src/img/united-states-flag-icon.png" class="w-11 mr-2" alt="USA Logo">
+                            <span class="md:text-4xl">English</span>
                         </div>
                     </a>
                 </li>
@@ -195,7 +195,7 @@
     <nav id="navbar"
         class="flex items-center justify-evenly mt-10 bg-nav dark:bg-darkPrimary bg-opacity-70 rounded-full w-[90vw] md:w-[80vw] m-auto">
         <a href="./landingpage.html"><img src="../src/img/SMART MIRROR.png" class="w-28 lg:w-56" alt="xx"></a>
-        <a href="#"><lord-icon src="https://cdn.lordicon.com/ovqhybfd.json" trigger="hover"
+        <a href="../public/login.html"><lord-icon src="https://cdn.lordicon.com/ovqhybfd.json" trigger="hover"
                 colors="outline:#121331,primary:#4bb3fd" style="width:70px;height:50px" class="md:hidden">
             </lord-icon>
             <lord-icon src="https://cdn.lordicon.com/ovqhybfd.json" trigger="hover"
@@ -205,41 +205,188 @@
     </nav>
     <!-- navbar end -->
 
-<article>
-    <div class="container relative top-0">
-        <img src="../src/img/niko img.jpg" class="w-56 mx-auto z-50" alt="">
-        <div class="absolute border-8 border-orange-600 h-96 w-52 z-30"></div>
-    </div>
+    <h1
+        class="p-3 mx-auto w-max text-center shadow-slate-600 shadow-inner my-4 bg-slate-300 dark:bg-darkPrimary dark:text-white rounded-lg font-Inter font-black text-4xl md:text-5xl lg:text-6xl">
+        TENTANG<span class="text-blue-800 dark:text-blue-400"> KAMI</span></h1>
+    <p class="p-3 md:p-5 font-Lato font-bold text-center text-slate-900 text-xl md:text-3xl lg:text-4xl">Terkendali oleh hasrat untuk inovasi, kami, Tim Kreatif
+        Kami, mendedikasikan diri untuk menciptakan
+        pengalaman luar biasa bagi Anda.</p>
+    <svg class="mx-auto" width="200" height="10" viewBox="0 0 301 10" fill="none" xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none">
+        <line x1="0.978261" y1="5.63046" x2="300.974" y2="4.00005" stroke="black" stroke-width="6"></line>
+    </svg>
+
+    <!-- prfile ketua guild -->
+    <article class="p-4 md:flex">
+
+        <div class="container relative my-5 overflow-hidden group">
+            <img src="../src/img/Ketua guild.png" class="mx-auto rounded-lg shadow-2xl shadow-black" alt="niko">
+            <div
+                class="absolute bg-black group-hover:translate-x-1 duration-300 bg-opacity-75 rounded-lg top-0 left-0 w-full h-full flex items-center justify-center -translate-x-full">
+                <div class="text-center">
+                    <h3 class="text-white text-2xl font-bold font-Montserrat mb-2">Kukuh Dwi Wicaksono</h3>
+                    <h4 class="text-white text-lg font-medium font-Montserrat mb-2">Leader</h4>
+                    <ul>
+                        <li class="text-white inline-block mx-3"><a href=""><ion-icon class="hover:text-blue-500"
+                                    size="large" name="mail-outline"></ion-icon></a></li>
+                        <li class="text-white inline-block mx-3"><a href=""><ion-icon class="hover:text-blue-500"
+                                    size="large" name="logo-whatsapp"></ion-icon></a></li>
+                        <li class="text-white inline-block mx-3"><a href=""><ion-icon class="hover:text-blue-500"
+                                    size=large name="logo-instagram"></ion-icon></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container flex flex-col bg-slate-200 dark:bg-darkPrimary rounded-lg bg-opacity-60 p-4 md:p-2 lg:p-4">
+            <h1 class="font-Inter font-black text-3xl dark:text-white md:my-auto md:text-4xl lg:text-5xl text-center">Hallo, Saya <span
+                    class="text-blue-800 dark:text-blue-400">Kukuh Dwi Wicaksono</span></h1>
+            <p class="mt-7 text-center dark:text-white text-lg md:my-auto md:text-2xl lg:text-3xl font-Montserrat">Hanya seorang bocah
+                dari Jawa
+                yang memiliki jiwa
+                kompetitif tinggi dan mempunyai keinginan yang tinggi
+                untuknya dan semua orang disekitarnya. Bocah yang suka bermain game dan bermain dengan sesuatu yang baru
+                yang menarik baginya.</p>
+            <table class="mt-11 md:my-auto dark:text-white">
+                <tr>
+                    <td class="font-Inter font-black text-xl md:text-3xl lg:text-4xl">Nama</td>
+                    <td class="font-Inter font-medium text-xl md:text-3xl lg:text-4xl">: Kukuh Dwi Wicaksono</td>
+                </tr>
+                <tr>
+                    <td class="font-Inter font-black text-xl md:text-3xl lg:text-4xl">Umur</td>
+                    <td class="font-Inter font-medium text-xl md:text-3xl lg:text-4xl">: 20</td>
+                </tr>
+                <tr>
+                    <td class="font-Inter font-black text-xl md:text-3xl lg:text-4xl">Tempat Tinggal</td>
+                    <td class="font-Inter font-medium text-xl md:text-3xl lg:text-4xl">: Jombang</td>
+                </tr>
+            </table>
+        </div>
+    </article>
+
+    <!-- profile gwehj -->
+    <article class="p-4 md:flex">
+
+        <div class="container relative my-5 overflow-hidden group">
+            <img src="../src/img/niko img.png" class="mx-auto rounded-lg shadow-2xl shadow-black" alt="niko">
+            <div
+                class="absolute bg-black group-hover:translate-x-1 duration-300 bg-opacity-75 rounded-lg top-0 left-0 w-full h-full flex items-center justify-center -translate-x-full">
+                <div class="text-center">
+                    <h3 class="text-white text-2xl font-bold font-Montserrat mb-2">Niko Achmad</h3>
+                    <h4 class="text-white text-lg font-medium font-Montserrat mb-2">Front End Developer</h4>
+                    <ul>
+                        <li class="text-white inline-block mx-3"><a href=""><ion-icon class="hover:text-blue-500"
+                                    size="large" name="mail-outline"></ion-icon></a></li>
+                        <li class="text-white inline-block mx-3"><a href=""><ion-icon class="hover:text-blue-500"
+                                    size="large" name="logo-whatsapp"></ion-icon></a></li>
+                        <li class="text-white inline-block mx-3"><a href=""><ion-icon class="hover:text-blue-500"
+                                    size=large name="logo-instagram"></ion-icon></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container flex flex-col bg-slate-200 dark:bg-darkPrimary rounded-lg bg-opacity-60 p-4 md:p-2 lg:p-4">
+            <h1 class="font-Inter font-black text-3xl dark:text-white md:my-auto md:text-4xl lg:text-5xl text-center">Hallo, Saya <span
+                    class="text-blue-800 dark:text-blue-400">Niko Achmad</span></h1>
+            <p class="mt-7 text-center dark:text-white text-lg md:my-auto md:text-2xl lg:text-3xl font-Montserrat">Hanya seorang bocah
+                dari Jawa lahir di Malang
+                yang memiliki jiwa
+                kompetitif tinggi dan mempunyai keinginan yang tinggi
+                untuknya dan semua orang disekitarnya. Bocah yang suka bermain game dan bermain dengan sesuatu yang baru
+                yang menarik baginya.</p>
+            <table class="mt-11 md:my-auto dark:text-white">
+                <tr>
+                    <td class="font-Inter font-black text-xl md:text-3xl lg:text-4xl">Nama</td>
+                    <td class="font-Inter font-medium text-xl md:text-3xl lg:text-4xl">: Niko Achmad</td>
+                </tr>
+                <tr>
+                    <td class="font-Inter font-black text-xl md:text-3xl lg:text-4xl">Umur</td>
+                    <td class="font-Inter font-medium text-xl md:text-3xl lg:text-4xl">: 20</td>
+                </tr>
+                <tr>
+                    <td class="font-Inter font-black text-xl md:text-3xl lg:text-4xl">Tempat Tinggal</td>
+                    <td class="font-Inter font-medium text-xl md:text-3xl lg:text-4xl">: Malang</td>
+                </tr>
+            </table>
+        </div>
+
+    </article>
+
+    <!-- profile sepuh  -->
+    <article class="p-4 md:flex">
+
+        <div class="container relative my-5 overflow-hidden group">
+            <img src="../src/img/sepuh mamad.jpg" class="mx-auto rounded-lg shadow-2xl shadow-black" alt="niko">
+            <div
+                class="absolute bg-black group-hover:translate-x-1 duration-300 bg-opacity-75 rounded-lg top-0 left-0 w-full h-full flex items-center justify-center -translate-x-full">
+                <div class="text-center">
+                    <h3 class="text-white text-2xl font-bold font-Montserrat mb-2">Muhammad</h3>
+                    <h4 class="text-white text-lg font-medium font-Montserrat mb-2">Back End Developer</h4>
+                    <ul>
+                        <li class="text-white inline-block mx-3"><a href=""><ion-icon class="hover:text-blue-500"
+                                    size="large" name="mail-outline"></ion-icon></a></li>
+                        <li class="text-white inline-block mx-3"><a href=""><ion-icon class="hover:text-blue-500"
+                                    size="large" name="logo-whatsapp"></ion-icon></a></li>
+                        <li class="text-white inline-block mx-3"><a href=""><ion-icon class="hover:text-blue-500"
+                                    size=large name="logo-instagram"></ion-icon></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container flex flex-col bg-slate-200 dark:bg-darkPrimary rounded-lg bg-opacity-60 p-4 md:p-2 lg:p-4">
+            <h1 class="font-Inter font-black text-3xl dark:text-white md:my-auto md:text-4xl lg:text-5xl text-center">Hallo, Saya <span
+                    class="text-blue-800 dark:text-blue-400">Muhammad</span></h1>
+            <p class="mt-7 text-center dark:text-white text-lg md:my-auto md:text-2xl lg:text-3xl font-Montserrat">Nama Saya Muhammad,
+                Umur Saya 20 Tahun, Saya Lahir Di Kota Surabaya, Sekarang Saya Tinggal Di Jawa Timur Lebih Tepatnya Di
+                Kota Sidoarjo. Saya Suka Mempelajari Hal Yang Berhubungan Dengan IT, Jaringan, Komputer, Dan Memahami
+                Basic Seputar Bahasa Pemrograman Seperti Node JS, Python Dan Web</p>
+            <table class="mt-11 md:my-auto dark:text-white">
+                <tr>
+                    <td class="font-Inter font-black text-xl md:text-3xl lg:text-4xl">Nama</td>
+                    <td class="font-Inter font-medium text-xl md:text-3xl lg:text-4xl">: Muhammad</td>
+                </tr>
+                <tr>
+                    <td class="font-Inter font-black text-xl md:text-3xl lg:text-4xl">Umur</td>
+                    <td class="font-Inter font-medium text-xl md:text-3xl lg:text-4xl">: 20</td>
+                </tr>
+                <tr>
+                    <td class="font-Inter font-black text-xl md:text-3xl lg:text-4xl">Tempat Tinggal</td>
+                    <td class="font-Inter font-medium text-xl md:text-3xl lg:text-4xl">: Kediri</td>
+                </tr>
+            </table>
+        </div>
 
 
-</article>
+    </article>
+
 
 
     <!-- footer start -->
-    <!-- <footer id="footer" class="bg-header p-4 md:grid md:grid-cols-2">
+    <footer id="footer" class="mt-16 text-white bg-header h-full p-4 md:grid md:grid-cols-2 dark:bg-darkPrimary">
         <div class="container mx-auto">
-            <img src="../src/img/LOGO INDO ASIA INTERTECH 5.png" class="w-80 mx-auto my-10" alt="logo">
-            <h2 class="text-center"><span class="text-blue-600  hover:text-blue-950"><a href="">Office No. 56, Jalan
+            <img src="../src/img/LOGO INDO ASIA INTERTECH 5.png" class="w-[50vw] md:w-[30vw] mx-auto my-10" alt="logo">
+            <h2 class="text-center md:text-3xl"><span class="text-black  hover:text-blue-500"><a href="">Office No. 56, Jalan
                         Raya Pakisaji,
                         Kabupaten Malang,
                         Jawa Timur(65162)</a></span>
-                || E-mail:<span class="text-blue-600 hover:text-blue-950"><a href="">cs@healthtech.com</a></span> ||
-                Telepon: <span class="text-blue-600  hover:text-blue-950"><a href="">(+62)89673457965</a></span>
+                || E-mail:<span class="text-black hover:text-blue-500"><a href="">cs@healthtech.com</a></span> ||
+                Telepon: <span class="text-black  hover:text-blue-500"><a href="">(+62)89673457965</a></span>
             </h2>
         </div>
-        <div class="container grid grid-cols-2 auto-cols-fr gap-1 p-5 mx-auto md:flex md:p-0 md:w-max">
-            <div class="text-center md:px-4 ">
+        <div class="container grid grid-cols-2 auto-cols-fr gap-1 p-5 mx-auto md:flex md:p-0 md:w-max md:mt-6">
+            <div class="text-center md:px-4 md:text-3xl">
                 <h1 class="font-bold md:text-left">Profil Kami</h1>
                 <p class="hover:text-blue-600 md:text-left"><a href="#">Tentang Perusahaan</a></p>
                 <p class="hover:text-blue-600 md:text-left"><a href="#">Pendiri Perusahaan</a></p>
             </div>
-            <div class="text-center md:px-4">
+            <div class="text-center md:px-4 md:text-3xl">
                 <h1 class="font-bold md:text-left"><a href="#">Insight</a></h1>
                 <p class="hover:text-blue-600 md:text-left"><a href="#">Blog</a></p>
                 <p class="hover:text-blue-600 md:text-left"><a href="#">Testimoni</a></p>
-                <p class="hover:text-blue-600 md:text-left"><a href="#">Portofolio</a></p>
             </div>
-            <div class="text-center col-span-2 md:px-4">
+            <div class="text-center col-span-2 md:px-4 md:text-3xl">
                 <h1 class="font-bold md:text-left">Pelayanan</h1>
                 <p class="hover:text-blue-600 md:text-left"><a href="#">Training and Consulting</a></p>
                 <p class="hover:text-blue-600 md:text-left"><a href="#">Webinar</a></p>
@@ -248,14 +395,14 @@
             </div>
         </div>
     </footer>
-    <div class="container px-5 w-full bg-slate-900 h-9">
-        <p class="text-white text-base">© Copyright 2023 - Indo Asia InterTech</p>
-    </div> -->
+        <p class="text-white px-5 w-full bg-slate-900 h-9 text-base md:text-3xl">© Copyright 2023 - Indo Asia InterTech</p>
     <!-- footer end -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
     <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
     <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
     <script src="../public/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
