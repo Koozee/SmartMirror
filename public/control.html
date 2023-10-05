@@ -7,7 +7,6 @@
     <title>Smart Mirror - Control</title>
     <link rel="shorcut icon" href="../src/img/LOGO INDO ASIA INTERTECH no text.svg">
     <link href="style.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -133,12 +132,13 @@
     <!-- start header -->
 
     <header class="bg-header w-full h-max py-4 px-6 top-0 flex justify-between dark:bg-darkPrimary">
-        <a href="./landingpage.html">
-            <img src="../src/img/LOGO INDO ASIA INTERTECH no text.svg" class="w-14" alt="logo_ntext">
-        </a>
-        <img src="../src/img/Text Indo Asia.png" class="w-32 hidden md:block md:absolute md:left-[90px]"
-            alt="textIndoasia">
-        <div class="flex items-center">
+        <div class="flex pl-2">
+            <a href="./landingpage.html" class="w-max">
+                <img src="../src/img/LOGO INDO ASIA INTERTECH no text.svg" class="w-[25%] md:w-[5vw]" alt="logo_ntext">
+            </a>
+            <img src="../src/img/Text Indo Asia.png" class="w-[13vw] hidden md:block" alt="textIndoasia">
+        </div>
+        <div class="my-auto relative -left-16 md:left-0">
             <label class="switch">
                 <span class="sun"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <g fill="#ffd43b">
@@ -158,80 +158,55 @@
             </label>
         </div>
 
-        <div class="flex items-center md:order-2">
-            <button type="button" data-dropdown-toggle="language-dropdown-menu"
-                class="inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-white dark:text-white rounded-lg cursor-pointer hover:bg-sky-700 dark:hover:bg-gray-700 dark:hover:text-white">
-                <img src="../src/img/indonesia-flag-icon.png" class="h-5 mr-2" alt="Indonesia Logo">
-                <span class="hidden md:block text-lg">Indonesia</span>
-            </button>
-            <!-- Dropdown -->
-            <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700"
-                id="language-dropdown-menu">
-                <ul class="py-2 font-medium" role="none">
-                    <li>
-                        <a href="#"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
-                            role="menuitem">
-                            <div class="inline-flex items-center">
-                                <img src="../src/img/indonesia-flag-icon.png" class="h-5 mr-2" alt="Indonesia Logo">
-                                Indonesia
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./loginEN.html"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
-                            role="menuitem">
-                            <div class="inline-flex items-center">
-                                <img src="../src/img/united-states-flag-icon.png" class="h-5 mr-2" alt="USA Logo">
-                                English (USA)
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="flex items-center">
-                <div class="flex items-center ml-3">
-                    <div>
-                        <button type="button"
-                            class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
-                            aria-expanded="false" data-dropdown-toggle="dropdown-user">
-                            <span class="sr-only">Open user menu</span>
-                            <img class="w-10 h-10 rounded-full" src="../src/img/Elaina_Chibi-removebg-preview.png"
-                                alt="user photo">
-                        </button>
-                    </div>
-                    <span class="text-white text-lg px-4 hidden md:block">KOO ZEE</span>
-                    <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600"
-                        id="dropdown-user">
-                        <div class="px-4 py-3" role="none">
-                            <p class="text-sm text-gray-900 dark:text-white" role="none">
-                                KOO ZEE
-                            </p>
-                            <p class="text-sm font-medium text-gray-900 truncate dark:text-gray-300" role="none">
-                                Koozee@gmail.com
-                            </p>
-                        </div>
-                        <ul class="py-1" role="none">
-                            <li>
-                                <a href="./dashboard.html"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
-                                    role="menuitem">Dashboard</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
-                                    role="menuitem">Pengaturan</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
-                                    role="menuitem">Keluar</a>
-                            </li>
-                        </ul>
-                    </div>
+        <div class="flex items-center">
+            <div class="flex items-center ml-3">
+                <div>
+                    <button type="button"
+                        class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                        aria-expanded="false" data-dropdown-toggle="dropdown-user">
+                        <img class="w-12 h-12 md:w-24 md:h-24 rounded-full"
+                            src="../src/img/Elaina_Chibi-removebg-preview.png" alt="user photo">
+                    </button>
                 </div>
+                <span class="text-white md:text-xl lg:text-3xl px-4 hidden md:block">Kukuh Gaming 87</span>
+                <div class="z-50 w-max h-max hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600"
+                    id="dropdown-user">
+                    <div class="px-4 py-3" role="none">
+                        <p class="text-sm md:text-3xl text-gray-900 dark:text-white" role="none">
+                            Kukuh Gaming 87
+                        </p>
+                        <p class="text-sm md:text-xl font-medium text-gray-900 truncate dark:text-gray-300" role="none">
+                            kukuhaduhai99@gmail.com
+                        </p>
+                    </div>
+                    <ul class="py-1" role="none">
+                        <li>
+                            <a href="./dashboard.html"
+                                class="block px-4 py-2 md:text-xl text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                                role="menuitem">Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block px-4 py-2 md:text-xl text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                                role="menuitem">Pengaturan</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block px-4 py-2 md:text-xl text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                                role="menuitem">Keluar</a>
+                        </li>
+                        <li class="flex justify-center">
+                            <a href="#"
+                                class="px-4 py-2 md:text-xl text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                                role="menuitem"><img src="../src/img/indonesia-flag-icon.png" alt="indo" class="w-11 md:w-16"></a>
+                            <a href="../public/controlEN.html"
+                                class="px-4 py-2 md:text-xl text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                                role="menuitem"><img src="../src/img/united-states-flag-icon.png" class="w-11 md:w-16"
+                                    alt="USA"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
     </header>
 
     <!-- end header -->
