@@ -133,10 +133,10 @@
 
     <header class="bg-header w-full h-max py-4 px-6 top-0 flex justify-between dark:bg-darkPrimary">
         <div class="flex pl-2">
-            <a href="./landingpage.html" class="w-max">
+            <a href="#" class="w-max">
                 <img src="../src/img/LOGO INDO ASIA INTERTECH no text.svg" class="w-[25%] md:w-[5vw]" alt="logo_ntext">
             </a>
-            <img src="../src/img/Text Indo Asia.png" class="w-[13vw] hidden md:block" alt="textIndoasia">
+            <img src="../src/img/Text Indo Asia.png" class="w-[10vw] hidden md:block" alt="textIndoasia">
         </div>
         <div class="my-auto relative -left-16 md:left-0">
             <label class="switch">
@@ -181,26 +181,26 @@
                     </div>
                     <ul class="py-1" role="none">
                         <li>
-                            <a href="./dashboard.html"
+                            <a href="../public/control.html"
                                 class="block px-4 py-2 md:text-xl text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
                                 role="menuitem">Dashboard</a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a href="../public/accountsettings.html"
                                 class="block px-4 py-2 md:text-xl text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
                                 role="menuitem">Pengaturan</a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a href="../public/login.html"
                                 class="block px-4 py-2 md:text-xl text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
                                 role="menuitem">Keluar</a>
                         </li>
                         <li class="flex justify-center">
-                            <a href="../public/accountsettings.html"
+                            <a href="#"
                                 class="px-4 py-2 md:text-xl text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
                                 role="menuitem"><img src="../src/img/indonesia-flag-icon.png" alt="indo"
                                     class="w-11 md:w-16"></a>
-                            <a href="#"
+                            <a href="../public/infodeviceEN.html"
                                 class="px-4 py-2 md:text-xl text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
                                 role="menuitem"><img src="../src/img/united-states-flag-icon.png" class="w-11 md:w-16"
                                     alt="USA"></a>
@@ -212,13 +212,40 @@
 
     <!-- end header -->
 
-    <h1 class="text-4xl text-center font-extrabold font-Lato py-6">Smart Mirror</h1>
-    <img src="../src/img/SMART MIRROR bg blue.png" class="w-1/2 relative mx-auto" alt="imgmirror">
-    <section class="container flow-root rounded-lg border border-gray-100 py-3 px-2 mt-16 md:mx-auto shadow-sm">
+    <section class="container flex mx-auto">
+        <div class="container ml-3 mt-10 w-max h-max py-28 px-6 rounded-lg bg-bgversion dark:bg-darkPrimary shadow-inner text-center">
+            <h1 class="font-Inter font-bold text-5xl md:text-7xl lg:text-9xl text-lime-200 shadow-lg">2.1</h1>
+            <h2 class="font-Inter text-white text-base md:text-3xl lg:text-6xl mt-2">FIRMWARE VERSION</h2>
+            <button
+                class="mt-4 px-6 py-1 rounded-xl bg-slate-200 border-4 border-slate-400 shadow-xl font-Inter text-xl md:text-3xl lg:text-5xl hover:bg-slate-50">UPDATE</button>
+        </div>
+        <div class="container flex flex-col items-center ml-2 md:ml-10">
+            <div class="container bg-bgversion dark:bg-darkPrimary text-white rounded-lg w-max lg:w-full py-5 h-max px-7 mt-10 mr-2">
+                <h1 class="font-Inter text-lg md:text-3xl lg:text-5xl">Processor</h1>
+                <h2 class="font-Inter text-base mt-4 md:text-3xl lg:text-5xl">LX6 Dual-Core 32-bit</h2>
+            </div>
+            <div class="container bg-bgversion dark:bg-darkPrimary text-white rounded-lg w-max lg:w-full py-5 h-max px-7 mt-10 mr-2">
+                <h1 class="font-Inter text-lg md:text-3xl lg:text-5xl">Layar</h1>
+                <h2 class="font-Inter text-base mt-4 md:text-3xl lg:text-5xl">1.8" TFT Display 30Hz</h2>
+            </div>
+            <div class="container relative bg-bgversion dark:bg-darkPrimary lg:w-full text-white rounded-lg w-max py-5 h-max px-4 mt-10 mr-2">
+                <h1 class="font-Inter text-lg mb-10 md:text-3xl lg:text-5xl">Penyimpanan</h1>
+                <h2 class="font-Inter text-sm md:text-3xl lg:text-3xl">520Kb SRAM + 4Mb ROM</h2>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path fill="#0099ff" fill-opacity="1"
+                        d="M0,96L24,85.3C48,75,96,53,144,64C192,75,240,117,288,117.3C336,117,384,75,432,96C480,117,528,203,576,224C624,245,672,203,720,176C768,149,816,139,864,112C912,85,960,43,1008,58.7C1056,75,1104,149,1152,186.7C1200,224,1248,224,1296,197.3C1344,171,1392,117,1416,90.7L1440,64L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z">
+                    </path>
+                </svg>
+            </div>
+        </div>
+    </section>
 
-        <dl class="-my-3 divide-y divide-gray-100 text-sm">
+    <section class="container w-full flow-root rounded-xl py-3 px-2 mt-4 md:mx-auto shadow-sm">
+        <dl class="-my-3 divide-y w-full divide-gray-100 text-lg md:text-4xl">
             <div class="grid grid-cols-1 gap-1 p-3 even:bg-gray-50 sm:grid-cols-3 sm:gap-4">
-                <dt class="font-medium text-gray-900">Username</dt>
+                <dt class="font-medium text-gray-900">Username
+
+                </dt>
                 <dd class="text-gray-700 sm:col-span-2">Kokoh Gaming</dd>
             </div>
 
@@ -228,33 +255,27 @@
             </div>
 
             <div class="grid grid-cols-1 gap-1 p-3 even:bg-gray-50 sm:grid-cols-3 sm:gap-4">
-                <dt class="font-medium text-gray-900">Processor</dt>
-                <dd class="text-gray-700 sm:col-span-2">Snap Naga 69G</dd>
+                <dt class="font-medium text-gray-900">ID</dt>
+                <dd class="text-gray-700 sm:col-span-2">C080123001</dd>
             </div>
 
             <div class="grid grid-cols-1 gap-1 p-3 even:bg-gray-50 sm:grid-cols-3 sm:gap-4">
-                <dt class="font-medium text-gray-900">RAM</dt>
-                <dd class="text-gray-700 sm:col-span-2">128 GB</dd>
+                <dt class="font-medium text-gray-900">MODEL</dt>
+                <dd class="text-gray-700 sm:col-span-2">CMP2130IAI</dd>
             </div>
 
             <div class="grid grid-cols-1 gap-1 p-3 even:bg-gray-50 sm:grid-cols-3 sm:gap-4">
-                <dt class="font-medium text-gray-900">ROM</dt>
+                <dt class="font-medium text-gray-900">GARANSI</dt>
                 <dd class="text-gray-700 sm:col-span-2">
-                    2 TB
+                    2024 - 08 - 05
                 </dd>
-            </div>
-
-            <div class="grid grid-cols-1 gap-1 p-3 even:bg-gray-50 sm:grid-cols-3 sm:gap-4">
-                <dt class="font-medium text-gray-900">Masa Garansi</dt>
-                <dd class="text-gray-700 sm:col-span-2">08/ 01/ 2024</dd>
             </div>
 
             <div class="grid grid-cols-1 gap-1 p-3 even:bg-gray-50 sm:grid-cols-3 sm:gap-4">
                 <dt class="font-medium text-gray-900">Pembaruan Perangkat Lunak</dt>
-                <dd class="text-gray-700 sm:col-span-2">
-                    Versi Terbaru
-                </dd>
+                <dd class="text-gray-700 sm:col-span-2">Versi Terbaru</dd>
             </div>
+
         </dl>
     </section>
 
