@@ -48,6 +48,9 @@ power.addEventListener('click', function () {
     const poweroff = document.getElementById('poweroff');
     const poweron = document.getElementById('poweron');
     const navc = document.getElementById('navcontrol');
+    const volt0 = document.getElementById('volt0');
+    const volt5 = document.getElementById('volt5');
+    const statusvolt = document.getElementById('statusvolt');
     if (!valuepower) {
         valuepower = 1
         poweron.classList.remove('hidden')
@@ -56,6 +59,9 @@ power.addEventListener('click', function () {
         navc.classList.remove('bg-nav')
         wifi.classList.remove('pointer-events-none')
         bluetooth.classList.remove('pointer-events-none')
+        volt5.classList.remove('hidden')
+        volt0.classList.add('hidden')
+        statusvolt.innerText = "5 VOLT"
     } else {
         valuepower = 0
         valuewifi = 0
@@ -72,6 +78,9 @@ power.addEventListener('click', function () {
         bton.classList.add('hidden')
         btoff.classList.remove('hidden')
         statusbt.innerText = 'Mati'
+        volt5.classList.add('hidden')
+        volt0.classList.remove('hidden')
+        statusvolt.innerText = "0 VOLT"
     }
 
 })

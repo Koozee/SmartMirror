@@ -477,7 +477,7 @@
         <div class="container w-1/2 mr-2 flex flex-col items-center">
             <!-- clock -->
             <div
-                class="container relative h-full w-full md:w-max px-4 py-7 left-2 bg-cardUI shadow-xl dark:bg-darkPrimary dark:text-white bg-opacity-80 rounded-3xl">
+                class="container relative flex flex-col items-center justify-center h-full w-full md:w-max px-4 py-7 left-2 bg-cardUI shadow-xl dark:bg-darkPrimary dark:text-white bg-opacity-80 rounded-3xl">
                 <svg class="absolute -right-3 -top-3 w-16 h-16 md:w-36 md:h-36 md:-right-4 md:-top-4" id="sun"
                     fill="#ddec09" height="200px" width="200px" version="1.1" id="Capa_1"
                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -516,19 +516,21 @@
                         d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z">
                     </path>
                 </svg>
-                <h1 class="font-Exo font-bold text-3xl md:text-5xl md:px-48"><span id="numHour"> 12 </span><span> :
+                <h1 class="font-Exo font-bold text-3xl lg:text-6xl lg:px-48"><span id="numHour"> 12 </span><span> :
                     </span><span id="numMin">
                         00 </span><span> : </span>
                     <span id="numSec"> 01 </span>
                 </h1>
-                <h2 class="font-Exo text-lg md:text-3xl md:px-48" id="dates"></h2>
+                <h2 class="font-Exo text-lg lg:text-4xl lg:px-48" id="dates"></h2>
             </div>
             <!-- end clock -->
 
             <!-- volt -->
             <div
-                class="container relative w-full md:w-max flex flex-row items-center left-2 bg-cardUI shadow-xl dark:bg-darkPrimary bg-opacity-80 h-32 p-4 rounded-3xl my-4 md:py-10 md:px-52">
-                <svg class="mr-4 h-14 w-14 md:w-24 md:h-24" width="110" height="110" viewBox="0 0 110 110" fill="none"
+                class="container relative w-full lg:w-max flex flex-row items-center left-2 bg-cardUI shadow-xl dark:bg-darkPrimary bg-opacity-80 h-32 p-4 rounded-3xl my-4 md:py-10 md:px-52">
+
+                <!-- volt 5 -->
+                <svg class="mr-4 h-14 w-14 md:w-24 md:h-24 hidden" id="volt5" width="110" height="110" viewBox="0 0 110 110" fill="none"
                     xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
                     <path
                         d="M55 110C85.3757 110 110 85.3757 110 55C110 24.6243 85.3757 0 55 0C24.6243 0 0 24.6243 0 55C0 85.3757 24.6243 110 55 110Z"
@@ -537,7 +539,45 @@
                         d="M79.0625 20.625L37.7128 48.9844L58.5991 62.3047L30.9375 89.375L76.6631 57.7225L56.0588 44.4022L79.0625 20.625Z"
                         fill="#E6D00C"></path>
                 </svg>
-                <span class="dark:text-white font-Exo font-bold text-2xl md:text-5xl">0 VOLT</span>
+
+                <!-- volt 0 -->
+                <svg width="118" height="119" viewBox="0 0 118 119" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="mr-4 h-14 w-14 md:w-24 md:h-24" id="volt0" preserveAspectRatio="none">
+                    <g filter="url(#filter0_di_116_20)">
+                        <path
+                            d="M59 110C89.3757 110 114 85.3757 114 55C114 24.6243 89.3757 0 59 0C28.6243 0 4 24.6243 4 55C4 85.3757 28.6243 110 59 110Z"
+                            fill="#7D7C7C"></path>
+                    </g>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M83.0625 20.625L41.7128 48.9844L62.5991 62.3047L34.9375 89.375L80.6631 57.7225L60.0588 44.4022L83.0625 20.625Z"
+                        fill="white"></path>
+                    <defs>
+                        <filter id="filter0_di_116_20" x="0" y="0" width="118" height="119" filterUnits="userSpaceOnUse"
+                            color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                            <feColorMatrix in="SourceAlpha" type="matrix"
+                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix>
+                            <feOffset dy="5"></feOffset>
+                            <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+                            <feComposite in2="hardAlpha" operator="out"></feComposite>
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0">
+                            </feColorMatrix>
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_116_20">
+                            </feBlend>
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_116_20" result="shape">
+                            </feBlend>
+                            <feColorMatrix in="SourceAlpha" type="matrix"
+                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix>
+                            <feOffset dy="4"></feOffset>
+                            <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+                            <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"></feComposite>
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0">
+                            </feColorMatrix>
+                            <feBlend mode="normal" in2="shape" result="effect2_innerShadow_116_20"></feBlend>
+                        </filter>
+                    </defs>
+                </svg>
+                <span class="dark:text-white font-Exo font-bold text-2xl lg:text-5xl" id="statusvolt">0 VOLT</span>
             </div>
         </div>
 
@@ -554,11 +594,11 @@
                         d="M68.913 48.908L68.865 49.034C68.88 48.996 68.892 48.957 68.907 48.919L68.913 48.908ZM34.006 69.057C19.88 71.053 10 75.828 10 82.857C10 92.325 26.508 100 50 100C73.492 100 90 92.325 90 82.857C90 75.828 80.121 71.053 65.996 69.057L64.039 72.389C74.685 73.866 82 76.97 82 80.572C82 85.622 67.673 89.715 50 89.715C32.327 89.715 18 85.622 18 80.572C17.999 76.982 25.266 73.881 35.945 72.398C35.3 71.284 34.652 70.172 34.006 69.057Z"
                         fill="#EE0000"></path>
                 </svg>
-                <h1 class="font-Exo font-bold text-3xl md:text-7xl text-center mb-10" id="location">Ngawi</h1>
+                <h1 class="font-Exo font-bold text-3xl lg:text-7xl text-center" id="location">Ngawi</h1>
             </div>
-            <div class="mb-10">INI LOGO CUACA</div>
-            <h1 class="font-Exo font-semibold text-xl md:text-4xl">Hujan Deras</h1>
-            <h2 class="font-Exo font-medium text-2xl md:text-4xl">27 C</h2>
+            <img src="../src/img/cuaca cerah.png" class="w-[40%] lg:w-[20%]" alt="">
+            <h1 class="font-Exo font-semibold text-xl lg:text-5xl">Cerah</h1>
+            <h2 class="font-Exo font-medium text-2xl lg:text-5xl">30℃</h2>
         </div>
     </section>
 
