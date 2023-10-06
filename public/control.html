@@ -10,9 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Lato:wght@300;400&family=Montserrat:wght@600&family=Poppins:wght@300&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@800&family=Inter:wght@600&family=Lato:wght@300;400&family=Montserrat:wght@600&family=Poppins:wght@300&display=swap"
         rel="stylesheet">
-
 
     <style>
         .switch {
@@ -133,7 +132,7 @@
 
     <header class="bg-header w-full h-max py-4 px-6 top-0 flex justify-between dark:bg-darkPrimary">
         <div class="flex pl-2">
-            <a href="./landingpage.html" class="w-max">
+            <a href="#" class="w-max">
                 <img src="../src/img/LOGO INDO ASIA INTERTECH no text.svg" class="w-[25%] md:w-[5vw]" alt="logo_ntext">
             </a>
             <img src="../src/img/Text Indo Asia.png" class="w-[13vw] hidden md:block" alt="textIndoasia">
@@ -162,9 +161,9 @@
             <div class="flex items-center ml-3">
                 <div>
                     <button type="button"
-                        class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                        class="flex w-max text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
                         aria-expanded="false" data-dropdown-toggle="dropdown-user">
-                        <img class="w-12 h-12 md:w-24 md:h-24 rounded-full"
+                        <img class="w-11 h-11 md:w-24 md:h-24 rounded-full"
                             src="../src/img/Elaina_Chibi-removebg-preview.png" alt="user photo">
                     </button>
                 </div>
@@ -181,25 +180,31 @@
                     </div>
                     <ul class="py-1" role="none">
                         <li>
-                            <a href="./dashboard.html"
+                            <a href="../public/control.html"
                                 class="block px-4 py-2 md:text-xl text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
                                 role="menuitem">Dashboard</a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a href="../public/accountsettings.html"
                                 class="block px-4 py-2 md:text-xl text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
                                 role="menuitem">Pengaturan</a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a href="../public/infodevice.html"
+                                class="block px-4 py-2 md:text-xl text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                                role="menuitem">Info Device</a>
+                        </li>
+                        <li>
+                            <a href="../public/login.html"
                                 class="block px-4 py-2 md:text-xl text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
                                 role="menuitem">Keluar</a>
                         </li>
                         <li class="flex justify-center">
                             <a href="#"
                                 class="px-4 py-2 md:text-xl text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
-                                role="menuitem"><img src="../src/img/indonesia-flag-icon.png" alt="indo" class="w-11 md:w-16"></a>
-                            <a href="../public/controlEN.html"
+                                role="menuitem"><img src="../src/img/indonesia-flag-icon.png" alt="indo"
+                                    class="w-11 md:w-16"></a>
+                            <a href="#"
                                 class="px-4 py-2 md:text-xl text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
                                 role="menuitem"><img src="../src/img/united-states-flag-icon.png" class="w-11 md:w-16"
                                     alt="USA"></a>
@@ -212,117 +217,319 @@
     <!-- end header -->
 
     <!-- nav controller -->
-    <!-- wifi-controller -->
-    <nav class="w-full flex h-max fixed bottom-0 z-50">
-        <div class="container pointer-events-none flex flex-row items-center sm:w-32 md:w-max bg-nav hover:bg-sky-700 px-5 rounded-tr-[90px]"
-            id="bgwifi">
+    <nav class="w-full flex justify-around fixed bottom-0 z-50 bg-nav border-t-2 border-slate-300" id="navcontrol">
+        <!-- wifi controller -->
+        <div class="container w-max">
             <form action="" method="post">
-                <label for="wifi" class="cursor-pointer md:ml-8"></label>
-                <button id="wifi" type="submit" name="wifi">
-                    <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        class="hidden w-[70px] h-[70px] relative wifiOn" preserveAspectRatio="none">
+                <label for="wifi" class="sr-only">Wifi</label>
+
+                <!-- wifi off -->
+                <button class="flex md:flex-row flex-col items-center w-max px-2 pointer-events-none" name="wifi"
+                    id="wifi" type="submit">
+                    <svg width="118" height="118" viewBox="0 0 118 118" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="w-[70px] h-[70px] md:w-[120px] md:h-[120px] lg:w-[140px] lg:h-[140px] relative"
+                        id="wifioff" preserveAspectRatio="none">
                         <path
-                            d="M33.75 27H38.25V67.5H33.75V27ZM25.4925 40.995C23.8389 39.5176 22.516 37.7077 21.6102 35.6838C20.7044 33.6598 20.2362 31.4674 20.2362 29.25C20.2362 27.0326 20.7044 24.8402 21.6102 22.8162C22.516 20.7923 23.8389 18.9824 25.4925 17.505L28.5075 20.8575C27.3253 21.9128 26.3794 23.206 25.7318 24.6522C25.0842 26.0985 24.7494 27.6653 24.7494 29.25C24.7494 30.8347 25.0842 32.4015 25.7318 33.8478C26.3794 35.294 27.3253 36.5872 28.5075 37.6425L25.4925 40.995ZM46.5075 40.995L43.4925 37.6425C44.6747 36.5872 45.6205 35.294 46.2682 33.8478C46.9158 32.4015 47.2506 30.8347 47.2506 29.25C47.2506 27.6653 46.9158 26.0985 46.2682 24.6522C45.6205 23.206 44.6747 21.9128 43.4925 20.8575L46.5075 17.505C48.161 18.9824 49.484 20.7923 50.3898 22.8162C51.2956 24.8402 51.7638 27.0326 51.7638 29.25C51.7638 31.4674 51.2956 33.6598 50.3898 35.6838C49.484 37.7077 48.161 39.5176 46.5075 40.995Z"
-                            fill="#F8F8F8"></path>
-                        <path
-                            d="M18.9 49.05C15.8261 46.7446 13.3313 43.7552 11.6129 40.3185C9.89459 36.8819 9 33.0923 9 29.25C9 25.4077 9.89459 21.6181 11.6129 18.1815C13.3313 14.7448 15.8261 11.7554 18.9 9.45001L21.6 13.05C19.085 14.9362 17.0438 17.3821 15.6378 20.1939C14.2319 23.0058 13.5 26.1063 13.5 29.25C13.5 32.3937 14.2319 35.4943 15.6378 38.3061C17.0438 41.1179 19.085 43.5638 21.6 45.45L18.9 49.05ZM53.1 49.05L50.4 45.45C52.915 43.5638 54.9562 41.1179 56.3622 38.3061C57.7681 35.4943 58.5 32.3937 58.5 29.25C58.5 26.1063 57.7681 23.0058 56.3622 20.1939C54.9562 17.3821 52.915 14.9362 50.4 13.05L53.1 9.45001C56.1739 11.7554 58.6687 14.7448 60.3871 18.1815C62.1054 21.6181 63 25.4077 63 29.25C63 33.0923 62.1054 36.8819 60.3871 40.3185C58.6687 43.7552 56.1739 46.7446 53.1 49.05Z"
-                            fill="#F8F8F8"></path>
+                            d="M10.1283 49.4616C12.6358 51.9691 16.6183 52.215 19.3225 49.9533C42.2833 31.0733 75.6183 31.0733 98.6283 49.9041C101.382 52.1658 105.413 51.9691 107.921 49.4616C110.822 46.5608 110.625 41.7425 107.429 39.1366C79.355 16.1758 38.7433 16.1758 10.62 39.1366C7.42414 41.6933 7.1783 46.5116 10.1283 49.4616ZM48.2816 87.615L55.5091 94.8425C57.4266 96.76 60.5241 96.76 62.4416 94.8425L69.6691 87.615C71.98 85.3041 71.4883 81.3216 68.5383 79.7975C65.5643 78.2704 62.2693 77.4739 58.9262 77.4739C55.5831 77.4739 52.2881 78.2704 49.3141 79.7975C46.5116 81.3216 45.9708 85.3041 48.2816 87.615ZM29.9425 69.2758C32.3516 71.685 36.1375 71.9308 38.94 69.915C44.8058 65.7648 51.8144 63.5361 59 63.5361C66.1855 63.5361 73.1942 65.7648 79.06 69.915C81.8625 71.8816 85.6483 71.685 88.0575 69.2758L88.1066 69.2266C91.0566 66.2766 90.86 61.2616 87.4675 58.8525C70.5541 46.61 47.495 46.61 30.5325 58.8525C27.14 61.3108 26.9433 66.2766 29.9425 69.2758Z"
+                            fill="#9F9FA3"></path>
                     </svg>
-                    <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        class="w-[70px] h-[70px] relative wifiOff" preserveAspectRatio="none">
+                    <!-- wifi on -->
+                    <svg width="118" height="118" viewBox="0 0 118 118" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="w-[70px] h-[70px] md:w-[120px] md:h-[120px] lg:w-[140px] lg:h-[140px] relative hidden"
+                        id="wifion" preserveAspectRatio="none">
                         <path
-                            d="M58.5 29.25C58.5117 34.4882 56.4725 39.5229 52.8188 43.2765L55.998 46.4558C58.4481 43.9384 60.3332 40.9274 61.5274 37.6238C62.7217 34.3201 63.1976 30.7998 62.9236 27.2977C62.6495 23.7955 61.6318 20.3921 59.9382 17.3144C58.2446 14.2367 55.9141 11.5557 53.1023 9.45001L50.3978 13.05C52.922 14.9277 54.9702 17.3717 56.3775 20.1855C57.7847 22.9992 58.5117 26.104 58.5 29.25Z"
-                            fill="#F8F8F8"></path>
-                        <path
-                            d="M47.25 29.25C47.2457 31.549 46.5375 33.7916 45.2205 35.676L48.4312 38.889C50.8806 35.7453 52.0438 31.7884 51.6854 27.8193C51.3269 23.8503 49.4736 20.1657 46.5007 17.5118L43.4993 20.8643C44.6783 21.9202 45.6217 23.2127 46.268 24.6575C46.9142 26.1024 47.2488 27.6672 47.25 29.25ZM67.5 64.3185L7.6815 4.5L4.5 7.6815L12.8475 16.029C9.51165 21.2839 8.28187 27.6041 9.40396 33.7264C10.5261 39.8487 13.9174 45.322 18.9 49.0522L21.6 45.4523C17.6616 42.5092 14.9332 38.2296 13.9273 33.4171C12.9214 28.6046 13.7072 23.5904 16.137 19.3162L21.0803 24.2595C20.0935 27.1738 19.9864 30.3141 20.7722 33.2889C21.558 36.2637 23.202 38.9414 25.4993 40.9882L28.5007 37.6357C27.3215 36.5799 26.3781 35.2874 25.7318 33.8425C25.0856 32.3977 24.751 30.8328 24.75 29.25C24.757 28.8391 24.7871 28.429 24.84 28.0215L33.75 36.9315V67.5H38.25V41.4315L64.3185 67.5L67.5 64.3185Z"
-                            fill="#F8F8F8"></path>
+                            d="M10.1283 49.4616C12.6358 51.9691 16.6183 52.215 19.3225 49.9533C42.2833 31.0733 75.6183 31.0733 98.6283 49.9041C101.382 52.1658 105.413 51.9691 107.921 49.4616C110.822 46.5608 110.625 41.7425 107.429 39.1366C79.355 16.1758 38.7433 16.1758 10.62 39.1366C7.42414 41.6933 7.1783 46.5116 10.1283 49.4616ZM48.2816 87.615L55.5091 94.8425C57.4266 96.76 60.5241 96.76 62.4416 94.8425L69.6691 87.615C71.98 85.3041 71.4883 81.3216 68.5383 79.7975C65.5643 78.2704 62.2693 77.4739 58.9262 77.4739C55.5831 77.4739 52.2881 78.2704 49.3141 79.7975C46.5116 81.3216 45.9708 85.3041 48.2816 87.615ZM29.9425 69.2758C32.3516 71.685 36.1375 71.9308 38.94 69.915C44.8058 65.7648 51.8144 63.5361 59 63.5361C66.1855 63.5361 73.1942 65.7648 79.06 69.915C81.8625 71.8816 85.6483 71.685 88.0575 69.2758L88.1066 69.2266C91.0566 66.2766 90.86 61.2616 87.4675 58.8525C70.5541 46.61 47.495 46.61 30.5325 58.8525C27.14 61.3108 26.9433 66.2766 29.9425 69.2758Z"
+                            fill="#FFFFFF"></path>
                     </svg>
+                    <p class="text-base md:text-2xl lg:text-3xl font-Montserrat">WIFI : <span class="font-Montserrat"
+                            id="statuswifi">Mati</span>
+                    </p>
                 </button>
             </form>
-            <span class="hidden text-lg font-Lato font-extrabold md:block md:ml-12">WI-FI :</span>
-            <span class="hidden text-lg font-Lato font-extrabold md:block md:ml-2" id="statuswifi">Mati</span>
         </div>
 
-        <!-- btn power  -->
-        <div class="container flex justify-center">
+        <!-- power controller -->
+        <div class="container w-max relative -top-8 translate-x-4">
             <form action="" method="post">
-                <label for="power"></label>
-                <button id="power" name="power">
-                    <svg width="134" height="134" viewBox="0 0 134 134" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        class="hidden w-[70px] h-[70px] md:w-[90px] md:h-[90px] relative onPower"
-                        preserveAspectRatio="none">
-                        <circle cx="67" cy="67" r="61" fill="#D9D9D9" stroke="#1611E8" stroke-width="12"></circle>
-                        <circle cx="67" cy="67" r="24.1429" fill="#EFF5F0" stroke="#00FF0A" stroke-width="9"></circle>
-                        <path d="M66.6071 76.4286L66.6071 56.7857" stroke="#00FF0A" stroke-width="9"></path>
+                <label for="power" class="sr-only">power</label>
+                <button name="power" id="power" type="submit">
+                    <!-- tombol off -->
+                    <svg width="178" height="178" viewBox="0 0 178 178" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="w-[85px] h-[85px] md:w-[120px] md:h-[120px] lg:w-[160px] lg:h-[160px] relative"
+                        id="poweroff" preserveAspectRatio="none">
+                        <g filter="url(#filter0_i_103_18)">
+                            <circle cx="89" cy="89" r="85" fill="#B5B5C6"></circle>
+                        </g>
+                        <circle cx="89" cy="89" r="85" stroke="#636363" stroke-opacity="0.54" stroke-width="8"></circle>
+                        <g style="mix-blend-mode:hard-light" filter="url(#filter1_i_103_18)">
+                            <mask id="path-2-inside-1_103_18" fill="white">
+                                <path
+                                    d="M83.4704 54.4396C74.7714 55.8314 66.9173 60.4525 61.4756 67.3804C56.0339 74.3084 53.4049 83.0337 54.1134 91.8148C54.8218 100.596 58.8157 108.787 65.2977 114.753C71.7797 120.719 80.2731 124.021 89.0827 124C97.8922 123.979 106.37 120.637 112.824 114.64C119.277 108.644 123.233 100.434 123.9 91.6499C124.567 82.8656 121.896 74.1528 116.422 67.2507C110.948 60.3485 103.072 55.7646 94.3663 54.4138L93.4229 60.4944C100.598 61.6076 107.089 65.3857 111.601 71.0744C116.113 76.7631 118.314 83.9441 117.764 91.184C117.214 98.424 113.954 105.19 108.635 110.133C103.316 115.075 96.3289 117.829 89.0681 117.847C81.8074 117.864 74.8072 115.142 69.4648 110.225C64.1223 105.308 60.8307 98.5572 60.2468 91.3199C59.6628 84.0826 61.8296 76.8913 66.3146 71.1814C70.7996 65.4714 77.2729 61.6627 84.4425 60.5156L83.4704 54.4396Z">
+                                </path>
+                            </mask>
+                            <path
+                                d="M83.4704 54.4396C74.7714 55.8314 66.9173 60.4525 61.4756 67.3804C56.0339 74.3084 53.4049 83.0337 54.1134 91.8148C54.8218 100.596 58.8157 108.787 65.2977 114.753C71.7797 120.719 80.2731 124.021 89.0827 124C97.8922 123.979 106.37 120.637 112.824 114.64C119.277 108.644 123.233 100.434 123.9 91.6499C124.567 82.8656 121.896 74.1528 116.422 67.2507C110.948 60.3485 103.072 55.7646 94.3663 54.4138L93.4229 60.4944C100.598 61.6076 107.089 65.3857 111.601 71.0744C116.113 76.7631 118.314 83.9441 117.764 91.184C117.214 98.424 113.954 105.19 108.635 110.133C103.316 115.075 96.3289 117.829 89.0681 117.847C81.8074 117.864 74.8072 115.142 69.4648 110.225C64.1223 105.308 60.8307 98.5572 60.2468 91.3199C59.6628 84.0826 61.8296 76.8913 66.3146 71.1814C70.7996 65.4714 77.2729 61.6627 84.4425 60.5156L83.4704 54.4396Z"
+                                stroke="black" stroke-width="10" stroke-linecap="square"
+                                mask="url(#path-2-inside-1_103_18)">
+                            </path>
+                        </g>
+                        <g filter="url(#filter2_i_103_18)">
+                            <path d="M89 72V37" stroke="#575353" stroke-width="5"></path>
+                        </g>
+                        <defs>
+                            <filter id="filter0_i_103_18" x="0" y="0" width="178" height="182"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape">
+                                </feBlend>
+                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha">
+                                </feColorMatrix>
+                                <feOffset dy="4"></feOffset>
+                                <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+                                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"></feComposite>
+                                <feColorMatrix type="matrix"
+                                    values="0 0 0 0 0.708642 0 0 0 0 0.708642 0 0 0 0 0.777778 0 0 0 1 0">
+                                </feColorMatrix>
+                                <feBlend mode="normal" in2="shape" result="effect1_innerShadow_103_18"></feBlend>
+                            </filter>
+                            <filter id="filter1_i_103_18" x="54" y="54.4138" width="70" height="73.5862"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape">
+                                </feBlend>
+                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha">
+                                </feColorMatrix>
+                                <feOffset dy="4"></feOffset>
+                                <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+                                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"></feComposite>
+                                <feColorMatrix type="matrix"
+                                    values="0 0 0 0 0.85098 0 0 0 0 0.85098 0 0 0 0 0.85098 0 0 0 1 0">
+                                </feColorMatrix>
+                                <feBlend mode="normal" in2="shape" result="effect1_innerShadow_103_18"></feBlend>
+                            </filter>
+                            <filter id="filter2_i_103_18" x="86.5" y="37" width="5" height="35"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape">
+                                </feBlend>
+                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha">
+                                </feColorMatrix>
+                                <feOffset dx="10" dy="10"></feOffset>
+                                <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+                                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"></feComposite>
+                                <feColorMatrix type="matrix"
+                                    values="0 0 0 0 0.488845 0 0 0 0 0.48613 0 0 0 0 0.48613 0 0 0 1 0"></feColorMatrix>
+                                <feBlend mode="normal" in2="shape" result="effect1_innerShadow_103_18"></feBlend>
+                            </filter>
+                        </defs>
                     </svg>
-                    <svg width="134" height="134" viewBox="0 0 134 134" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        class="w-[70px] h-[70px] md:w-[90px] md:h-[90px] relative offPower" preserveAspectRatio="none">
-                        <circle cx="67" cy="67" r="61" fill="#D9D9D9" stroke="#121111" stroke-width="12"></circle>
-                        <circle cx="67" cy="67" r="24.1429" fill="#F5EFEF" stroke="#FF0000" stroke-width="9"></circle>
-                        <path d="M66.6071 76.4286L66.6071 56.7857" stroke="#FF0000" stroke-width="9"></path>
+
+                    <!-- tombol on  -->
+                    <svg width="198" height="198" viewBox="0 0 198 198" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="w-[85px] h-[85px] md:w-[120px] md:h-[120px] lg:w-[160px] lg:h-[160px] relative hidden"
+                        id="poweron" preserveAspectRatio="none">
+                        <g filter="url(#filter0_ddi_103_19)">
+                            <circle cx="104" cy="94" r="85" fill="url(#paint0_linear_103_19)"
+                                shape-rendering="crispEdges">
+                            </circle>
+                            <circle cx="104" cy="94" r="85" fill="#33FF00" fill-opacity="0.26"
+                                shape-rendering="crispEdges">
+                            </circle>
+                            <circle cx="104" cy="94" r="85" stroke="#636363" stroke-opacity="0.54" stroke-width="8"
+                                shape-rendering="crispEdges"></circle>
+                        </g>
+                        <g style="mix-blend-mode:hard-light" filter="url(#filter1_d_103_19)">
+                            <mask id="path-2-inside-1_103_19" fill="white">
+                                <path
+                                    d="M98.4704 59.4396C89.7714 60.8314 81.9173 65.4525 76.4756 72.3804C71.0339 79.3084 68.4049 88.0337 69.1134 96.8148C69.8218 105.596 73.8157 113.787 80.2977 119.753C86.7797 125.719 95.2731 129.021 104.083 129C112.892 128.979 121.37 125.637 127.824 119.64C134.277 113.644 138.233 105.434 138.9 96.6499C139.567 87.8656 136.896 79.1528 131.422 72.2507C125.948 65.3485 118.072 60.7646 109.366 59.4138L108.423 65.4944C115.598 66.6076 122.089 70.3857 126.601 76.0744C131.113 81.7631 133.314 88.9441 132.764 96.184C132.214 103.424 128.954 110.19 123.635 115.133C118.316 120.075 111.329 122.829 104.068 122.847C96.8074 122.864 89.8072 120.142 84.4648 115.225C79.1223 110.308 75.8307 103.557 75.2468 96.3199C74.6628 89.0826 76.8296 81.8913 81.3146 76.1814C85.7996 70.4714 92.2729 66.6627 99.4425 65.5156L98.4704 59.4396Z">
+                                </path>
+                            </mask>
+                            <path
+                                d="M98.4704 59.4396C89.7714 60.8314 81.9173 65.4525 76.4756 72.3804C71.0339 79.3084 68.4049 88.0337 69.1134 96.8148C69.8218 105.596 73.8157 113.787 80.2977 119.753C86.7797 125.719 95.2731 129.021 104.083 129C112.892 128.979 121.37 125.637 127.824 119.64C134.277 113.644 138.233 105.434 138.9 96.6499C139.567 87.8656 136.896 79.1528 131.422 72.2507C125.948 65.3485 118.072 60.7646 109.366 59.4138L108.423 65.4944C115.598 66.6076 122.089 70.3857 126.601 76.0744C131.113 81.7631 133.314 88.9441 132.764 96.184C132.214 103.424 128.954 110.19 123.635 115.133C118.316 120.075 111.329 122.829 104.068 122.847C96.8074 122.864 89.8072 120.142 84.4648 115.225C79.1223 110.308 75.8307 103.557 75.2468 96.3199C74.6628 89.0826 76.8296 81.8913 81.3146 76.1814C85.7996 70.4714 92.2729 66.6627 99.4425 65.5156L98.4704 59.4396Z"
+                                stroke="white" stroke-width="10" stroke-linecap="square" shape-rendering="crispEdges"
+                                mask="url(#path-2-inside-1_103_19)"></path>
+                        </g>
+                        <g filter="url(#filter2_d_103_19)">
+                            <path d="M104 77V42" stroke="#F0F1F1" stroke-width="5"></path>
+                        </g>
+                        <defs>
+                            <filter id="filter0_ddi_103_19" x="0" y="0" width="198" height="198"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha">
+                                </feColorMatrix>
+                                <feOffset dx="-5" dy="5"></feOffset>
+                                <feGaussianBlur stdDeviation="5"></feGaussianBlur>
+                                <feComposite in2="hardAlpha" operator="out"></feComposite>
+                                <feColorMatrix type="matrix"
+                                    values="0 0 0 0 0.972549 0 0 0 0 0.972549 0 0 0 0 0.972549 0 0 0 1 0">
+                                </feColorMatrix>
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_103_19">
+                                </feBlend>
+                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha">
+                                </feColorMatrix>
+                                <feOffset dy="5"></feOffset>
+                                <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+                                <feComposite in2="hardAlpha" operator="out"></feComposite>
+                                <feColorMatrix type="matrix"
+                                    values="0 0 0 0 0.878431 0 0 0 0 1 0 0 0 0 0.890196 0 0 0 1 0">
+                                </feColorMatrix>
+                                <feBlend mode="normal" in2="effect1_dropShadow_103_19"
+                                    result="effect2_dropShadow_103_19">
+                                </feBlend>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_103_19"
+                                    result="shape">
+                                </feBlend>
+                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha">
+                                </feColorMatrix>
+                                <feOffset dx="4" dy="4"></feOffset>
+                                <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+                                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"></feComposite>
+                                <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0">
+                                </feColorMatrix>
+                                <feBlend mode="normal" in2="shape" result="effect3_innerShadow_103_19"></feBlend>
+                            </filter>
+                            <filter id="filter1_d_103_19" x="65" y="59.4138" width="78" height="77.5862"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha">
+                                </feColorMatrix>
+                                <feOffset dy="4"></feOffset>
+                                <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+                                <feComposite in2="hardAlpha" operator="out"></feComposite>
+                                <feColorMatrix type="matrix"
+                                    values="0 0 0 0 0.972549 0 0 0 0 0.972549 0 0 0 0 0.972549 0 0 0 1 0">
+                                </feColorMatrix>
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_103_19">
+                                </feBlend>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_103_19"
+                                    result="shape">
+                                </feBlend>
+                            </filter>
+                            <filter id="filter2_d_103_19" x="97.5" y="42" width="13" height="49"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha">
+                                </feColorMatrix>
+                                <feOffset dy="10"></feOffset>
+                                <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+                                <feComposite in2="hardAlpha" operator="out"></feComposite>
+                                <feColorMatrix type="matrix"
+                                    values="0 0 0 0 0.488845 0 0 0 0 0.48613 0 0 0 0 0.48613 0 0 0 1 0"></feColorMatrix>
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_103_19">
+                                </feBlend>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_103_19"
+                                    result="shape">
+                                </feBlend>
+                            </filter>
+                            <linearGradient id="paint0_linear_103_19" x1="104" y1="9" x2="104" y2="179"
+                                gradientUnits="userSpaceOnUse">
+                                <stop offset="0.453125" stop-color="#08FA94" stop-opacity="0.911458"></stop>
+                                <stop offset="0.473958" stop-color="#07FE96"></stop>
+                                <stop offset="1" stop-color="#0DD581" stop-opacity="0"></stop>
+                            </linearGradient>
+                        </defs>
                     </svg>
                 </button>
             </form>
         </div>
 
         <!-- bluetooth controller -->
-        <div class="container flex flex-row sm:w-32 md:w-max items-center bg-nav hover:bg-sky-700 px-5 rounded-tl-[90px] pointer-events-none"
-            id="bgbt">
-            <label for="bluetooth"></label>
-            <button id="bluetooth" name="bluetooth">
-                <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    class="hidden w-[70px] h-[70px] relative left-9 btOn" preserveAspectRatio="none">
-                    <path d="M21 24L51 48L36 60V12L51 24L21 48" stroke="#F8F8F8" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round"></path>
-                </svg>
-                <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    class="w-[70px] h-[70px] relative left-9 btOff" preserveAspectRatio="none">
-                    <path d="M9 9L63 63M49.314 49.35L36 60V36M36 24V12L51 24L42.672 30.66M36.006 35.997L21.006 47.997"
-                        stroke="#F8F8F8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                </svg>
-            </button>
-            <span class="hidden text-lg font-Lato font-extrabold md:block md:ml-12">Bluetooth :</span>
-            <span class="hidden text-lg font-Lato font-extrabold md:block md:ml-2" id="statusbt">Mati</span>
+        <div class="container w-max">
+            <form action="" method="post">
+                <label for="bluetooth" class="sr-only">bluetooth</label>
+                <button class="flex flex-col md:flex-row items-center px-2 pointer-events-none" name="bluetooth"
+                    id="bluetooth" type="submit">
+                    <!-- bluetooth off -->
+                    <svg width="118" height="118" viewBox="0 0 118 118" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="w-[70px] h-[70px] md:w-[120px] md:h-[120px] lg:w-[140px] lg:h-[140px] relative"
+                        id="btoff" preserveAspectRatio="none">
+                        <path
+                            d="M87.0741 37.9075L58.9999 9.83331H54.0833V47.1508L31.5158 24.5833L24.5833 31.5158L52.0674 59L24.5833 86.4842L31.5158 93.4167L54.0833 70.8491V108.167H58.9999L87.0741 80.0925L65.9324 59L87.0741 37.9075ZM63.9166 28.6641L73.1599 37.9075L63.9166 47.1508V28.6641ZM73.1599 80.0925L63.9166 89.3358V70.8491L73.1599 80.0925Z"
+                            fill="#9F9FA3"></path>
+                    </svg>
+                    <!-- bluetooth on -->
+                    <svg width="118" height="118" viewBox="0 0 118 118" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="w-[70px] h-[70px] md:w-[120px] md:h-[120px] lg:w-[140px] lg:h-[140px] relative hidden"
+                        id="bton" preserveAspectRatio="none">
+                        <path
+                            d="M87.0741 37.9075L58.9999 9.83331H54.0833V47.1508L31.5158 24.5833L24.5833 31.5158L52.0674 59L24.5833 86.4842L31.5158 93.4167L54.0833 70.8491V108.167H58.9999L87.0741 80.0925L65.9324 59L87.0741 37.9075ZM63.9166 28.6641L73.1599 37.9075L63.9166 47.1508V28.6641ZM73.1599 80.0925L63.9166 89.3358V70.8491L73.1599 80.0925Z"
+                            fill="#FFFFFF"></path>
+                    </svg>
+                    <p class="text-base md:text-2xl lg:text-3xl font-Montserrat">Bluetooth : <span
+                            class="font-Montserrat" id="statusbt">Mati</span></p>
+                </button>
+            </form>
         </div>
     </nav>
 
     <!-- end nav controller -->
+    <section id="weatherclock" class="w-full mt-16 flex flex-row">
 
-    <!-- greetings -->
-    <!-- <section class="p-6">
-        <p class="text-3xl font-Montserrat">Selamat Pagi,</p>
-        <p class="text-2xl font-Montserrat">KOO ZEE</p>
-    </section> -->
-
-    <!-- end greetings -->
-
-    <!-- weather & clock -->
-    <section id="infoUI" class="w-full mt-16 flex flex-row bg-slate-50 bg-opacity-70 rounded-tr-2xl rounded-tl-2xl">
-
-        <div class="w-1/2 mr-2">
+        <div class="container w-1/2 mr-2 flex flex-col items-center">
+            <!-- clock -->
             <div
-                class="container w-full flex flex-col justify-center mx-2 bg-cardUI bg-opacity-80 h-32 p-4 rounded-3xl">
-                <span class="inline-grid grid-cols-5">
-                    <div class="p-2">
-                        <h2 class="text-xl" id="numHour">00</h2>
-                    </div>
-                    <span class="text-xl mx-3 py-2">:</span>
-                    <div class="p-2">
-                        <h2 class="text-xl" id="numMin">00</h2>
-                    </div>
-                    <span class="text-xl mx-3 py-2">:</span>
-                    <div class="p-2">
-                        <h2 class="text-xl" id="numSec">00</h2>
-                    </div>
-                </span>
-                <div class="container flex justify-center">
-                    <span class="text-lg p-1 text-center" id="day"></span>
-                    <span class="text-lg p-1 text-center" id="dates"></span>
-                </div>
+                class="container relative h-full w-full md:w-max px-4 py-7 left-2 bg-cardUI shadow-xl dark:bg-darkPrimary dark:text-white bg-opacity-80 rounded-3xl">
+                <svg class="absolute -right-3 -top-3 w-16 h-16 md:w-36 md:h-36 md:-right-4 md:-top-4" id="sun"
+                    fill="#ddec09" height="200px" width="200px" version="1.1" id="Capa_1"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="-288.11 -288.11 1033.54 1033.54" xml:space="preserve" stroke="#ddec09"
+                    stroke-width="0.0045732" transform="matrix(1, 0, 0, -1, 0, 0)rotate(90)">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC"
+                        stroke-width="18.2928">
+                        <g id="XMLID_467_">
+                            <path id="XMLID_922_"
+                                d="M228.66,112.692c-63.945,0-115.968,52.022-115.968,115.967c0,63.945,52.023,115.968,115.968,115.968 s115.968-52.023,115.968-115.968C344.628,164.715,292.605,112.692,228.66,112.692z">
+                            </path>
+                            <path id="XMLID_1397_"
+                                d="M401.429,228.66l42.467-57.07c2.903-3.9,3.734-8.966,2.232-13.59c-1.503-4.624-5.153-8.233-9.794-9.683 l-67.901-21.209l0.811-71.132c0.056-4.862-2.249-9.449-6.182-12.307c-3.934-2.858-9.009-3.633-13.615-2.077l-67.399,22.753 L240.895,6.322C238.082,2.356,233.522,0,228.66,0c-4.862,0-9.422,2.356-12.235,6.322l-41.154,58.024l-67.4-22.753 c-4.607-1.555-9.682-0.781-13.615,2.077c-3.933,2.858-6.238,7.445-6.182,12.307l0.812,71.132l-67.901,21.209 c-4.641,1.45-8.291,5.059-9.793,9.683c-1.503,4.624-0.671,9.689,2.232,13.59l42.467,57.07l-42.467,57.07 c-2.903,3.9-3.734,8.966-2.232,13.59c1.502,4.624,5.153,8.233,9.793,9.683l67.901,21.208l-0.812,71.132 c-0.056,4.862,2.249,9.449,6.182,12.307c3.934,2.857,9.007,3.632,13.615,2.077l67.4-22.753l41.154,58.024 c2.813,3.966,7.373,6.322,12.235,6.322c4.862,0,9.422-2.356,12.235-6.322l41.154-58.024l67.399,22.753 c4.606,1.555,9.681,0.781,13.615-2.077c3.933-2.858,6.238-7.445,6.182-12.306l-0.811-71.133l67.901-21.208 c4.641-1.45,8.291-5.059,9.794-9.683c1.502-4.624,0.671-9.689-2.232-13.59L401.429,228.66z M228.66,374.627 c-80.487,0-145.968-65.481-145.968-145.968S148.173,82.692,228.66,82.692s145.968,65.48,145.968,145.967 S309.147,374.627,228.66,374.627z">
+                            </path>
+                        </g>
+                    </g>
+                    <g id="SVGRepo_iconCarrier">
+                        <g id="XMLID_467_">
+                            <path id="XMLID_922_"
+                                d="M228.66,112.692c-63.945,0-115.968,52.022-115.968,115.967c0,63.945,52.023,115.968,115.968,115.968 s115.968-52.023,115.968-115.968C344.628,164.715,292.605,112.692,228.66,112.692z">
+                            </path>
+                            <path id="XMLID_1397_"
+                                d="M401.429,228.66l42.467-57.07c2.903-3.9,3.734-8.966,2.232-13.59c-1.503-4.624-5.153-8.233-9.794-9.683 l-67.901-21.209l0.811-71.132c0.056-4.862-2.249-9.449-6.182-12.307c-3.934-2.858-9.009-3.633-13.615-2.077l-67.399,22.753 L240.895,6.322C238.082,2.356,233.522,0,228.66,0c-4.862,0-9.422,2.356-12.235,6.322l-41.154,58.024l-67.4-22.753 c-4.607-1.555-9.682-0.781-13.615,2.077c-3.933,2.858-6.238,7.445-6.182,12.307l0.812,71.132l-67.901,21.209 c-4.641,1.45-8.291,5.059-9.793,9.683c-1.503,4.624-0.671,9.689,2.232,13.59l42.467,57.07l-42.467,57.07 c-2.903,3.9-3.734,8.966-2.232,13.59c1.502,4.624,5.153,8.233,9.793,9.683l67.901,21.208l-0.812,71.132 c-0.056,4.862,2.249,9.449,6.182,12.307c3.934,2.857,9.007,3.632,13.615,2.077l67.4-22.753l41.154,58.024 c2.813,3.966,7.373,6.322,12.235,6.322c4.862,0,9.422-2.356,12.235-6.322l41.154-58.024l67.399,22.753 c4.606,1.555,9.681,0.781,13.615-2.077c3.933-2.858,6.238-7.445,6.182-12.306l-0.811-71.133l67.901-21.208 c4.641-1.45,8.291-5.059,9.794-9.683c1.502-4.624,0.671-9.689-2.232-13.59L401.429,228.66z M228.66,374.627 c-80.487,0-145.968-65.481-145.968-145.968S148.173,82.692,228.66,82.692s145.968,65.48,145.968,145.967 S309.147,374.627,228.66,374.627z">
+                            </path>
+                        </g>
+                    </g>
+                </svg>
+                <svg class="absolute right-3 top-2 w-8 h-8 md:w-16 md:h-16 hidden" id="moon"
+                    xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" stroke-width="0"
+                    fill="currentColor" stroke="currentColor" class="moon">
+                    <path
+                        d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z">
+                    </path>
+                    <path
+                        d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z">
+                    </path>
+                </svg>
+                <h1 class="font-Exo font-bold text-3xl md:text-5xl md:px-48"><span id="numHour"> 12 </span><span> :
+                    </span><span id="numMin">
+                        00 </span><span> : </span>
+                    <span id="numSec"> 01 </span>
+                </h1>
+                <h2 class="font-Exo text-lg md:text-3xl md:px-48" id="dates"></h2>
             </div>
-            <div class="container w-full flex flex-row mx-2 bg-cardUI bg-opacity-80 h-32 p-4 rounded-3xl my-4">
-                <svg width="110" height="110" viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    class="w-[60px] h-[60px] relative" preserveAspectRatio="none">
+            <!-- end clock -->
+
+            <!-- volt -->
+            <div
+                class="container relative w-full md:w-max flex flex-row items-center left-2 bg-cardUI shadow-xl dark:bg-darkPrimary bg-opacity-80 h-32 p-4 rounded-3xl my-4 md:py-10 md:px-52">
+                <svg class="mr-4 h-14 w-14 md:w-24 md:h-24" width="110" height="110" viewBox="0 0 110 110" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
                     <path
                         d="M55 110C85.3757 110 110 85.3757 110 55C110 24.6243 85.3757 0 55 0C24.6243 0 0 24.6243 0 55C0 85.3757 24.6243 110 55 110Z"
                         fill="#29C302"></path>
@@ -330,14 +537,16 @@
                         d="M79.0625 20.625L37.7128 48.9844L58.5991 62.3047L30.9375 89.375L76.6631 57.7225L56.0588 44.4022L79.0625 20.625Z"
                         fill="#E6D00C"></path>
                 </svg>
-                <span class="">5 Volt</span>
+                <span class="dark:text-white font-Exo font-bold text-2xl md:text-5xl">0 VOLT</span>
             </div>
         </div>
 
-        <div class="container w-1/2 bg-slate-50 bg-opacity-20 flex flex-col items-center p-3 mx-2 rounded-3xl">
+        <!-- weather -->
+        <div
+            class="container w-1/2 bg-cardUI shadow-xl dark:bg-darkPrimary dark:text-white bg-opacity-75 flex flex-col items-center p-3 mx-2 rounded-3xl">
             <div class="container flex flex-col items-center">
-                <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    class="w-[50px] h-[50px] relative" preserveAspectRatio="none">
+                <svg class="w-16 h-16 md:w-20 md:h-20" width="100" height="100" viewBox="0 0 100 100" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
                     <path
                         d="M50.001 0C33.65 0 20.25 13.36 20.25 29.666C20.25 35.984 22.268 41.856 25.683 46.682L46.37 82.445C49.267 86.23 51.193 85.511 53.602 82.245L76.42 43.415C76.88 42.581 77.242 41.693 77.557 40.786C79.0049 37.2575 79.7496 33.4801 79.749 29.666C79.75 13.36 66.354 0 50.001 0ZM50.001 13.9C58.807 13.9 65.809 20.886 65.809 29.666C65.809 38.446 58.807 45.429 50.001 45.429C41.196 45.429 34.191 38.447 34.191 29.666C34.191 20.886 41.196 13.901 50.001 13.901V13.9Z"
                         fill="#EE0000"></path>
@@ -345,11 +554,11 @@
                         d="M68.913 48.908L68.865 49.034C68.88 48.996 68.892 48.957 68.907 48.919L68.913 48.908ZM34.006 69.057C19.88 71.053 10 75.828 10 82.857C10 92.325 26.508 100 50 100C73.492 100 90 92.325 90 82.857C90 75.828 80.121 71.053 65.996 69.057L64.039 72.389C74.685 73.866 82 76.97 82 80.572C82 85.622 67.673 89.715 50 89.715C32.327 89.715 18 85.622 18 80.572C17.999 76.982 25.266 73.881 35.945 72.398C35.3 71.284 34.652 70.172 34.006 69.057Z"
                         fill="#EE0000"></path>
                 </svg>
-                <h1 class="text-xl text-center mb-10" id="location">Ngawi</h1>
+                <h1 class="font-Exo font-bold text-3xl md:text-7xl text-center mb-10" id="location">Ngawi</h1>
             </div>
             <div class="mb-10">INI LOGO CUACA</div>
-            <h1 class="text-xl">Hujan Deras</h1>
-            <h2>27 C</h2>
+            <h1 class="font-Exo font-semibold text-xl md:text-4xl">Hujan Deras</h1>
+            <h2 class="font-Exo font-medium text-2xl md:text-4xl">27 C</h2>
         </div>
     </section>
 
@@ -357,177 +566,165 @@
 
     <!-- control lamp -->
     <!-- control rgb -->
-    <div class="container p-4 w-full flex justify-center mx-auto">
-        <div class="container relative bg-cardUI bg-opacity-75 mt-6 w-full rounded-3xl" id="lamprgb">
-            <button class="absolute right-0" id="inforgb">
+    <div class="container mx-auto relative flex flex-col items-center bg-cardUI shadow-xl dark:bg-darkPrimary bg-opacity-75 mt-6 w-[90vw] rounded-3xl"
+        id="lamprgb">
+        <button class="absolute right-0" id="inforgb">
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"
+                class="w-[40px] h-[40px] md:w-20 md:h-20 bg-white rounded-bl-3xl rounded-tr-3xl border-white border-4 absolute right-0"
+                preserveAspectRatio="none">
+                <path
+                    d="M27.0833 18.75H22.9166V14.5833H27.0833M27.0833 35.4167H22.9166V22.9167H27.0833M25 4.16667C22.2641 4.16667 19.555 4.70554 17.0274 5.75251C14.4998 6.79948 12.2031 8.33405 10.2686 10.2686C6.36156 14.1756 4.16663 19.4747 4.16663 25C4.16663 30.5253 6.36156 35.8244 10.2686 39.7314C12.2031 41.6659 14.4998 43.2005 17.0274 44.2475C19.555 45.2945 22.2641 45.8333 25 45.8333C30.5253 45.8333 35.8243 43.6384 39.7314 39.7314C43.6384 35.8244 45.8333 30.5253 45.8333 25C45.8333 22.2641 45.2944 19.555 44.2475 17.0274C43.2005 14.4998 41.6659 12.2032 39.7314 10.2686C37.7968 8.33405 35.5002 6.79948 32.9725 5.75251C30.4449 4.70554 27.7358 4.16667 25 4.16667Z"
+                    fill="#0500F7"></path>
+            </svg>
+        </button>
+        <p class="absolute left-0 bg-white text-base rounded-tl-3xl rounded-br-3xl w-max p-2 md:text-3xl">Lampu RGB</p>
+        <img src="../src/img/icon rgb.png" class="w-[20%] mx-auto mt-10" alt="">
+        <p class="text-lg text-center md:text-3xl dark:text-white" id="vlrgbtxt">0%</p>
+        <form class="flex flex-col items-center" action="" method="post">
+            <label for="rgb" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"></label>
+            <input id="rgb" name="rgb" type="range" min="0" max="257" value="0" step="1"
+                class="w-36 h-2 mb-3 md:w-96 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
+            <label for="modergb" class="sr-only"></label>
+            <select class="md:text-3xl" name="modergb" id="modergb">
+                <option value="m1">Mode 1</option>
+                <option value="m2">Mode 2</option>
+                <option value="m3">Mode 3</option>
+                <option value="m4">Mode 4</option>
+                <option value="m5">Mode 5</option>
+                <option value="m6">Mode 6</option>
+                <option value="m7">Mode 7</option>
+                <option value="m8">Mode 8</option>
+                <option value="m9">Mode 9</option>
+                <option value="m10">Mode 10</option>
+            </select>
+            <button type="submit"
+                class="relative w-max md:text-4xl mt-2 mb-3 shrink-0 rounded-md border border-blue-600 bg-blue-800 px-6 py-2 text-lg font-medium text-white transition hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-blue-500">
+                Konfirmasi
+            </button>
+        </form>
+    </div>
+
+    <section class="grid grid-cols-2 grid-flow-row gap-3">
+        <!-- control lamp photo  -->
+        <div class="container relative flex flex-col items-center bg-cardUI shadow-xl dark:bg-darkPrimary bg-opacity-75 mt-6 w-full rounded-3xl"
+            id="lamp1">
+            <button class="absolute right-0" id="info1">
                 <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    class="w-[40px] h-[40px] bg-white rounded-bl-3xl rounded-tr-3xl border-white border-4 absolute right-0"
+                    class="w-[40px] h-[40px] md:w-20 md:h-20 bg-white rounded-bl-3xl rounded-tr-3xl border-white border-4 absolute right-0"
                     preserveAspectRatio="none">
                     <path
                         d="M27.0833 18.75H22.9166V14.5833H27.0833M27.0833 35.4167H22.9166V22.9167H27.0833M25 4.16667C22.2641 4.16667 19.555 4.70554 17.0274 5.75251C14.4998 6.79948 12.2031 8.33405 10.2686 10.2686C6.36156 14.1756 4.16663 19.4747 4.16663 25C4.16663 30.5253 6.36156 35.8244 10.2686 39.7314C12.2031 41.6659 14.4998 43.2005 17.0274 44.2475C19.555 45.2945 22.2641 45.8333 25 45.8333C30.5253 45.8333 35.8243 43.6384 39.7314 39.7314C43.6384 35.8244 45.8333 30.5253 45.8333 25C45.8333 22.2641 45.2944 19.555 44.2475 17.0274C43.2005 14.4998 41.6659 12.2032 39.7314 10.2686C37.7968 8.33405 35.5002 6.79948 32.9725 5.75251C30.4449 4.70554 27.7358 4.16667 25 4.16667Z"
                         fill="#0500F7"></path>
                 </svg>
             </button>
-            <p class="bg-white text-base rounded-tl-3xl rounded-br-3xl w-max p-2">Lampu RGB</p>
-            <form action="" method="post">
-                <button type="submit" class="container flex justify-center">
-                    <img src="../src/img/intellectual-property-unscreen.gif" class="w-20 bg-white rounded-full m-4"
-                        alt="iconlampface">
+            <p class="absolute left-0 bg-white text-base rounded-tl-3xl rounded-br-3xl w-max p-2 md:text-4xl">Lampu Foto
+            </p>
+            <img src="../src/img/icon_lampu_foto-removebg-preview.png" class="w-[50%] md:w-[35%] mx-auto mt-12"
+                alt="iconl1">
+            <p class="text-lg text-center md:text-3xl dark:text-white" id="vlamp1txt">0%</p>
+            <form class="flex flex-col items-center" action="" method="post">
+                <label for="vlamp1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"></label>
+                <input id="vlamp1" name="vlamp1" type="range" min="0" max="256" value="0" step="1"
+                    class="w-36 h-2 mb-3 md:w-96 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
+                <button type="submit"
+                    class="relative w-max md:text-4xl mt-2 mb-3 shrink-0 rounded-md border border-blue-600 bg-blue-800 px-6 py-2 text-lg font-medium text-white transition hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-blue-500">
+                    Konfirmasi
                 </button>
-                <p class="text-lg text-center" id="vlrgbtxt">0%</p>
-                <div class="container flex items-center justify-center text-center">
-                    <label for="rgb" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                        <input id="rgb" name="rgb" type="range" min="0" max="257" value="0" step="1"
-                            class="w-36 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
-                    </label>
-                </div>
-                <div class="flex flex-wrap justify-center p-5">
-                    <div class="flex items-center mr-4">
-                        <input id="red-radio" type="radio" value="red" name="colored-radio"
-                            class="w-4 h-4 text-red-600 bg-gray-100 border-gray-300 focus:ring-red-500 dark:focus:ring-red-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                        <label for="red-radio"
-                            class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Red</label>
-                    </div>
-                    <div class="flex items-center mr-4">
-                        <input id="green-radio" type="radio" value="green" name="colored-radio"
-                            class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                        <label for="green-radio"
-                            class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Green</label>
-                    </div>
-                    <div class="flex items-center mr-4">
-                        <input checked id="purple-radio" type="radio" value="blue" name="colored-radio"
-                            class="w-4 h-4 text-blue-600-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                        <label for="purple-radio"
-                            class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Blue</label>
-                    </div>
-                </div>
             </form>
         </div>
-    </div>
-    <section class="grid grid-cols-2 grid-flow-row gap-3">
-        <!-- control lamp photo  -->
-        <div class="container relative bg-cardUI bg-opacity-75 ml-1 mt-6 w-48 md:w-full rounded-3xl" id="lamp1">
-            <label for="info1" class="cursor-pointer">
-                <input type="checkbox" class="absolute right-0 sr-only" name="info1" id="info1">
-                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    class="w-[40px] h-[40px] bg-white rounded-bl-3xl rounded-tr-3xl border-white border-4 absolute right-0"
-                    preserveAspectRatio="none">
-                    <path
-                        d="M27.0833 18.75H22.9166V14.5833H27.0833M27.0833 35.4167H22.9166V22.9167H27.0833M25 4.16667C22.2641 4.16667 19.555 4.70554 17.0274 5.75251C14.4998 6.79948 12.2031 8.33405 10.2686 10.2686C6.36156 14.1756 4.16663 19.4747 4.16663 25C4.16663 30.5253 6.36156 35.8244 10.2686 39.7314C12.2031 41.6659 14.4998 43.2005 17.0274 44.2475C19.555 45.2945 22.2641 45.8333 25 45.8333C30.5253 45.8333 35.8243 43.6384 39.7314 39.7314C43.6384 35.8244 45.8333 30.5253 45.8333 25C45.8333 22.2641 45.2944 19.555 44.2475 17.0274C43.2005 14.4998 41.6659 12.2032 39.7314 10.2686C37.7968 8.33405 35.5002 6.79948 32.9725 5.75251C30.4449 4.70554 27.7358 4.16667 25 4.16667Z"
-                        fill="#0500F7"></path>
-                </svg>
-            </label>
-            <p class="bg-white text-base rounded-tl-3xl rounded-br-3xl w-max p-2">Lampu Foto</p>
-            <div class="container flex justify-center">
-                <img src="../src/img/intellectual-property-unscreen.gif" class="w-20 bg-white rounded-full m-4"
-                    alt="iconlampface">
-            </div>
-            <div class="container flex flex-col items-center justify-center text-center">
-                <p class="text-lg text-center" id="vlamp1txt">0%</p>
-                <label for="vlamp1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                    <input id="vlamp1" type="range" min="0" max="256" value="0" step="0.1"
-                        class="w-36 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
-                </label>
-            </div>
-        </div>
-        <div class="container invisible absolute bg-cardUI bg-opacity-75 left-[8px] mt-6  w-48 md:w-full rounded-3xl"
-            id="help1">
-            <label for="info1" class="cursor-pointer">
-                <input type="checkbox" class="absolute right-0 sr-only" name="close1" id="close1">
-                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    class="w-[40px] h-[40px] bg-white rounded-bl-3xl rounded-tr-3xl border-white border-4 absolute right-0"
-                    preserveAspectRatio="none">
-                    <path
-                        d="M27.0833 18.75H22.9166V14.5833H27.0833M27.0833 35.4167H22.9166V22.9167H27.0833M25 4.16667C22.2641 4.16667 19.555 4.70554 17.0274 5.75251C14.4998 6.79948 12.2031 8.33405 10.2686 10.2686C6.36156 14.1756 4.16663 19.4747 4.16663 25C4.16663 30.5253 6.36156 35.8244 10.2686 39.7314C12.2031 41.6659 14.4998 43.2005 17.0274 44.2475C19.555 45.2945 22.2641 45.8333 25 45.8333C30.5253 45.8333 35.8243 43.6384 39.7314 39.7314C43.6384 35.8244 45.8333 30.5253 45.8333 25C45.8333 22.2641 45.2944 19.555 44.2475 17.0274C43.2005 14.4998 41.6659 12.2032 39.7314 10.2686C37.7968 8.33405 35.5002 6.79948 32.9725 5.75251C30.4449 4.70554 27.7358 4.16667 25 4.16667Z"
-                        fill="#0500F7"></path>
-                </svg>
-            </label>
-            <p class="bg-white text-base rounded-tl-3xl rounded-br-3xl w-max p-2">Lampu Foto</p>
-            <p class="p-1 text-center text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-                reiciendis provident distinctio, fugit
-                inventore earum.</p>
-        </div>
+
         <!-- control lamp rias -->
-        <div class="container relative bg-cardUI bg-opacity-75 mt-6 mr-1 w-48 md:w-full rounded-3xl" id="lamp2">
-            <label for="info2" class="cursor-pointer">
-                <input type="checkbox" class="absolute right-0 sr-only" name="info2" id="info2">
+        <div class="container relative flex flex-col items-center bg-cardUI shadow-xl dark:bg-darkPrimary bg-opacity-75 mt-6 w-full rounded-3xl"
+            id="lamp2">
+            <button class="absolute right-0" id="info1">
                 <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    class="w-[40px] h-[40px] bg-white rounded-bl-3xl rounded-tr-3xl border-white border-4 absolute right-0"
+                    class="w-[40px] h-[40px] md:w-20 md:h-20 bg-white rounded-bl-3xl rounded-tr-3xl border-white border-4 absolute right-0"
                     preserveAspectRatio="none">
                     <path
                         d="M27.0833 18.75H22.9166V14.5833H27.0833M27.0833 35.4167H22.9166V22.9167H27.0833M25 4.16667C22.2641 4.16667 19.555 4.70554 17.0274 5.75251C14.4998 6.79948 12.2031 8.33405 10.2686 10.2686C6.36156 14.1756 4.16663 19.4747 4.16663 25C4.16663 30.5253 6.36156 35.8244 10.2686 39.7314C12.2031 41.6659 14.4998 43.2005 17.0274 44.2475C19.555 45.2945 22.2641 45.8333 25 45.8333C30.5253 45.8333 35.8243 43.6384 39.7314 39.7314C43.6384 35.8244 45.8333 30.5253 45.8333 25C45.8333 22.2641 45.2944 19.555 44.2475 17.0274C43.2005 14.4998 41.6659 12.2032 39.7314 10.2686C37.7968 8.33405 35.5002 6.79948 32.9725 5.75251C30.4449 4.70554 27.7358 4.16667 25 4.16667Z"
                         fill="#0500F7"></path>
                 </svg>
-            </label>
-            <p class="bg-white text-base rounded-tl-3xl rounded-br-3xl w-max p-2">Lampu Rias</p>
-            <div class="container flex justify-center">
-                <img src="../src/img/intellectual-property-unscreen.gif" class="w-20 bg-white rounded-full m-4"
-                    alt="iconlamp">
-            </div>
-            <p class="text-lg text-center" id="vlamp2txt">0%</p>
-            <div class="container flex items-center justify-center text-center">
-                <label for="vlamp2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                    <input id="vlamp2" type="range" min="0" max="255" value="0" step="0.1"
-                        class="w-36 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
-                </label>
-            </div>
+            </button>
+            <p class="absolute left-0 bg-white text-base rounded-tl-3xl rounded-br-3xl w-max p-2 md:text-4xl">Lampu Rias
+            </p>
+            <img src="../src/img/icon lampu rias.png" class="w-[50%] md:w-[35%] mx-auto mt-12" alt="iconl1">
+            <p class="text-lg text-center md:text-3xl dark:text-white" id="vlamp2txt">0%</p>
+            <form class="flex flex-col items-center" action="" method="post">
+                <label for="vlamp2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"></label>
+                <input id="vlamp2" name="vlamp2" type="range" min="0" max="255" value="0" step="1"
+                    class="w-36 h-2 mb-3 md:w-96 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
+                <button type="submit"
+                    class="relative w-max md:text-4xl mt-2 mb-3 shrink-0 rounded-md border border-blue-600 bg-blue-800 px-6 py-2 text-lg font-medium text-white transition hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-blue-500">
+                    Konfirmasi
+                </button>
+            </form>
         </div>
         <!-- sensor jarak  -->
-        <div class="container relative bg-cardUI bg-opacity-75 mt-6 ml-1 w-48 md:w-full rounded-3xl" id="jarak">
-            <label for="infojarak" class="cursor-pointer">
-                <input type="checkbox" class="absolute right-0 sr-only" name="infojarak" id="infojarak">
+        <div class="container relative flex flex-col items-center bg-cardUI shadow-xl dark:bg-darkPrimary bg-opacity-75 mt-6 w-full rounded-3xl"
+            id="jarak">
+            <button class="absolute right-0" id="info1">
                 <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    class="w-[40px] h-[40px] bg-white rounded-bl-3xl rounded-tr-3xl border-white border-4 absolute right-0"
+                    class="w-[40px] h-[40px] md:w-20 md:h-20 bg-white rounded-bl-3xl rounded-tr-3xl border-white border-4 absolute right-0"
                     preserveAspectRatio="none">
                     <path
                         d="M27.0833 18.75H22.9166V14.5833H27.0833M27.0833 35.4167H22.9166V22.9167H27.0833M25 4.16667C22.2641 4.16667 19.555 4.70554 17.0274 5.75251C14.4998 6.79948 12.2031 8.33405 10.2686 10.2686C6.36156 14.1756 4.16663 19.4747 4.16663 25C4.16663 30.5253 6.36156 35.8244 10.2686 39.7314C12.2031 41.6659 14.4998 43.2005 17.0274 44.2475C19.555 45.2945 22.2641 45.8333 25 45.8333C30.5253 45.8333 35.8243 43.6384 39.7314 39.7314C43.6384 35.8244 45.8333 30.5253 45.8333 25C45.8333 22.2641 45.2944 19.555 44.2475 17.0274C43.2005 14.4998 41.6659 12.2032 39.7314 10.2686C37.7968 8.33405 35.5002 6.79948 32.9725 5.75251C30.4449 4.70554 27.7358 4.16667 25 4.16667Z"
                         fill="#0500F7"></path>
                 </svg>
-            </label>
-            <p class="bg-white text-base rounded-tl-3xl rounded-br-3xl w-max p-2">Sensor Jarak</p>
-            <div class="container flex justify-center">
-                <img src="../src/img/intellectual-property-unscreen.gif" class="w-20 bg-white rounded-full m-4"
-                    alt="iconlamp">
-            </div>
-            <p class="text-lg text-center" id="vjaraktxt">0 cm</p>
-            <div class="container flex items-center justify-center text-center">
-                <label for="vjarak" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                    <input id="vjarak" type="range" min="0" max="200" value="0" step="0.1"
-                        class="w-36 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
-                </label>
-            </div>
+            </button>
+            <p class="absolute left-0 bg-white text-base rounded-tl-3xl rounded-br-3xl w-max p-2 md:text-4xl">Sensor
+                Jarak</p>
+            <img src="../src/img/icon sensor jarak.png" class="w-[50%] md:w-[35%] mx-auto mt-12" alt="iconl1">
+            <p class="text-lg text-center md:text-3xl dark:text-white" id="vjaraktxt">0 cm</p>
+            <form class="flex flex-col items-center" action="" method="post">
+                <label for="vjarak" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"></label>
+                <input id="vjarak" name="vjarak" type="range" min="0" max="200" value="0" step="1"
+                    class="w-36 h-2 mb-3 md:w-96 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
+                <button type="submit"
+                    class="relative w-max md:text-4xl mt-2 mb-3 shrink-0 rounded-md border border-blue-600 bg-blue-800 px-6 py-2 text-lg font-medium text-white transition hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-blue-500">
+                    Konfirmasi
+                </button>
+            </form>
         </div>
+
         <!-- sensor cahaya  -->
-        <div class="container relative bg-cardUI bg-opacity-75 mt-6 w-48 md:w-full rounded-3xl" id="cahaya">
-            <label for="infocahaya" class="cursor-pointer">
-                <input type="checkbox" class="absolute right-0 sr-only" name="infocahaya" id="infocahaya">
+        <div class="container relative flex flex-col items-center bg-cardUI shadow-xl dark:bg-darkPrimary bg-opacity-75 mt-6 w-full rounded-3xl"
+            id="cahaya">
+            <button class="absolute right-0" id="info1">
                 <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    class="w-[40px] h-[40px] bg-white rounded-bl-3xl rounded-tr-3xl border-white border-4 absolute right-0"
+                    class="w-[40px] h-[40px] md:w-20 md:h-20 bg-white rounded-bl-3xl rounded-tr-3xl border-white border-4 absolute right-0"
                     preserveAspectRatio="none">
                     <path
                         d="M27.0833 18.75H22.9166V14.5833H27.0833M27.0833 35.4167H22.9166V22.9167H27.0833M25 4.16667C22.2641 4.16667 19.555 4.70554 17.0274 5.75251C14.4998 6.79948 12.2031 8.33405 10.2686 10.2686C6.36156 14.1756 4.16663 19.4747 4.16663 25C4.16663 30.5253 6.36156 35.8244 10.2686 39.7314C12.2031 41.6659 14.4998 43.2005 17.0274 44.2475C19.555 45.2945 22.2641 45.8333 25 45.8333C30.5253 45.8333 35.8243 43.6384 39.7314 39.7314C43.6384 35.8244 45.8333 30.5253 45.8333 25C45.8333 22.2641 45.2944 19.555 44.2475 17.0274C43.2005 14.4998 41.6659 12.2032 39.7314 10.2686C37.7968 8.33405 35.5002 6.79948 32.9725 5.75251C30.4449 4.70554 27.7358 4.16667 25 4.16667Z"
                         fill="#0500F7"></path>
                 </svg>
-            </label>
-            <p class="bg-white text-base rounded-tl-3xl rounded-br-3xl w-max p-2">Sensor Cahaya</p>
-            <div class="container flex justify-center">
-                <img src="../src/img/intellectual-property-unscreen.gif" class="w-20 bg-white rounded-full m-4"
-                    alt="iconlamp">
-            </div>
-            <p class="text-lg text-center" id="vcahayatxt">0 Cd</p>
-            <div class="container flex items-center justify-center text-center">
-                <label for="vcahaya" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                    <input id="vcahaya" type="range" min="0" max="2500" value="0" step="1"
-                        class="w-36 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
-                </label>
-            </div>
+            </button>
+            <p class="absolute left-0 bg-white text-base rounded-tl-3xl rounded-br-3xl w-max p-2 md:text-4xl">Sensor
+                Cahaya</p>
+            <img src="../src/img/icon sensor cahaya.png" class="w-[50%] md:w-[35%] mx-auto mt-12" alt="iconl1">
+            <p class="text-lg text-center md:text-3xl dark:text-white" id="vcahayatxt">0 Cd</p>
+            <form class="flex flex-col items-center" action="" method="post">
+                <label for="vcahaya" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"></label>
+                <input id="vcahaya" name="vcahaya" type="range" min="0" max="2500" value="0" step="1"
+                    class="w-36 h-2 mb-3 md:w-96 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
+                <button type="submit"
+                    class="relative w-max md:text-4xl mt-2 mb-3 shrink-0 rounded-md border border-blue-600 bg-blue-800 px-6 py-2 text-lg font-medium text-white transition hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-blue-500">
+                    Konfirmasi
+                </button>
+            </form>
         </div>
     </section>
 
     <!-- end control lamp -->
 
     <!-- alarm controller  -->
-    <h3 class="bg-blue-950 w-max mx-auto my-5 rounded-lg p-3 text-white"><a href="./alarm.html">Kontrol Alarm</a></h3>
+
+    <a href="../public/alarm.html">
+        <p
+            class="relative mx-auto w-max md:text-5xl md:px-20 mt-14 shrink-0 rounded-md border border-blue-600 bg-blue-800 px-6 py-2 text-lg font-medium text-white transition hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-blue-500">
+            Alarm
+        </p>
+    </a>
+    <br><br><br><br><br>
     <!-- end alarm controller -->
     <br><br><br><br>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>

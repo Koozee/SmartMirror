@@ -1,21 +1,5 @@
-const header = document.querySelector('header');
-const nav = document.querySelector('nav');
-const fixnav = header.offsetTop;
 const darktoogle = document.querySelector('.input');
 const html = document.querySelector('html');
-const power = document.getElementById('power');
-const wifi = document.getElementById('wifi');
-const bluetooth = document.getElementById('bluetooth');
-const statuswifi = document.getElementById('statuswifi');
-const statusbt = document.getElementById('statusbt');
-const onPower = document.querySelector('.onPower');
-const offPower = document.querySelector('.offPower');
-const wifiOff = document.querySelector('.wifiOff');
-const wifiOn = document.querySelector('.wifiOn');
-const btOn = document.querySelector('.btOn');
-const btOff = document.querySelector('.btOff');
-const bgwifi = document.getElementById('bgwifi');
-const bgbt = document.getElementById('bgbt');
 const info1 = document.getElementById('info1');
 const vlamp1 = document.getElementById('vlamp1');
 const vlamp1txt = document.getElementById('vlamp1txt');
@@ -28,12 +12,9 @@ const vcahayatxt = document.getElementById('vcahayatxt');
 const vlrgb = document.getElementById('vlrgb');
 const vlrgbtxt = document.getElementById('vlrgbtxt');
 
-
-
-var poweron = 0;
-var powerwifion = 0;
-var powerbton = 0;
 //navbar fixed
+const header = document.querySelector('header');
+const fixnav = header.offsetTop;
 window.onscroll = function () {
 
     if (window.pageYOffset > fixnav) {
@@ -47,70 +28,90 @@ window.onscroll = function () {
 
 // dark mode toggle
 darktoogle.addEventListener('click', function () {
+    const sun = document.getElementById('sun')
+    const moon = document.getElementById('moon')
     if (darktoogle.checked) {
         html.classList.add('dark')
-
+        sun.classList.add('hidden')
+        moon.classList.remove('hidden')
     } else {
         html.classList.remove('dark')
+        sun.classList.remove('hidden')
+        moon.classList.add('hidden')
     }
 
 });
 
 // power button
+var valuepower = 0;
 power.addEventListener('click', function () {
-    if (!poweron) {
-        poweron = 1
-        onPower.classList.remove('hidden')
-        offPower.classList.add('hidden')
-        bgwifi.classList.remove('pointer-events-none')
-        bgbt.classList.remove('pointer-events-none')
+    const poweroff = document.getElementById('poweroff');
+    const poweron = document.getElementById('poweron');
+    const navc = document.getElementById('navcontrol');
+    if (!valuepower) {
+        valuepower = 1
+        poweron.classList.remove('hidden')
+        poweroff.classList.add('hidden')
+        navc.classList.add('bg-header')
+        navc.classList.remove('bg-nav')
+        wifi.classList.remove('pointer-events-none')
+        bluetooth.classList.remove('pointer-events-none')
     } else {
-        poweron = 0
-        onPower.classList.add('hidden')
-        offPower.classList.remove('hidden')
-        bgwifi.classList.add('pointer-events-none')
-        bgbt.classList.add('pointer-events-none')
-        wifiOn.classList.add('hidden')
-        wifiOff.classList.remove('hidden')
-        bgwifi.style.backgroundColor = '#8EA7E9'
+        valuepower = 0
+        valuewifi = 0
+        valuebluetooth = 0
+        poweron.classList.add('hidden')
+        poweroff.classList.remove('hidden')
+        navc.classList.remove('bg-header')
+        navc.classList.add('bg-nav')
+        wifi.classList.add('pointer-events-none')
+        bluetooth.classList.add('pointer-events-none')
+        wifion.classList.add('hidden')
+        wifioff.classList.remove('hidden')
         statuswifi.innerText = 'Mati'
-        btOn.classList.add('hidden')
-        btOff.classList.remove('hidden')
-        bgbt.style.backgroundColor = '#8EA7E9'
+        bton.classList.add('hidden')
+        btoff.classList.remove('hidden')
         statusbt.innerText = 'Mati'
     }
 
 })
+
 // wifi button
+var valuewifi = 0;
+const wifi = document.getElementById('wifi')
+const wifioff = document.getElementById('wifioff')
+const wifion = document.getElementById('wifion')
+const statuswifi = document.getElementById('statuswifi')
 wifi.addEventListener('click', function () {
-    if (!powerwifion) {
-        powerwifion = 1
-        wifiOn.classList.remove('hidden')
-        wifiOff.classList.add('hidden')
-        bgwifi.style.backgroundColor = 'blue'
+    if (!valuewifi) {
+        valuewifi = 1
+        wifion.classList.remove('hidden')
+        wifioff.classList.add('hidden')
         statuswifi.innerText = 'Hidup'
     } else {
-        powerwifion = 0
-        wifiOn.classList.add('hidden')
-        wifiOff.classList.remove('hidden')
-        bgwifi.style.backgroundColor = '#8EA7E9'
+        valuewifi = 0
+        wifion.classList.add('hidden')
+        wifioff.classList.remove('hidden')
         statuswifi.innerText = 'Mati'
     }
 
 })
 // bluetooth button
+var valuebluetooth = 0;
+const bluetooth = document.getElementById('bluetooth')
+const btoff = document.getElementById('btoff')
+const bton = document.getElementById('bton')
+const statusbt = document.getElementById('statusbt')
 bluetooth.addEventListener('click', function () {
-    if (!powerbton) {
-        powerbton = 1
-        btOn.classList.remove('hidden')
-        btOff.classList.add('hidden')
-        bgbt.style.backgroundColor = 'blue'
+    if (!valuebluetooth) {
+        valuebluetooth = 1
+        bton.classList.remove('hidden')
+        btoff.classList.add('hidden')
         statusbt.innerText = 'Hidup'
     } else {
-        powerbton = 0
-        btOn.classList.add('hidden')
-        btOff.classList.remove('hidden')
-        bgbt.style.backgroundColor = '#8EA7E9'
+        valuebluetooth = 0
+        bton.classList.add('hidden')
+        btoff.classList.remove('hidden')
         statusbt.innerText = 'Mati'
     }
 
@@ -123,12 +124,14 @@ setInterval(() => {
         min = date.getMinutes(),
         sec = date.getSeconds(),
         day = date.getDay(),
-        Dayy = date.getDate(),
+        tanggal = date.getDate(),
         year = date.getFullYear(),
-        month = date.getMonth() + 1;
+        month = date.getMonth() ;
     nameday = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+    namemonth = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "August", "September", "Oktober", "November,", "Desember"]
     namedaystring = nameday[day];
-    format = Dayy + '/' + month + '/' + year
+    namemonthstring = namemonth[month];
+    format = namedaystring + "," + " " + tanggal + " " + namemonthstring + " " + year
     let d;
     d = hour < 12 ? "AM" : "PM"; //if hour is smaller than 12, than its value will be AM else its value will be pm
     // hour = hour > 12 ? hour - 12 : hour; //if hour value is greater than 12 than 12 will subtracted ( by doing this we will get value till 12 not 13,14 or 24 )
@@ -143,7 +146,6 @@ setInterval(() => {
     document.getElementById("numMin").innerText = min;
     document.getElementById("numSec").innerText = sec;
     document.getElementById("dates").innerText = format;
-    document.getElementById("day").innerText = namedaystring;
     // document.getElementById(".am_pm").innerText = d;
 }, 1000); // 1000 milliseconds = 1s
 

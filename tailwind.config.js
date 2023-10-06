@@ -17,6 +17,7 @@ module.exports = {
         Poppins: 'Poppins',
         Lato: 'Lato',
         Inter: 'Inter',
+        Exo: 'Exo2',
       }
 
     },

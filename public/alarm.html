@@ -133,12 +133,13 @@
     <!-- start header -->
 
     <header class="bg-header w-full h-max py-4 px-6 top-0 flex justify-between dark:bg-darkPrimary">
-        <a href="./landingpage.html">
-            <img src="../src/img/LOGO INDO ASIA INTERTECH no text.svg" class="w-14" alt="logo_ntext">
-        </a>
-        <img src="../src/img/Text Indo Asia.png" class="w-32 hidden md:block md:absolute md:left-[90px]"
-            alt="textIndoasia">
-        <div class="flex items-center">
+        <div class="flex pl-2">
+            <a href="#" class="w-max">
+                <img src="../src/img/LOGO INDO ASIA INTERTECH no text.svg" class="w-[25%] md:w-[5vw]" alt="logo_ntext">
+            </a>
+            <img src="../src/img/Text Indo Asia.png" class="w-[13vw] hidden md:block" alt="textIndoasia">
+        </div>
+        <div class="my-auto relative -left-16 md:left-0">
             <label class="switch">
                 <span class="sun"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <g fill="#ffd43b">
@@ -158,126 +159,95 @@
             </label>
         </div>
 
-        <div class="flex items-center md:order-2">
-            <button type="button" data-dropdown-toggle="language-dropdown-menu"
-                class="inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-white dark:text-white rounded-lg cursor-pointer hover:bg-sky-700 dark:hover:bg-gray-700 dark:hover:text-white">
-                <img src="../src/img/indonesia-flag-icon.png" class="h-5 mr-2" alt="Indonesia Logo">
-                <span class="hidden md:block text-lg">Indonesia</span>
-            </button>
-            <!-- Dropdown -->
-            <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700"
-                id="language-dropdown-menu">
-                <ul class="py-2 font-medium" role="none">
-                    <li>
-                        <a href="#"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
-                            role="menuitem">
-                            <div class="inline-flex items-center">
-                                <img src="../src/img/indonesia-flag-icon.png" class="h-5 mr-2" alt="Indonesia Logo">
-                                Indonesia
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./loginEN.html"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
-                            role="menuitem">
-                            <div class="inline-flex items-center">
-                                <img src="../src/img/united-states-flag-icon.png" class="h-5 mr-2" alt="USA Logo">
-                                English (USA)
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="flex items-center">
-                <div class="flex items-center ml-3">
-                    <div>
-                        <button type="button"
-                            class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
-                            aria-expanded="false" data-dropdown-toggle="dropdown-user">
-                            <span class="sr-only">Open user menu</span>
-                            <img class="w-10 h-10 rounded-full" src="../src/img/Elaina_Chibi-removebg-preview.png"
-                                alt="user photo">
-                        </button>
-                    </div>
-                    <span class="text-white text-lg px-4 hidden md:block">KOO ZEE</span>
-                    <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600"
-                        id="dropdown-user">
-                        <div class="px-4 py-3" role="none">
-                            <p class="text-sm text-gray-900 dark:text-white" role="none">
-                                KOO ZEE
-                            </p>
-                            <p class="text-sm font-medium text-gray-900 truncate dark:text-gray-300" role="none">
-                                Koozee@gmail.com
-                            </p>
-                        </div>
-                        <ul class="py-1" role="none">
-                            <li>
-                                <a href="./dashboard.html"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
-                                    role="menuitem">Dashboard</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
-                                    role="menuitem">Pengaturan</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
-                                    role="menuitem">Keluar</a>
-                            </li>
-                        </ul>
-                    </div>
+        <div class="flex items-center">
+            <div class="flex items-center ml-3">
+                <div>
+                    <button type="button"
+                        class="flex w-max text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                        aria-expanded="false" data-dropdown-toggle="dropdown-user">
+                        <img class="w-11 h-11 md:w-24 md:h-24 rounded-full"
+                            src="../src/img/Elaina_Chibi-removebg-preview.png" alt="user photo">
+                    </button>
                 </div>
+                <span class="text-white md:text-xl lg:text-3xl px-4 hidden md:block">Kukuh Gaming 87</span>
+                <div class="z-50 w-max h-max hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600"
+                    id="dropdown-user">
+                    <div class="px-4 py-3" role="none">
+                        <p class="text-sm md:text-3xl text-gray-900 dark:text-white" role="none">
+                            Kukuh Gaming 87
+                        </p>
+                        <p class="text-sm md:text-xl font-medium text-gray-900 truncate dark:text-gray-300" role="none">
+                            kukuhaduhai99@gmail.com
+                        </p>
+                    </div>
+                    <ul class="py-1" role="none">
+                        <li>
+                            <a href="../public/control.html"
+                                class="block px-4 py-2 md:text-xl text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                                role="menuitem">Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="../public/accountsettings.html"
+                                class="block px-4 py-2 md:text-xl text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                                role="menuitem">Pengaturan</a>
+                        </li>
+                        <li>
+                            <a href="../public/login.html"
+                                class="block px-4 py-2 md:text-xl text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                                role="menuitem">Keluar</a>
+                        </li>
+                        <li class="flex justify-center">
+                            <a href="#"
+                                class="px-4 py-2 md:text-xl text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                                role="menuitem"><img src="../src/img/indonesia-flag-icon.png" alt="indo"
+                                    class="w-11 md:w-16"></a>
+                            <a href="#"
+                                class="px-4 py-2 md:text-xl text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                                role="menuitem"><img src="../src/img/united-states-flag-icon.png" class="w-11 md:w-16"
+                                    alt="USA"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
     </header>
 
     <!-- end header -->
 
-    <!-- greetings -->
-    <!-- <section class="p-6">
-        <p class="text-3xl font-Montserrat">Selamat Pagi,</p>
-        <p class="text-2xl font-Montserrat">KOO ZEE</p>
-    </section> -->
-
-    <!-- end greetings -->
 
     <!-- alarm controller  -->
     <section id="alarm" class="mx-4 mt-6 rounded-3xl p-4 bg-cardUI">
         <div class="p-2 flex justify-between">
-            <h1 class="text-lg md:text-2xl">Alarm</h1>
-            <button class="hover:bg-white rounded-full" id="setalarm"><svg width="70" height="70"
-                viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg"
-                class="w-[30px] h-[30px] relative" preserveAspectRatio="none">
-                <path
-                d="M37.625 16.625C37.625 15.9288 37.3484 15.2611 36.8562 14.7688C36.3639 14.2766 35.6962 14 35 14C34.3038 14 33.6361 14.2766 33.1438 14.7688C32.6516 15.2611 32.375 15.9288 32.375 16.625V32.375H16.625C15.9288 32.375 15.2611 32.6516 14.7688 33.1438C14.2766 33.6361 14 34.3038 14 35C14 35.6962 14.2766 36.3639 14.7688 36.8562C15.2611 37.3484 15.9288 37.625 16.625 37.625H32.375V53.375C32.375 54.0712 32.6516 54.7389 33.1438 55.2312C33.6361 55.7234 34.3038 56 35 56C35.6962 56 36.3639 55.7234 36.8562 55.2312C37.3484 54.7389 37.625 54.0712 37.625 53.375V37.625H53.375C54.0712 37.625 54.7389 37.3484 55.2312 36.8562C55.7234 36.3639 56 35.6962 56 35C56 34.3038 55.7234 33.6361 55.2312 33.1438C54.7389 32.6516 54.0712 32.375 53.375 32.375H37.625V16.625Z"
-                fill="black"></path>
-            </svg></button>
+            <h1 class="text-lg md:text-5xl">Alarm</h1>
+            <button class="hover:bg-white rounded-full" id="setalarm"><svg width="70" height="70" viewBox="0 0 70 70"
+                    fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[30px] h-[30px] md:h-20 md:w-20 relative"
+                    preserveAspectRatio="none">
+                    <path
+                        d="M37.625 16.625C37.625 15.9288 37.3484 15.2611 36.8562 14.7688C36.3639 14.2766 35.6962 14 35 14C34.3038 14 33.6361 14.2766 33.1438 14.7688C32.6516 15.2611 32.375 15.9288 32.375 16.625V32.375H16.625C15.9288 32.375 15.2611 32.6516 14.7688 33.1438C14.2766 33.6361 14 34.3038 14 35C14 35.6962 14.2766 36.3639 14.7688 36.8562C15.2611 37.3484 15.9288 37.625 16.625 37.625H32.375V53.375C32.375 54.0712 32.6516 54.7389 33.1438 55.2312C33.6361 55.7234 34.3038 56 35 56C35.6962 56 36.3639 55.7234 36.8562 55.2312C37.3484 54.7389 37.625 54.0712 37.625 53.375V37.625H53.375C54.0712 37.625 54.7389 37.3484 55.2312 36.8562C55.7234 36.3639 56 35.6962 56 35C56 34.3038 55.7234 33.6361 55.2312 33.1438C54.7389 32.6516 54.0712 32.375 53.375 32.375H37.625V16.625Z"
+                        fill="black"></path>
+                </svg></button>
         </div>
         <form action="" method="post">
             <div class="mb-5 hidden" id="setsalarm">
-                <label for="alarm-time" class="block text-gray-600">Atur Alarm Anda:</label>
+                <label for="alarm-time" class="block text-gray-600 md:text-5xl">Atur Alarm Anda:</label>
                 <input type="time" id="alarm-time" name="alarm-time"
-                    class="border border-gray-300 p-2 rounded-md w-full">
+                    class="border border-gray-300 p-2 rounded-md w-full md:text-4xl">
                 <label for="alarm-name"></label>
                 <input type="text" name="alarm-name" id="alarm-name"
-                    class="mt-2 border border-gray-300 p-2 rounded-md w-full" placeholder="Nama Alarm">
+                    class="mt-2 border border-gray-300 p-2 rounded-md w-full md:text-4xl" placeholder="Nama Alarm">
                 <button id="add-alarm-btn" type="submit"
-                    class="mt-4 bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none">Tambah
+                    class="mt-4 md:text-4xl bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none">Tambah
                     Alarm</button>
                 <button id="cancel-alarm-btn"
-                    class="mt-4 bg-red-500 text-white py-2 px-4 rounded-md hover:bg-red-600 focus:outline-none">Batal</button>
+                    class="mt-4 md:text-4xl bg-red-500 text-white py-2 px-4 rounded-md hover:bg-red-600 focus:outline-none">Batal</button>
             </div>
             <div class="mt-4">
-                <ul id="alarm-list" class="list-decimal pl-6">
+                <ul id="alarm-list" class="list-decimal pl-6 md:text-4xl">
                     <!-- Alarm items will be added here -->
                     <li class="rounded-md p-1 mb-2 relative">
-                        <p class="text-lg font-Montserrat">COLI</p>
-                        <h2 class="text-2xl font-Montserrat">12:00</h2>
+                        <p class="text-lg font-Montserrat md:text-4xl">School</p>
+                        <h2 class="text-2xl font-Montserrat md:text-4xl">12:00</h2>
                         <button type="submit"
-                            class="font-Montserrat text-base text-red-500 hover:text-red-700 absolute right-0 px-3 top-2">Hapus</button>
+                            class="font-Montserrat text-base md:text-4xl text-red-500 hover:text-red-700 absolute right-0 px-3 top-2">Hapus</button>
                     </li>
 
                 </ul>
@@ -285,7 +255,7 @@
         </form>
     </section>
 
-    <h3 class="bg-blue-950 w-max mx-auto my-5 rounded-lg p-3 text-white"><a href="./controlDev.html">Kembali</a></h3>
+    <h3 class="bg-blue-950 w-max mx-auto my-5 rounded-lg p-3 text-white md:text-4xl"><a href="../public/control.html">Kembali</a></h3>
 
     <!-- end alarm controller -->
     <br><br><br><br>
