@@ -7,8 +7,6 @@
     <title>Smart Mirror - landingpage</title>
     <link rel="shorcut icon" href="../src/img/LOGO INDO ASIA INTERTECH no text.svg">
     <link href="style.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
-
 
     <style>
         .switch {
@@ -123,13 +121,13 @@
     </style>
 </head>
 
-<body class="bg-primary overflow-x-hidden"
+<body class="overflow-x-hidden"
     style="background-image: url(../src/img/bg-image.jpg); background-size: cover; background-repeat: no-repeat;">
     <!-- start header -->
 
     <header class="bg-header w-full h-max py-4 px-6 top-0 flex items-center justify-between dark:bg-darkPrimary">
         <div class="flex">
-            <a href="./landingpage.html" class="w-max">
+            <a href="#" class="w-max">
                 <img src="../src/img/LOGO INDO ASIA INTERTECH no text.svg" class="w-[25%] md:w-[5vw]" alt="logo_ntext">
             </a>
             <img src="../src/img/Text Indo Asia.png" class="w-[13vw] hidden md:block" alt="textIndoasia">
@@ -156,9 +154,9 @@
 
         <div class="flex w-max h-max">
             <button type="button" data-dropdown-toggle="language-dropdown-menu"
-                class="inline-flex items-center font-medium justify-center px-4 py-2 text-base md:text-6xl text-white dark:text-white rounded-lg cursor-pointer hover:bg-sky-700 dark:hover:bg-gray-700 dark:hover:text-white">
-                <img src="../src/img/indonesia-flag-icon.png" class="w-10 mr-2 md:w-16" alt="Indonesia Logo">
-                Indonesia
+                class="inline-flex w-max items-center font-medium justify-center mr-2 md:px-4 py-2 text-base md:text-6xl text-white dark:text-white rounded-lg cursor-pointer hover:bg-sky-700 dark:hover:bg-gray-700 dark:hover:text-white">
+                <img src="../src/img/indonesia-flag-icon.png" class="w-11 md:w-16" alt="Indonesia Logo">
+                <span class="hidden md:block md:text-3xl">Indonesia</span>
             </button>
         </div>
         <!-- Dropdown -->
@@ -176,7 +174,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="./loginEN.html"
+                    <a href="./landingpageEN.html"
                         class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
                         role="menuitem">
                         <div class="inline-flex items-center">
@@ -193,7 +191,7 @@
 
     <!-- navbar start -->
     <nav id="navbar"
-        class="flex items-center justify-evenly mt-10 bg-nav dark:bg-darkPrimary bg-opacity-70 rounded-full w-[90vw] md:w-[80vw] m-auto">
+        class="flex items-center justify-evenly mt-10 shadow-xl bg-nav dark:bg-darkPrimary bg-opacity-70 rounded-full w-[90vw] md:w-[80vw] m-auto">
         <a href="#"><img src="../src/img/SMART MIRROR.png" class="w-28 lg:w-56" alt="xx"></a>
         <a href="../public/login.html"><lord-icon src="https://cdn.lordicon.com/ovqhybfd.json" trigger="hover"
                 colors="outline:#121331,primary:#4bb3fd" style="width:70px;height:50px" class="md:hidden">
@@ -206,57 +204,148 @@
     <!-- navbar end -->
 
     <!-- info mirror -->
-    <main id="productinfo" class="flex flex-wrap justify-center my-2">
-        <div class="container bg-slate-50 bg-opacity-80 py-4 flex flex-col justify-center text-center">
-            <h1 class="font-Montserrat font-bold text-xl text-orange-400">Baru</h1>
-            <h1 class="font-Montserrat my-2 text-3xl font-extrabold">Smart Mirror</h1>
-            <h2 class="p-3 my-5 text-xl font-bold bg-slate- bg-opacity-50">Smart Mirror, atau cermin pintar, adalah
+    <main id="productinfo" class="mt-16">
+        <div
+            class=" w-full shadow-xl bg-slate-100 dark:bg-darkPrimary dark:text-white p-4 flex flex-col justify-center text-center">
+            <h1 class="font-Montserrat font-bold text-xl md:text-2xl lg:text-4xl text-orange-400">Baru</h1>
+            <h1 class="my-2 text-4xl md:text-5xl lg:text-7xl font-extrabold">Smart Mirror</h1>
+            <h2 class="p-3 my-5 text-xl lg:text-4xl font-Montserrat font-bold bg-slate- bg-opacity-50">Smart Mirror,
+                atau cermin
+                pintar, adalah
                 sebuah perangkat Internet of Things (IoT) yang menggabungkan
                 teknologi canggih dengan fungsionalitas cermin tradisional untuk menciptakan pengalaman pengguna yang
                 modern dan informatif. Produk ini memadukan cermin dengan layar sentuh atau tampilan digital yang
-                tersembunyi di balik permukaan kaca cermin, memungkinkan pengguna untuk mengakses berbagai informasi dan
+                tersembunyi di bawah permukaan kaca cermin, memungkinkan pengguna untuk mengakses berbagai informasi dan
                 fungsi yang berguna sehari-hari.</h2>
-            <img src="../src/img/CERMIN PINTAR REV 111.png" alt="">
+            <img src="../src/img/CERMIN PINTAR REV 111.png" class="md:w-[40vw] mx-auto" alt="miiror">
         </div>
     </main>
 
     <!-- end info mirror -->
 
-    <article id="feature" class="flex flex-wrap justify-center my-2">
-        <div class="container">
-            <div class="flex flex-col justify-center items-center text-center">
-                <h3 class="font-Inter text-2xl font-black mb-5">Layar Interaktif</h3>
-                <img src="../src/img/touch.png" class="w-32 mx-auto" alt="touch">
-                <p class="text-lg font-bold font-Montserrat p-3">Smart Mirror dilengkapi dengan layar sentuh atau
+    <!-- fitur -->
+    <article id="feature" class="flex flex-wrap justify-center mt-7">
+        <div class="md:grid md:grid-cols-2 shadow-xl bg-slate-300 dark:bg-darkPrimary dark:text-white bg-opacity-70 w-full">
+            <div class="flex flex-col justify-center items-center text-center p-3">
+                <h3 class="font-Inter text-2xl lg:text-4xl font-black mb-5">Layar Interaktif</h3>
+                <img src="../src/img/interact-unscreen.gif" class="w-32 mx-auto" alt="touch">
+                <p class="text-lg lg:text-3xl font-black font-Inter p-3 md:p-4">Smart Mirror dilengkapi dengan layar
+                    sentuh atau
                     tampilan digital yang
                     memungkinkan pengguna untuk
                     berinteraksi dengan berbagai informasi. Anda dapat menampilkan jam, cuaca, atau bahkan
                     pesan kalender pribadi.</p>
             </div>
-            <div class="flex flex-col justify-center items-center text-center">
-                <h3 class="font-Inter text-2xl font-black mb-5">Koneksi Yang Mudah</h3>
-                <img src="../src/img/link.png" class="w-32 mx-auto" alt="touch">
-                <p class="text-lg font-bold font-Montserrat p-3"> Produk ini dapat terhubung ke perangkat pribadi Anda.
+            <div class="flex flex-col justify-center items-center text-center p-3">
+                <h3 class="font-Inter text-2xl lg:text-4xl font-black mb-5">Koneksi Yang Mudah</h3>
+                <img src="../src/img/smart-house-unscreen.gif" class="w-32 mx-auto" alt="conn">
+                <p class="text-lg lg:text-3xl font-black font-Inter p-3 md:p-4"> Produk ini dapat terhubung ke perangkat
+                    pribadi Anda.
                     Misalnya, Anda dapat mengontrol pencahayaan, mematikan dan menghidupkan cermin, serta mengatur
                     jadwal dengan fitur alarm dari Smart Mirror.</p>
             </div>
-            <div class="flex flex-col justify-center items-center text-center">
-                <h3 class="font-Inter text-2xl font-black mb-5">Tampilan Informatif</h3>
-                <img src="../src/img/timer.png" class="w-32 mx-auto" alt="touch">
-                <p class="text-lg font-bold font-Montserrat p-3"> Produk ini dapat menampilkan berbagai informasi yang
+            <div class="flex flex-col justify-center items-center text-center p-3">
+                <h3 class="font-Inter text-2xl lg:text-4xl font-black mb-5">Tampilan Informatif</h3>
+                <img src="../src/img/geolocation-unscreen.gif" class="w-32 mx-auto" alt="inf">
+                <p class="text-lg lg:text-3xl font-black font-Inter p-3 md:p-4"> Produk ini dapat menampilkan berbagai
+                    informasi yang
                     berguna, seperti suhu saat ini, prakiraan cuaca, waktu dan lokasi semuanya ditampilkan dengan gaya
                     yang elegan.</p>
             </div>
-            <div class="flex flex-col justify-center items-center text-center">
-                <h3 class="font-Inter text-2xl font-black mb-5">Desain Modern</h3>
-                <img src="../src/img/abstract.png" class="w-32 mx-auto" alt="touch">
-                <p class="text-lg font-bold font-Montserrat p-3">Smart Mirror dirancang dengan estetika modern,
+            <div class="flex flex-col justify-center items-center text-center p-3">
+                <h3 class="font-Inter text-2xl lg:text-4xl font-black mb-5">Desain Modern</h3>
+                <img src="../src/img/framed-unscreen.gif" class="w-32 mx-auto" alt="des">
+                <p class="text-lg lg:text-3xl font-black font-Inter p-3 md:p-4">Smart Mirror dirancang dengan estetika
+                    modern,
                     seringkali dengan bingkai yang tipis dan minimalis yang cocok dengan berbagai gaya dekorasi
                     interior.</p>
+            </div>
+            <div class="flex flex-col justify-center items-center text-center p-3">
+                <h3 class="font-Inter text-2xl lg:text-4xl font-black mb-5">Kustomisasi</h3>
+                <img src="../src/img/paint-brush-unscreen.gif" class="w-32 mx-auto" alt="des">
+                <p class="text-lg lg:text-3xl font-black font-Inter p-3 md:p-4">Anda dapat mengatur tampilan dari layar
+                    Smart Mirror sesuai dengan selera Anda.</p>
+            </div>
+            <div class="flex flex-col justify-center items-center text-center p-3">
+                <h3 class="font-Inter text-2xl lg:text-4xl font-black mb-5">Hemat Energi</h3>
+                <img src="../src/img/green-energy-unscreen.gif" class="w-32 mx-auto" alt="des">
+                <p class="text-lg lg:text-3xl font-black font-Inter p-3 md:p-4">Smart Mirror sangat hemat energi karena
+                    hanya memerlukan daya sebesar 5 volt untuk beroperasi, membantu Anda menghemat energi dan mengurangi
+                    dampak lingkungan sambil tetap menikmati fitur-fitur canggih yang ditawarkan.</p>
+            </div>
+        </div>
+    </article>
+    <!-- end fitur -->
+
+    <!-- specific -->
+    <article class="mt-5 w-full shadow-xl bg-slate-100 dark:bg-darkPrimary dark:text-white">
+        <div class="w-full flex flex-col items-center justify-center mx-auto">
+            <h1 class="font-Inter font-black text-5xl md:text-6xl text-center underline mb-16">Spesifikasi</h1>
+            <img src="../src/img/Part Body.png" class="w-60 md:w-[20vw] mx-auto" alt="spec">
+        </div>
+        <div class="w-full text-center mt-11 md:grid md:grid-cols-2 mx-auto">
+            <div class="p-4 flex flex-col justify-center items-center border-t-4 border-b-4">
+                <h1 class="font-Montserrat font-extrabold text-4xl md:text-5xl lg:text-7xl">Processor</h1>
+                <h2 class="font-Montserrat font-extrabold text-xl md:text-3xl p-5">LX6 Dual-Core 32-bit</h2>
+                <img src="../src/img/cpu.png" class="w-32 lg:w-36" alt="cpu">
+            </div>
+            <div class="p-4 flex flex-col justify-center items-center border-t-4 border-b-4">
+                <h1 class="font-Montserrat font-extrabold text-4xl md:text-5xl lg:text-7xl">Penyimpanan</h1>
+                <h2 class="font-Montserrat font-extrabold text-xl md:text-3xl p-5">520Kb SRAM + 4Mb ROM</h2>
+                <img src="../src/img/ram.png" class="w-32 lg:w-36" alt="ram">
+            </div>
+            <div class="p-4 flex flex-col justify-center items-center border-t-4 border-b-4">
+                <h1 class="font-Montserrat font-extrabold text-4xl md:text-5xl lg:text-7xl">Layar</h1>
+                <h2 class="font-Montserrat font-extrabold text-xl md:text-3xl p-5">1.8" TFT Display 30 Hz</h2>
+                <img src="../src/img/lcd.png" class="w-32 lg:w-36" alt="lcd">
+            </div>
+            <div class="p-4 flex flex-col justify-center items-center border-t-4 border-b-4">
+                <h1 class="font-Montserrat font-extrabold text-4xl md:text-5xl lg:text-7xl">Software</h1>
+                <h2 class="font-Montserrat font-extrabold text-xl md:text-3xl p-5">2.1 Firmware Version Up to Date</h2>
+                <img src="../src/img/update.png" class="w-32 lg:w-36" alt="update">
             </div>
         </div>
     </article>
 
+    <!-- footer start -->
+    <footer id="footer" class="mt-16 text-white bg-header h-full p-4 md:grid md:grid-cols-2 dark:bg-darkPrimary">
+        <div class="container mx-auto">
+            <img src="../src/img/LOGO INDO ASIA INTERTECH 5.png" class="w-[50vw] md:w-[30vw] mx-auto my-10" alt="logo">
+            <h2 class="text-center md:text-3xl"><span class="text-blue-300 hover:text-blue-500"><a href="">Office No.
+                        56,
+                        Jalan
+                        Raya Pakisaji,
+                        Kabupaten Malang,
+                        Jawa Timur(65162)</a></span>
+                || E-mail:<span class="text-blue-300hover:text-blue-500"><a href="">cs@indoasiatech.com</a></span> ||
+                Telepon: <span class="text-blue-300 hover:text-blue-500"><a href="">(+62)89673457965</a></span>
+            </h2>
+        </div>
+        <div class="container grid grid-cols-2 auto-cols-fr gap-1 p-5 mx-auto md:flex md:p-0 md:w-max md:mt-6">
+            <div class="text-center md:px-4 md:text-3xl">
+                <h1 class="font-bold md:text-left pb-2">Profil Kami</h1>
+                <p class="hover:text-blue-600 md:text-left pb-2"><a href="#">Tentang Perusahaan</a></p>
+                <p class="hover:text-blue-600 md:text-left pb-2"><a href="#">Pendiri Perusahaan</a></p>
+            </div>
+            <div class="text-center md:px-4 md:text-3xl">
+                <h1 class="font-bold md:text-left pb-2"><a href="#">Insight</a></h1>
+                <p class="hover:text-blue-600 md:text-left pb-2"><a href="#">Blog</a></p>
+                <p class="hover:text-blue-600 md:text-left pb-2"><a href="#">Testimoni</a></p>
+            </div>
+            <div class="text-center col-span-2 md:px-4 md:text-3xl">
+                <h1 class="font-bold md:text-left pb-2">Pelayanan</h1>
+                <p class="hover:text-blue-600 md:text-left pb-2"><a href="#">Hubungi Kami</a></p>
+                <p class="hover:text-blue-600 md:text-left pb-2"><a href="#">Reservasi Perbaikan</a></p>
+                <p class="hover:text-blue-600 md:text-left pb-2"><a href="#">Kritik dan Saran</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- footer end -->
+    <p class="text-white px-5 w-full bg-slate-900 h-9 text-base md:text-3xl">© Copyright 2023 - Indo Asia InterTech</p>
+
+    <script src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js'></script>
+    <script src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
     <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
     <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
