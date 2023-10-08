@@ -53,3 +53,15 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+// dark mode toggle
+const darktoogle = document.querySelector('.input');
+const html = document.querySelector('html');
+darktoogle.addEventListener('click', function () {
+    if (darktoogle.checked) {
+        html.classList.add('dark')
+    } else {
+        html.classList.remove('dark')
+    }
+
+});
