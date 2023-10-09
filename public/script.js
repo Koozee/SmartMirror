@@ -1,5 +1,3 @@
-const darktoogle = document.querySelector('.input');
-const html = document.querySelector('html');
 const info1 = document.getElementById('info1');
 const vlamp1 = document.getElementById('vlamp1');
 const vlamp1txt = document.getElementById('vlamp1txt');
@@ -16,7 +14,7 @@ const vlrgbtxt = document.getElementById('vlrgbtxt');
 const header = document.querySelector('header');
 const fixnav = header.offsetTop;
 window.onscroll = function () {
-
+    
     if (window.pageYOffset > fixnav) {
         header.classList.add('navbar-fixed')
         // navigation.classList.add('navbar-fixed')
@@ -27,6 +25,8 @@ window.onscroll = function () {
 }
 
 // dark mode toggle
+const darktoogle = document.querySelector('.input');
+const html = document.querySelector('html');
 darktoogle.addEventListener('click', function () {
     const sun = document.getElementById('sun')
     const moon = document.getElementById('moon')
@@ -135,7 +135,7 @@ setInterval(() => {
         day = date.getDay(),
         tanggal = date.getDate(),
         year = date.getFullYear(),
-        month = date.getMonth() ;
+        month = date.getMonth();
     nameday = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
     namemonth = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "August", "September", "Oktober", "November,", "Desember"]
     namedaystring = nameday[day];

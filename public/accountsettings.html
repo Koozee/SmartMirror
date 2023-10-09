@@ -189,7 +189,7 @@
                         <li>
                             <a href="../public/accountsettings.html"
                                 class="block px-4 py-2 md:text-xl text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
-                                role="menuitem">Pengaturan</a>
+                                role="menuitem">Settings</a>
                         </li>
                         <li>
                             <a href="../public/infodevice.html"
@@ -199,7 +199,7 @@
                         <li>
                             <a href="../public/login.html"
                                 class="block px-4 py-2 md:text-xl text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
-                                role="menuitem">Keluar</a>
+                                role="menuitem">Log Out</a>
                         </li>
                         <li class="flex justify-center">
                             <a href="#"
@@ -217,25 +217,114 @@
     </header>
 
     <!-- end header -->
+    <div class="flex flex-col justify-center mx-auto">
+        <!-- settings wifi -->
+        <section class="mx-4 mt-6 rounded-3xl p-4 bg-cardUI dark:bg-darkPrimary dark:text-white">
+            <button class="w-full hover:bg-white hover:text-black flex items-center justify-between rounded-3xl"
+                id="setwifi">
+                <h1 class="font-Montserrat text-lg md:text-4xl">Pengaturan WIFI</h1>
+                <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="w-[30px] h-[30px] md:h-20 md:w-20" preserveAspectRatio="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M10.5 35C10.5 34.3038 10.7766 33.6361 11.2688 33.1439C11.7611 32.6516 12.4288 32.375 13.125 32.375H50.358L35.805 18.515C35.5448 18.279 35.3346 17.9931 35.1869 17.6744C35.0392 17.3556 34.957 17.0105 34.9451 16.6594C34.9333 16.3083 34.992 15.9583 35.1178 15.6303C35.2437 15.3024 35.4341 15.003 35.6778 14.7499C35.9215 14.4969 36.2135 14.2953 36.5365 14.1572C36.8595 14.019 37.2069 13.9471 37.5582 13.9457C37.9095 13.9443 38.2576 14.0135 38.5816 14.1491C38.9057 14.2846 39.1993 14.4839 39.445 14.735L58.695 33.11C58.9491 33.3549 59.1511 33.6485 59.2892 33.9732C59.4272 34.2979 59.4983 34.6472 59.4983 35C59.4983 35.3529 59.4272 35.7021 59.2892 36.0268C59.1511 36.3516 58.9491 36.6451 58.695 36.89L39.445 55.265C39.1993 55.5161 38.9057 55.7154 38.5816 55.8509C38.2576 55.9865 37.9095 56.0557 37.5582 56.0543C37.2069 56.0529 36.8595 55.981 36.5365 55.8429C36.2135 55.7047 35.9215 55.5032 35.6778 55.2501C35.4341 54.997 35.2437 54.6977 35.1178 54.3697C34.992 54.0417 34.9333 53.6918 34.9451 53.3406C34.957 52.9895 35.0392 52.6444 35.1869 52.3256C35.3346 52.0069 35.5448 51.721 35.805 51.485L50.358 37.625H13.125C12.4288 37.625 11.7611 37.3484 11.2688 36.8562C10.7766 36.3639 10.5 35.6962 10.5 35Z"
+                        fill="black"></path>
+                </svg>
+            </button>
+            <form action="" method="post" id="setswifi" class="hidden">
+                <div class="mb-5">
+                    <ul class="mt-4 space-y-2">
+                        <li>
+                            <label for="ssidwifi"
+                                class="dark:text-white text-lg md:text-xl lg:text-4xl font-Montserrat font-bold">Masukkan
+                                SSID</label>
+                            <input type="text" name="ssidwifi" id="ssidwifi"
+                                class="block h-full w-full rounded-lg border border-gray-700 p-4 hover:border-pink-600 font-medium text-black"
+                                placeholder="Masukkan SSID WIFI">
+                        </li>
+                        <li>
+                            <label for="passwifi"
+                                class="dark:text-white text-lg md:text-xl lg:text-4xl font-Montserrat font-bold">Masukkkan
+                                Password
+                            </label>
+                            <input type="password" name="passwifi" id="passwifi"
+                                class="block h-full w-full rounded-lg border border-gray-700 p-4 hover:border-pink-600 font-medium text-black"
+                                placeholder="Masukkan Password">
+                        </li>
+                    </ul>
+                    <button type="submit"
+                        class="mt-10 text-white w-full shrink-0 rounded-md border border-blue-600 bg-blue-800 px-12 py-3 text-2xl font-medium dark:text-white transition hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-blue-500">
+                        Konfirmasi
+                    </button>
+            </form>
+        </section>
 
-    <section class="p-4">
-        <h1 class="p-3 text-start text-2xl md:text-4xl font-Montserrat text-white">Pengaturan Akun</h1>
-        <div class="rounded-xl border w-full bg-blue-500 border-blue-600 dark:border-gray-700 dark:bg-gray-800 p-4">
+        <!-- settings bluetooth -->
+        <section class="mx-4 mt-6 rounded-3xl p-4 bg-cardUI dark:bg-darkPrimary dark:text-white">
+            <button class="w-full hover:bg-white hover:text-black flex items-center justify-between rounded-3xl"
+                id="setbt">
+                <h1 class="font-Montserrat text-lg md:text-4xl">Pengaturan Bluetooth</h1>
+                <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="w-[30px] h-[30px] md:h-20 md:w-20" preserveAspectRatio="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M10.5 35C10.5 34.3038 10.7766 33.6361 11.2688 33.1439C11.7611 32.6516 12.4288 32.375 13.125 32.375H50.358L35.805 18.515C35.5448 18.279 35.3346 17.9931 35.1869 17.6744C35.0392 17.3556 34.957 17.0105 34.9451 16.6594C34.9333 16.3083 34.992 15.9583 35.1178 15.6303C35.2437 15.3024 35.4341 15.003 35.6778 14.7499C35.9215 14.4969 36.2135 14.2953 36.5365 14.1572C36.8595 14.019 37.2069 13.9471 37.5582 13.9457C37.9095 13.9443 38.2576 14.0135 38.5816 14.1491C38.9057 14.2846 39.1993 14.4839 39.445 14.735L58.695 33.11C58.9491 33.3549 59.1511 33.6485 59.2892 33.9732C59.4272 34.2979 59.4983 34.6472 59.4983 35C59.4983 35.3529 59.4272 35.7021 59.2892 36.0268C59.1511 36.3516 58.9491 36.6451 58.695 36.89L39.445 55.265C39.1993 55.5161 38.9057 55.7154 38.5816 55.8509C38.2576 55.9865 37.9095 56.0557 37.5582 56.0543C37.2069 56.0529 36.8595 55.981 36.5365 55.8429C36.2135 55.7047 35.9215 55.5032 35.6778 55.2501C35.4341 54.997 35.2437 54.6977 35.1178 54.3697C34.992 54.0417 34.9333 53.6918 34.9451 53.3406C34.957 52.9895 35.0392 52.6444 35.1869 52.3256C35.3346 52.0069 35.5448 51.721 35.805 51.485L50.358 37.625H13.125C12.4288 37.625 11.7611 37.3484 11.2688 36.8562C10.7766 36.3639 10.5 35.6962 10.5 35Z"
+                        fill="black"></path>
+                </svg>
+            </button>
+            <form action="" method="post" class="hidden" id="setsbt">
+                <div class="mb-5">
+                    <ul class="mt-4 space-y-2">
+                        <li>
+                            <label for="ssidbt"
+                                class="dark:text-white text-lg md:text-xl lg:text-4xl font-Montserrat font-bold">Masukkan
+                                Nama Bluetooth</label>
+                            <input type="text" name="ssidbt" id="ssidbt"
+                                class="block h-full w-full rounded-lg border border-gray-700 p-4 hover:border-pink-600 font-medium text-black"
+                                placeholder="Masukkan Nama Bluetooth">
+                        </li>
+                        <li>
+                            <label for="passbt"
+                                class="dark:text-white text-lg md:text-xl lg:text-4xl font-Montserrat font-bold">Masukkkan
+                                Password
+                            </label>
+                            <input type="password" name="passbt" id="passbt"
+                                class="block h-full w-full rounded-lg border border-gray-700 p-4 hover:border-pink-600 font-medium text-black"
+                                placeholder="Masukkan Password">
+                        </li>
+                    </ul>
+                    <button type="submit"
+                        class="mt-10 w-full text-white shrink-0 rounded-md border border-blue-600 bg-blue-800 px-12 py-3 text-2xl font-medium dark:text-white transition hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-blue-500">
+                        Konfirmasi
+                    </button>
+            </form>
+        </section>
+
+<!-- accountsettings -->
+        <section
+            class="p-4 mx-4 mt-6 rounded-3xl border bg-cardUI border-blue-600 dark:text-white  dark:border-gray-700 dark:bg-gray-800">
+            <button class="w-full hover:bg-white hover:text-black flex items-center justify-between rounded-3xl"
+                id="setacc">
+                <h1 class="font-Montserrat text-lg md:text-4xl">Pengaturan Akun</h1>
+                <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="w-[30px] h-[30px] md:h-20 md:w-20" preserveAspectRatio="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M10.5 35C10.5 34.3038 10.7766 33.6361 11.2688 33.1439C11.7611 32.6516 12.4288 32.375 13.125 32.375H50.358L35.805 18.515C35.5448 18.279 35.3346 17.9931 35.1869 17.6744C35.0392 17.3556 34.957 17.0105 34.9451 16.6594C34.9333 16.3083 34.992 15.9583 35.1178 15.6303C35.2437 15.3024 35.4341 15.003 35.6778 14.7499C35.9215 14.4969 36.2135 14.2953 36.5365 14.1572C36.8595 14.019 37.2069 13.9471 37.5582 13.9457C37.9095 13.9443 38.2576 14.0135 38.5816 14.1491C38.9057 14.2846 39.1993 14.4839 39.445 14.735L58.695 33.11C58.9491 33.3549 59.1511 33.6485 59.2892 33.9732C59.4272 34.2979 59.4983 34.6472 59.4983 35C59.4983 35.3529 59.4272 35.7021 59.2892 36.0268C59.1511 36.3516 58.9491 36.6451 58.695 36.89L39.445 55.265C39.1993 55.5161 38.9057 55.7154 38.5816 55.8509C38.2576 55.9865 37.9095 56.0557 37.5582 56.0543C37.2069 56.0529 36.8595 55.981 36.5365 55.8429C36.2135 55.7047 35.9215 55.5032 35.6778 55.2501C35.4341 54.997 35.2437 54.6977 35.1178 54.3697C34.992 54.0417 34.9333 53.6918 34.9451 53.3406C34.957 52.9895 35.0392 52.6444 35.1869 52.3256C35.3346 52.0069 35.5448 51.721 35.805 51.485L50.358 37.625H13.125C12.4288 37.625 11.7611 37.3484 11.2688 36.8562C10.7766 36.3639 10.5 35.6962 10.5 35Z"
+                        fill="black"></path>
+                </svg>
+            </button>
             <div class="flex items-center gap-4">
                 <img alt="Developer" src="../src/img/Elaina_Chibi-removebg-preview.png"
                     class="h-16 w-16 md:h-28 md:w-28 rounded-full object-cover" />
-
                 <div>
-                    <h3 class="text-lg md:text-4xl lg:text-5xl font-medium text-white">Kukuh Gaming 87</h3>
-                    <h2 class="text-base md:text-3xl lg:text-4xl font-medium font-Poppins text-white">
+                    <h3 class="text-lg md:text-4xl lg:text-5xl font-medium dark:text-white">Kukuh Gaming 87</h3>
+                    <h2 class="text-base md:text-3xl lg:text-4xl font-medium font-Poppins dark:text-white">
                         kukuhaduhai99@gmail.com</h2>
                 </div>
             </div>
-            <form action="" method="post">
+            <form action="" method="post" class="hidden" id="setsacc">
                 <ul class="mt-4 space-y-2">
                     <li>
                         <label for="username"
-                            class="text-white text-lg md:text-xl lg:text-2xl font-Montserrat font-bold">Ganti
+                            class="dark:text-white text-lg md:text-xl lg:text-4xl font-Montserrat font-bold">Ganti
                             Username</label>
                         <input type="text" name="username" id="username"
                             class="block h-full w-full rounded-lg border border-gray-700 p-4 hover:border-pink-600 font-medium text-black"
@@ -243,7 +332,7 @@
                     </li>
                     <li>
                         <label for="owner"
-                            class="text-white text-lg md:text-xl lg:text-2xl font-Montserrat font-bold">Ganti Nama
+                            class="dark:text-white text-lg md:text-xl lg:text-4xl font-Montserrat font-bold">Ganti Nama
                             Pemilik</label>
                         <input type="text" name="owner" id="owner"
                             class="block h-full w-full rounded-lg border border-gray-700 p-4 hover:border-pink-600 font-medium text-black"
@@ -251,7 +340,7 @@
                     </li>
                     <li>
                         <label for="password"
-                            class="text-white text-lg md:text-xl lg:text-2xl font-Montserrat font-bold">Ganti Kata
+                            class="dark:text-white text-lg md:text-xl lg:text-4xl font-Montserrat font-bold">Ganti Kata
                             Sandi</label>
                         <input type="password" name="password" id="password"
                             class="block h-full w-full rounded-lg border border-gray-700 p-4 hover:border-pink-600 font-medium text-black"
@@ -259,7 +348,7 @@
                     </li>
                     <li>
                         <label for="retypepassword"
-                            class="text-white text-lg md:text-xl lg:text-2xl font-Montserrat font-bold">Ulangi Kata
+                            class="dark:text-white text-lg md:text-xl lg:text-4xl font-Montserrat font-bold">Ulangi Kata
                             Sandi Baru</label>
                         <input type="password" name="username" id="retypepassword"
                             class="block h-full w-full rounded-lg border border-gray-700 p-4 hover:border-pink-600 font-medium text-black"
@@ -267,18 +356,18 @@
                     </li>
                 </ul>
                 <button type="submit"
-                    class="mt-10 w-full shrink-0 rounded-md border border-blue-600 bg-blue-800 px-12 py-3 text-2xl font-medium text-white transition hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-blue-500">
+                    class="mt-10 w-full text-white shrink-0 rounded-md border border-blue-600 bg-blue-800 px-12 py-3 text-2xl font-medium dark:text-white transition hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-blue-500">
                     Konfirmasi
                 </button>
             </form>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <br><br><br><br>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
     <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
     <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
-    <script src="../public/script.js"></script>
+    <script src="../public/scriptsetting.js"></script>
 </body>
 
 </html>
